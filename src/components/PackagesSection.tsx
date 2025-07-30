@@ -3,6 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const PackagesSection = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const packages = [
     {
       name: "Воля",
@@ -61,8 +65,7 @@ const PackagesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Пакети з 
-            <span className="text-gradient-ukraine"> патріотичними назвами</span>
+            <span className="text-gradient-ukraine">Патріотичні пакети</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Оберіть рівень автоматизації, який відповідає вашим цілям та можливостям
@@ -111,6 +114,7 @@ const PackagesSection = () => {
                   className="w-full mt-6" 
                   variant={pkg.popular ? "ukraine" : "outline"}
                   size="lg"
+                  onClick={scrollToContact}
                 >
                   {pkg.popular ? "🚀 Обрати цей пакет" : "Дізнатися більше"}
                 </Button>
@@ -123,7 +127,7 @@ const PackagesSection = () => {
           <p className="text-muted-foreground mb-4">
             Потрібно індивідуальне рішення? Маєте особливі вимоги?
           </p>
-          <Button variant="ukraineYellow" size="lg">
+          <Button variant="ukraineYellow" size="lg" onClick={scrollToContact}>
             💬 Обговорити індивідуальний проєкт
           </Button>
         </div>

@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-ukraine.jpg";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -36,13 +40,13 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="ukraineYellow" size="lg" className="w-full sm:w-auto text-lg px-8 py-4">
+            <Button variant="ukraineYellow" size="lg" className="w-full sm:w-auto text-lg px-8 py-4" onClick={scrollToContact}>
               🔵 Залишити заявку
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary" onClick={scrollToContact}>
               🟡 Протестувати рішення
             </Button>
-            <Button variant="ghost" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 text-white hover:bg-white/20">
+            <Button variant="ghost" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 text-white hover:bg-white/20" onClick={scrollToContact}>
               🔶 Порахувати вартість
             </Button>
           </div>
@@ -59,7 +63,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center justify-center gap-2">
               <span className="text-secondary">💙</span>
-              <span>Команда з Києва, Львова та Рівного</span>
+              <span>Команда з Києва, Львова, Рівного, Дніпра та Запоріжжя</span>
             </div>
           </div>
         </div>

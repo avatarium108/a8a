@@ -3,10 +3,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const ContactSection = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="py-20 bg-background">
+    <section id="contact-section" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -34,8 +39,8 @@ const ContactSection = () => {
                   <Input id="name" placeholder="Ваше ім'я" />
                 </div>
                 <div>
-                  <Label htmlFor="company">Компанія</Label>
-                  <Input id="company" placeholder="Назва компанії" />
+                  <Label htmlFor="company">Компанія або проект</Label>
+                  <Input id="company" placeholder="Назва компанії або проекту" />
                 </div>
               </div>
               
@@ -47,6 +52,55 @@ const ContactSection = () => {
                 <div>
                   <Label htmlFor="email">Email *</Label>
                   <Input id="email" type="email" placeholder="email@example.com" />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="messenger">Зручний месенджер *</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Оберіть месенджер" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="telegram">Telegram</SelectItem>
+                      <SelectItem value="whatsapp">WhatsApp</SelectItem>
+                      <SelectItem value="viber">Viber</SelectItem>
+                      <SelectItem value="email">Email</SelectItem>
+                      <SelectItem value="phone">Телефон</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="messenger-contact">Логін / контакт *</Label>
+                  <Input id="messenger-contact" placeholder="@username, номер чи email" />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="date">Зручна дата *</Label>
+                  <Input id="date" type="date" />
+                </div>
+                <div>
+                  <Label htmlFor="time">Зручний час *</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Оберіть час" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="09:00">09:00</SelectItem>
+                      <SelectItem value="10:00">10:00</SelectItem>
+                      <SelectItem value="11:00">11:00</SelectItem>
+                      <SelectItem value="12:00">12:00</SelectItem>
+                      <SelectItem value="13:00">13:00</SelectItem>
+                      <SelectItem value="14:00">14:00</SelectItem>
+                      <SelectItem value="15:00">15:00</SelectItem>
+                      <SelectItem value="16:00">16:00</SelectItem>
+                      <SelectItem value="17:00">17:00</SelectItem>
+                      <SelectItem value="18:00">18:00</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
               
@@ -80,7 +134,7 @@ const ContactSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="ukraineYellow" className="w-full">
+                <Button variant="ukraineYellow" className="w-full" onClick={scrollToContact}>
                   Калькулятор вартості
                 </Button>
               </CardContent>
@@ -89,13 +143,13 @@ const ContactSection = () => {
             {/* Consultation */}
             <Card className="border-primary/20 hover:shadow-blue transition-ukraine">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">📞 Записатися на дзвінок</CardTitle>
+                <CardTitle className="text-xl text-primary">📞 Записатися на консультацію</CardTitle>
                 <CardDescription>
                   Безкоштовна 30-хвилинна консультація з нашим експертом
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white" onClick={scrollToContact}>
                   Обрати зручний час
                 </Button>
               </CardContent>
@@ -109,19 +163,35 @@ const ContactSection = () => {
               <CardContent className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="text-primary">📱</span>
-                  <span>Telegram: @ukraine_automation</span>
+                  <span>Telegram: @a8abot</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-primary">📧</span>
-                  <span>hello@automation.ua</span>
+                  <span>a8a@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-primary">📞</span>
-                  <span>+380 67 123 45 67</span>
+                  <span className="text-primary">📘</span>
+                  <span>Facebook: </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-secondary">🕒</span>
-                  <span>Пн-Пт: 9:00-18:00 (Київ)</span>
+                  <span className="text-primary">💼</span>
+                  <span>LinkedIn: </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary">📷</span>
+                  <span>Instagram: </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary">▶️</span>
+                  <span>YouTube: </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary">🎵</span>
+                  <span>TikTok: </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary">💬</span>
+                  <span>WhatsApp: </span>
                 </div>
               </CardContent>
             </Card>
@@ -140,6 +210,12 @@ const ContactSection = () => {
             <span>🤝 Волонтерські організації</span>
             <span>🏥 Медичні клініки</span>
             <span>🍕 Ресторани</span>
+            <span>🏭 Виробництво</span>
+            <span>🚛 Логістика</span>
+            <span>💰 Фінтех</span>
+            <span>🏠 Нерухомість</span>
+            <span>💅 Салони краси</span>
+            <span>🚗 Автосервіси</span>
           </div>
         </div>
       </div>

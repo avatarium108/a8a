@@ -28,7 +28,7 @@ const TeamSection = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-primary">Глобальна присутність</h3>
                   <p className="text-muted-foreground">
-                    Працюємо з клієнтами в Україні, Польщі, Норвегії, Німеччині
+                    Працюємо з клієнтами в Україні, Норвегії, Європейському Союзі
                   </p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const TeamSection = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-primary">Команда з України</h3>
                   <p className="text-muted-foreground">
-                    Київ, Львів, Рівне — ми тут, поруч, і розуміємо ваш контекст як ніхто інший.
+                    Київ, Львів, Рівне, Дніпро, Запоріжжя — ми тут, поруч, і розуміємо ваш контекст як ніхто інший.
                   </p>
                 </div>
               </div>
