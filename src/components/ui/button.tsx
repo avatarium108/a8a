@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        ukraine: "btn-ukraine blue-gradient text-white hover:shadow-ukraine font-montserrat font-semibold",
+        ukraineYellow: "btn-ukraine bg-secondary text-secondary-foreground hover:bg-secondary-dark hover:shadow-yellow font-montserrat font-semibold",
+        hero: "btn-ukraine ukraine-gradient text-white hover:shadow-ukraine font-montserrat font-bold text-lg",
       },
       size: {
         default: "h-10 px-4 py-2",

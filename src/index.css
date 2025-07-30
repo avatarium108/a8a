@@ -1,40 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Ukrainian Business Automation Design System */
 
 @layer base {
   :root {
+    /* Ukrainian patriotic colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222 16% 20%;
 
+    /* Blue - Ukrainian flag blue */
+    --primary: 216 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 216 100% 35%;
+    
+    /* Yellow - Ukrainian flag yellow */
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 222 16% 20%;
+    --secondary-dark: 48 100% 40%;
+
+    /* Supporting colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 16% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 16% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: 216 20% 95%;
+    --muted-foreground: 222 16% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 216 20% 95%;
+    --accent-foreground: 216 100% 50%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 216 100% 50%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Ukrainian gradients */
+    --gradient-ukraine: linear-gradient(135deg, hsl(216 100% 50%), hsl(48 100% 50%));
+    --gradient-blue: linear-gradient(135deg, hsl(216 100% 50%), hsl(216 100% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(216 100% 60%) 25%, hsl(48 100% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(216 20% 98%));
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Shadows with Ukrainian theme */
+    --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.3);
+    --shadow-blue: 0 4px 20px hsl(216 100% 50% / 0.2);
+    --shadow-yellow: 0 4px 20px hsl(48 100% 50% / 0.2);
+
+    /* Animations */
+    --transition-ukraine: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -100,6 +120,63 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .ukraine-gradient {
+    background: var(--gradient-ukraine);
+  }
+  
+  .blue-gradient {
+    background: var(--gradient-blue);
+  }
+  
+  .text-gradient-ukraine {
+    background: var(--gradient-ukraine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .shadow-ukraine {
+    box-shadow: var(--shadow-ukraine);
+  }
+  
+  .shadow-blue {
+    box-shadow: var(--shadow-blue);
+  }
+  
+  .shadow-yellow {
+    box-shadow: var(--shadow-yellow);
+  }
+  
+  .transition-ukraine {
+    transition: var(--transition-ukraine);
+  }
+  
+  .btn-ukraine {
+    @apply relative overflow-hidden rounded-xl font-semibold px-8 py-4 transition-ukraine;
+  }
+  
+  .btn-ukraine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-ukraine:hover::before {
+    left: 100%;
   }
 }
