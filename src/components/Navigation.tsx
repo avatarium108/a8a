@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/a8a-logo.png";
 
 const Navigation = () => {
   const scrollToSection = (id: string) => {
@@ -10,11 +11,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">A8A</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">Автоматизація</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src={logoImage} 
+              alt="a8a.smart логотип" 
+              className="w-10 h-10 object-contain"
+            />
+            <span className="font-bold text-xl text-foreground">a8a.smart</span>
           </div>
 
           {/* Navigation Menu */}
