@@ -65,11 +65,11 @@ const ResultsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Results Cards */}
           <div className="space-y-6">
             {results.map((result, index) => (
-              <Card key={index} className="group border-l-4 border-l-primary hover:shadow-blue transition-ukraine overflow-hidden">
+              <Card key={index} className="group border-l-4 border-l-primary hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     {/* Category Badge */}
@@ -112,11 +112,11 @@ const ResultsSection = () => {
           </div>
 
           {/* Success Story Image */}
-          <div className="relative">
+          <div className="relative h-fit">
             <img 
               src={successImage} 
               alt="Результати автоматизації" 
-              className="rounded-xl shadow-ukraine w-full"
+              className="rounded-xl shadow-lg w-full h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-xl"></div>
             <div className="absolute bottom-6 left-6 text-white">
@@ -131,33 +131,33 @@ const ResultsSection = () => {
 
         {/* Interactive ROI Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="text-center border-primary/20 hover:shadow-blue transition-ukraine group">
+          <Card className="text-center border-primary/20 hover:shadow-lg transition-all duration-300 group">
             <CardContent className="p-6">
-              <div className="text-4xl font-black text-primary mb-2 group-hover:scale-110 transition-ukraine">300%</div>
+              <div className="text-4xl font-black text-primary mb-2 group-hover:scale-110 transition-transform duration-300">300%</div>
               <div className="text-lg font-semibold">Середній ROI</div>
               <div className="text-muted-foreground">за перші 3 місяці</div>
               <div className="mt-3 w-full bg-muted rounded-full h-2">
-                <div className="bg-gradient-to-r from-primary to-primary-dark h-2 rounded-full transition-all duration-1000 ease-out" 
+                <div className="bg-gradient-to-r from-primary to-primary h-2 rounded-full transition-all duration-1000 ease-out" 
                      style={{ width: progressValues[0] > 0 ? "85%" : "0%" }}></div>
               </div>
             </CardContent>
           </Card>
           
-          <Card className="text-center border-secondary/20 hover:shadow-yellow transition-ukraine group">
+          <Card className="text-center border-secondary/20 hover:shadow-lg transition-all duration-300 group">
             <CardContent className="p-6">
-              <div className="text-4xl font-black text-secondary mb-2 group-hover:scale-110 transition-ukraine">40+</div>
+              <div className="text-4xl font-black text-secondary mb-2 group-hover:scale-110 transition-transform duration-300">40+</div>
               <div className="text-lg font-semibold">Годин економії</div>
               <div className="text-muted-foreground">щомісяця на автоматизації</div>
               <div className="mt-3 w-full bg-muted rounded-full h-2">
-                <div className="bg-gradient-to-r from-secondary to-secondary-dark h-2 rounded-full transition-all duration-1000 ease-out delay-300" 
+                <div className="bg-gradient-to-r from-secondary to-secondary h-2 rounded-full transition-all duration-1000 ease-out delay-300" 
                      style={{ width: progressValues[0] > 0 ? "90%" : "0%" }}></div>
               </div>
             </CardContent>
           </Card>
           
-          <Card className="text-center border-primary/20 hover:shadow-blue transition-ukraine group">
+          <Card className="text-center border-primary/20 hover:shadow-lg transition-all duration-300 group">
             <CardContent className="p-6">
-              <div className="text-4xl font-black text-primary mb-2 group-hover:scale-110 transition-ukraine">98%</div>
+              <div className="text-4xl font-black text-primary mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
               <div className="text-lg font-semibold">Задоволених клієнтів</div>
               <div className="text-muted-foreground">рекомендують нас іншим</div>
               <div className="mt-3 w-full bg-muted rounded-full h-2">
@@ -170,7 +170,7 @@ const ResultsSection = () => {
         
         {/* Consultation Block */}
         <div className="mt-16 flex justify-center">
-          <Card className="border-primary/20 hover:shadow-blue transition-ukraine max-w-md">
+          <Card className="border-primary/20 hover:shadow-lg transition-all duration-300 max-w-md">
             <CardHeader>
               <CardTitle className="text-xl text-primary text-center">📞 Записатися на консультацію</CardTitle>
               <CardDescription className="text-center">
@@ -179,7 +179,7 @@ const ResultsSection = () => {
             </CardHeader>
             <CardContent>
               <button 
-                className="w-full border border-primary text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg font-semibold transition-ukraine"
+                className="w-full border border-primary text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300"
                 onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Обрати зручний час
