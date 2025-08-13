@@ -1,7 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import successImage from "@/assets/success-ukraine.jpg";
+import successUkraine from "@/assets/success-ukraine.jpg";
+import successChatbot from "@/assets/success-chatbot-stripe-sheets.jpg";
+import successIoT from "@/assets/success-iot-ai-make.jpg";
+import successROI from "@/assets/success-roi-dashboard.jpg";
+import successVoiceBot from "@/assets/success-voice-bot-crm.jpg";
+import successAutomation from "@/assets/success-home-automation.jpg";
 import { useState, useEffect } from "react";
 
 const ResultsSection = () => {
@@ -13,43 +18,67 @@ const ResultsSection = () => {
       after: "✅ Онлайн запис та телемедицина",
       improvement: 200,
       metric: "більше пацієнтів",
-      category: "Медицина"
+      category: "Медицина",
+      image: successUkraine,
+      caseTitle: "Медична клініка",
+      caseDescription: "За 10 днів запустили онлайн запис та телемедицину"
     },
     {
       before: "❌ Волонтери не координувалися",
       after: "✅ Платформа об'єднала всіх", 
       improvement: 300,
       metric: "ефективніша допомога",
-      category: "Волонтерство"
+      category: "Волонтерство",
+      image: successChatbot,
+      caseTitle: "Чат-бот для допомоги",
+      caseDescription: "Автоматизація прийому заявок та координації волонтерів"
     },
     {
       before: "❌ Ручний контроль обладнання",
       after: "✅ IoT сенсори контролюють автоматично",
       improvement: 95,
       metric: "автоматизації",
-      category: "Промисловість"
+      category: "Промисловість",
+      image: successIoT,
+      caseTitle: "IoT система",
+      caseDescription: "Розумний контроль промислового обладнання"
     },
     {
       before: "❌ Сайт не приводив клієнтів",
       after: "✅ Новий сайт з AI-чатом",
       improvement: 500,
       metric: "більше заявок",
-      category: "Бізнес"
+      category: "Бізнес",
+      image: successROI,
+      caseTitle: "ROI дашборд",
+      caseDescription: "Аналітика ефективності маркетингових кампаній"
     },
     {
       before: "❌ Багато рутини",
       after: "✅ 40+ годин на місяць звільнено",
       improvement: 85,
       metric: "економії часу",
-      category: "Ефективність"
+      category: "Ефективність",
+      image: successVoiceBot,
+      caseTitle: "Голосовий бот",
+      caseDescription: "Автоматизація телефонних дзвінків та CRM"
     }
   ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setProgressValues(results.map(result => Math.min(result.improvement, 100)));
     }, 500);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const imageTimer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % results.length);
+    }, 4000);
+    return () => clearInterval(imageTimer);
   }, []);
 
   return (
@@ -111,20 +140,44 @@ const ResultsSection = () => {
             ))}
           </div>
 
-          {/* Success Story Image */}
+          {/* Success Stories Gallery */}
           <div className="relative h-fit">
-            <img 
-              src={successImage} 
-              alt="Результати автоматизації" 
-              className="rounded-xl shadow-lg w-full h-auto object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-xl"></div>
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">Кейс: Медична клініка</h3>
-              <p className="text-lg opacity-90">
-                За 10 днів запустили онлайн запис та телемедицину — 
-                <span className="font-bold text-secondary"> +200% пацієнтів за місяць</span>
-              </p>
+            <div className="relative overflow-hidden rounded-xl">
+              <img 
+                src={results[currentImageIndex].image} 
+                alt={`Кейс: ${results[currentImageIndex].caseTitle}`}
+                className="w-full h-80 object-cover transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">
+                  Кейс: {results[currentImageIndex].caseTitle}
+                </h3>
+                <p className="text-lg opacity-90">
+                  {results[currentImageIndex].caseDescription} — 
+                  <span className="font-bold text-secondary">
+                    {results[currentImageIndex].improvement > 100 
+                      ? ` +${results[currentImageIndex].improvement}%` 
+                      : ` ${results[currentImageIndex].improvement}%`} {results[currentImageIndex].metric}
+                  </span>
+                </p>
+              </div>
+            </div>
+            
+            {/* Gallery Indicators */}
+            <div className="flex justify-center gap-2 mt-4">
+              {results.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex 
+                      ? 'bg-primary scale-125' 
+                      : 'bg-primary/30 hover:bg-primary/60'
+                  }`}
+                  aria-label={`Показати кейс ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
