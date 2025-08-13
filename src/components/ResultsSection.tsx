@@ -4,19 +4,24 @@ import successImage from "@/assets/success-ukraine.jpg";
 const ResultsSection = () => {
   const results = [
     {
-      before: "❌ Менеджер вручну писав клієнтам",
-      after: "✅ Бот сам закриває на продаж",
-      impact: "Економія 6 годин щодня"
+      before: "❌ Клініка втрачала пацієнтів через черги",
+      after: "✅ Онлайн запис та телемедицина",
+      impact: "200% більше пацієнтів"
     },
     {
-      before: "❌ Плутанина з клієнтами",
-      after: "✅ CRM все фіксує й нагадує", 
-      impact: "0% втрачених лідів"
+      before: "❌ Волонтери не координувалися",
+      after: "✅ Платформа об'єднала всіх", 
+      impact: "300% ефективніша допомога"
     },
     {
       before: "❌ Ручний контроль обладнання",
       after: "✅ IoT сенсори контролюють автоматично",
       impact: "24/7 моніторинг"
+    },
+    {
+      before: "❌ Сайт не приводив клієнтів",
+      after: "✅ Новий сайт з AI-чатом",
+      impact: "500% більше заявок"
     },
     {
       before: "❌ Багато рутини",
@@ -69,10 +74,10 @@ const ResultsSection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-xl"></div>
             <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">Кейс: Агро IoT моніторинг</h3>
+              <h3 className="text-2xl font-bold mb-2">Кейс: Медична клініка</h3>
               <p className="text-lg opacity-90">
-                За 7 днів підключили сенсори вологості та боти для сповіщень — 
-                <span className="font-bold text-secondary"> економія 20 год/тиждень</span>
+                За 10 днів запустили онлайн запис та телемедицину — 
+                <span className="font-bold text-secondary"> +200% пацієнтів за місяць</span>
               </p>
             </div>
           </div>
