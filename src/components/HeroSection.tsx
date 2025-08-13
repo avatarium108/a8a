@@ -25,14 +25,16 @@ const HeroSection = () => {
           <div className="relative text-6xl mb-6">
             <span>🇺🇦</span>
             <div 
-              className="absolute -top-2 -left-8 text-black font-bold text-xs whitespace-nowrap"
+              className="absolute top-0 left-2 text-black font-bold text-sm"
               style={{ 
                 transform: 'rotate(-30deg)',
                 fontFamily: 'marker, sans-serif',
-                textShadow: '1px 1px 0px rgba(255,255,255,0.8)'
+                textShadow: '1px 1px 0px rgba(255,255,255,0.8)',
+                lineHeight: '1.2'
               }}
             >
-              За підтримки:
+              <div>За</div>
+              <div>підтримки:</div>
             </div>
           </div>
           
