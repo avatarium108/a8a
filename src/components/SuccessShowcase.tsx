@@ -1,38 +1,62 @@
 import { Badge } from "@/components/ui/badge";
-import successAutomation from "@/assets/hero-ukraine.jpg";
-import successMedical from "@/assets/success-ukraine.jpg";
-import successVolunteer from "@/assets/team-ukraine.jpg";
-import successIoT from "@/assets/hero-ukraine.jpg";
+import successIoTAI from "@/assets/success-iot-ai-make.jpg";
+import successChatbot from "@/assets/success-chatbot-stripe-sheets.jpg";
+import successWebhook from "@/assets/success-webhook-gpt-email.jpg";
+import successVoiceBot from "@/assets/success-voice-bot-crm.jpg";
+import successHomeAuto from "@/assets/success-home-automation.jpg";
+import successTelegram from "@/assets/success-telegram-notion-gpt.jpg";
+import successROI from "@/assets/success-roi-dashboard.jpg";
 
 const SuccessShowcase = () => {
   const showcases = [
     {
-      image: successAutomation,
+      image: successROI,
       title: "ROI +340%",
       subtitle: "Автоматизація продажів",
-      description: "CRM + боти + аналітика",
+      description: "Dashboard з ростом після впровадження",
       icon: "📈"
     },
     {
-      image: successMedical,
-      title: "Телемедицина",
-      subtitle: "Цифрова клініка",
-      description: "EMR + IoT + AI діагностика",
-      icon: "🏥"
+      image: successIoTAI,
+      title: "IoT + AI + Make",
+      subtitle: "Розумна аналітика",
+      description: "Датчики + штучний інтелект + автоматизація",
+      icon: "🤖"
     },
     {
-      image: successVolunteer,
-      title: "Волонтерство 2.0",
-      subtitle: "Координація допомоги",
-      description: "Платформа + логістика + звіти",
-      icon: "🤝"
+      image: successChatbot,
+      title: "ManyChat + Stripe",
+      subtitle: "Чат-бот продажів",
+      description: "Автоматизація оплат через Google Sheets",
+      icon: "💬"
     },
     {
-      image: successIoT,
-      title: "Розумне місто",
-      subtitle: "IoT моніторинг",
-      description: "Сенсори + дашборди + alerts",
-      icon: "🏙️"
+      image: successWebhook,
+      title: "Webhook + GPT",
+      subtitle: "Email розсилки",
+      description: "AI-генерація контенту для outreach",
+      icon: "📧"
+    },
+    {
+      image: successVoiceBot,
+      title: "Voice Bot + CRM",
+      subtitle: "Голосова аналітика",
+      description: "Call tracking з AI обробкою",
+      icon: "📞"
+    },
+    {
+      image: successHomeAuto,
+      title: "Розумний дім",
+      subtitle: "AI тригери",
+      description: "Home automation з машинним навчанням",
+      icon: "🏠"
+    },
+    {
+      image: successTelegram,
+      title: "Telegram + Notion",
+      subtitle: "GPT аналіз",
+      description: "Бот з базою даних та AI інсайтами",
+      icon: "📊"
     }
   ];
 
