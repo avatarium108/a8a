@@ -22,7 +22,19 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
           {/* Ukrainian flag emoji */}
-          <div className="text-6xl mb-6">🇺🇦</div>
+          <div className="relative text-6xl mb-6">
+            <span>🇺🇦</span>
+            <div 
+              className="absolute -top-2 -left-8 text-black font-bold text-xs whitespace-nowrap"
+              style={{ 
+                transform: 'rotate(-30deg)',
+                fontFamily: 'marker, sans-serif',
+                textShadow: '1px 1px 0px rgba(255,255,255,0.8)'
+              }}
+            >
+              За підтримки:
+            </div>
+          </div>
           
           {/* Main title */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">

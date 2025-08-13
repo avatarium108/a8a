@@ -12,49 +12,49 @@ const SuccessShowcase = () => {
     {
       image: successROI,
       title: "ROI +340%",
-      subtitle: "Автоматизація продажів",
+      subtitle: "Аналітичний дашборд",
       description: "Dashboard з ростом після впровадження",
       icon: "📈"
     },
     {
       image: successIoTAI,
-      title: "IoT + AI + Make",
+      title: "IoT + AI системи",
       subtitle: "Розумна аналітика",
       description: "Датчики + штучний інтелект + автоматизація",
       icon: "🤖"
     },
     {
       image: successChatbot,
-      title: "ManyChat + Stripe",
-      subtitle: "Чат-бот продажів",
-      description: "Автоматизація оплат через Google Sheets",
+      title: "E-commerce бот",
+      subtitle: "Автоматизація продажів",
+      description: "Чат-бот з інтеграцією Stripe та Google Sheets",
       icon: "💬"
     },
     {
       image: successWebhook,
-      title: "Webhook + GPT",
-      subtitle: "Email розсилки",
-      description: "AI-генерація контенту для outreach",
+      title: "Email маркетинг",
+      subtitle: "AI-контент генерація",
+      description: "Автоматизація розсилок з GPT",
       icon: "📧"
     },
     {
       image: successVoiceBot,
-      title: "Voice Bot + CRM",
+      title: "Voice AI асистент",
       subtitle: "Голосова аналітика",
-      description: "Call tracking з AI обробкою",
+      description: "Call tracking з AI обробкою розмов",
       icon: "📞"
     },
     {
       image: successHomeAuto,
       title: "Розумний дім",
-      subtitle: "AI тригери",
+      subtitle: "IoT автоматизація",
       description: "Home automation з машинним навчанням",
       icon: "🏠"
     },
     {
       image: successTelegram,
-      title: "Telegram + Notion",
-      subtitle: "GPT аналіз",
+      title: "CRM інтеграція",
+      subtitle: "Telegram + Notion",
       description: "Бот з базою даних та AI інсайтами",
       icon: "📊"
     }
@@ -68,7 +68,7 @@ const SuccessShowcase = () => {
             🏆 Наші успішні проєкти
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Як виглядає <span className="text-primary">успіх автоматизації</span>
+            Наші <span className="text-primary">успішні рішення</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Реальні результати українських компаній, що довірилися нашим рішенням
