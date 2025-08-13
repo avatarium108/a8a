@@ -113,19 +113,21 @@ const AIManagerChatbot = () => {
       <div className="fixed bottom-6 right-6 z-50 group cursor-pointer">
         <Button
           onClick={() => setIsOpen(true)}
-          className="h-20 w-20 rounded-full bg-gradient-to-r from-primary via-primary/90 to-primary/80 hover:from-primary hover:to-primary/70 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-110 animate-pulse hover:animate-none ring-4 ring-primary/20 hover:ring-primary/40"
+          className="h-24 w-24 rounded-full bg-gradient-to-br from-primary via-primary/95 to-primary/85 hover:from-primary/90 hover:to-primary/70 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:scale-105 border-4 border-white/20 backdrop-blur-sm"
         >
-          <MessageCircle className="h-10 w-10 group-hover:scale-125 transition-transform duration-300" />
+          <div className="flex flex-col items-center gap-1">
+            <MessageCircle className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-xs font-medium">Чат</span>
+          </div>
         </Button>
-        <div className="absolute -top-4 -left-6 animate-bounce">
-          <Badge variant="secondary" className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm px-3 py-2 shadow-lg">
+        <div className="absolute -top-2 -left-8">
+          <Badge variant="secondary" className="bg-gradient-to-r from-green-500 to-green-600 text-white text-sm px-4 py-2 shadow-lg rounded-full border-2 border-white/30">
             💬 Асистент
           </Badge>
         </div>
-        <div className="absolute -bottom-1 -right-1">
-          <div className="w-6 h-6 bg-green-500 rounded-full border-4 border-background animate-pulse shadow-lg"></div>
+        <div className="absolute -bottom-2 -right-2">
+          <div className="w-6 h-6 bg-green-500 rounded-full border-3 border-white shadow-lg"></div>
         </div>
-        <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping"></div>
       </div>
     );
   }
