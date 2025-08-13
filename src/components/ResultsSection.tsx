@@ -14,6 +14,11 @@ const ResultsSection = () => {
       impact: "0% втрачених лідів"
     },
     {
+      before: "❌ Ручний контроль обладнання",
+      after: "✅ IoT сенсори контролюють автоматично",
+      impact: "24/7 моніторинг"
+    },
+    {
       before: "❌ Багато рутини",
       after: "✅ 40+ годин на місяць звільнено",
       impact: "Фокус на стратегії"
@@ -64,10 +69,10 @@ const ResultsSection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-xl"></div>
             <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">Кейс: Волонтерська платформа</h3>
+              <h3 className="text-2xl font-bold mb-2">Кейс: Агро IoT моніторинг</h3>
               <p className="text-lg opacity-90">
-                За 5 днів налаштували бота для збору заявок і логістики — 
-                <span className="font-bold text-secondary"> економія 15 год/тиждень</span>
+                За 7 днів підключили сенсори вологості та боти для сповіщень — 
+                <span className="font-bold text-secondary"> економія 20 год/тиждень</span>
               </p>
             </div>
           </div>
