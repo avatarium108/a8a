@@ -14,22 +14,22 @@ const MissionSection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🇺🇦</div>
-              <h3 className="font-semibold text-lg mb-2">Українські цінності</h3>
-              <p className="text-muted-foreground">Працюємо з повагою до нашої культури та мови</p>
+            <div className="text-center group hover:scale-105 transition-all duration-300">
+              <div className="text-8xl mb-6 hover:scale-110 transition-transform duration-300 cursor-pointer">🇺🇦</div>
+              <h3 className="font-bold text-xl mb-3 text-primary group-hover:text-primary/80 transition-colors">Українські цінності</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">Працюємо з повагою до нашої культури та мови, підтримуючи український бізнес</p>
             </div>
             
-            <div className="text-center">
-              <div className="text-4xl mb-4">💪</div>
-              <h3 className="font-semibold text-lg mb-2">Сила у єдності</h3>
-              <p className="text-muted-foreground">Разом створюємо сильний цифровий бізнес</p>
+            <div className="text-center group hover:scale-105 transition-all duration-300">
+              <div className="text-8xl mb-6 hover:scale-110 transition-transform duration-300 cursor-pointer">💪</div>
+              <h3 className="font-bold text-xl mb-3 text-primary group-hover:text-primary/80 transition-colors">Сила у єдності</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">Разом створюємо сильний цифровий бізнес для майбутнього нації</p>
             </div>
             
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="font-semibold text-lg mb-2">Рух до перемоги</h3>
-              <p className="text-muted-foreground">Кожен проєкт — крок до сильнішої України</p>
+            <div className="text-center group hover:scale-105 transition-all duration-300">
+              <div className="text-8xl mb-6 hover:scale-110 transition-transform duration-300 cursor-pointer">🚀</div>
+              <h3 className="font-bold text-xl mb-3 text-primary group-hover:text-primary/80 transition-colors">Рух до перемоги</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">Кожен проєкт — крок до сильнішої України через інновації</p>
             </div>
           </div>
         </div>

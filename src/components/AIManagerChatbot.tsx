@@ -19,7 +19,7 @@ const AIManagerChatbot = () => {
     {
       id: '1',
       type: 'bot',
-      content: '👋 Привіт! Я ваш AI-менеджер з автоматизації та штучного інтелекту. Розкажіть, які бізнес-процеси ви хочете автоматизувати?',
+      content: '👋 Вітаю! Я ваш персональний асистент з автоматизації та ШІ-рішень! 🚀 Готовий допомогти оптимізувати ваш бізнес. Що цікавить найбільше?',
       timestamp: new Date()
     }
   ]);
@@ -113,14 +113,17 @@ const AIManagerChatbot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(true)}
-          className="h-14 w-14 rounded-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className="h-16 w-16 rounded-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 group animate-pulse hover:animate-none"
         >
-          <MessageCircle className="h-6 w-6 group-hover:scale-110 transition-transform" />
+          <MessageCircle className="h-7 w-7 group-hover:scale-110 transition-transform" />
         </Button>
-        <div className="absolute -top-2 -left-2">
-          <Badge variant="destructive" className="animate-pulse">
-            AI
+        <div className="absolute -top-3 -left-3 animate-bounce">
+          <Badge variant="secondary" className="bg-primary/90 text-primary-foreground text-xs px-2 py-1">
+            💬 Асистент
           </Badge>
+        </div>
+        <div className="absolute -bottom-1 -right-1">
+          <div className="w-4 h-4 bg-green-500 rounded-full border-2 border-background animate-pulse"></div>
         </div>
       </div>
     );
@@ -132,10 +135,10 @@ const AIManagerChatbot = () => {
         <CardHeader className="pb-3 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-t-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Bot className="h-5 w-5" />
-              <CardTitle className="text-sm">AI-Менеджер</CardTitle>
-              <Badge variant="secondary" className="text-xs">
-                Online
+              <Bot className="h-5 w-5 animate-pulse" />
+              <CardTitle className="text-sm">Персональний Асистент</CardTitle>
+              <Badge variant="secondary" className="text-xs bg-green-500/20 text-green-700 dark:text-green-300">
+                ● Онлайн
               </Badge>
             </div>
             <Button
