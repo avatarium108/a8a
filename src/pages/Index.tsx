@@ -7,6 +7,7 @@ import PackagesSection from "@/components/PackagesSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import AIManagerChatbot from "@/components/AIManagerChatbot";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <TeamSection />
       <ContactSection />
       <Footer />
+      <AIManagerChatbot />
     </div>
   );
 };
