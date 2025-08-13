@@ -75,6 +75,26 @@ const ServicesSection = () => {
             </Card>
           ))}
         </div>
+        
+        {/* Cost Calculator Block */}
+        <div className="mt-16 flex justify-center">
+          <Card className="border-secondary/20 hover:shadow-yellow transition-ukraine max-w-md">
+            <CardHeader>
+              <CardTitle className="text-xl text-secondary text-center">📊 Розрахувати вартість</CardTitle>
+              <CardDescription className="text-center">
+                Отримайте приблизну вартість автоматизації за 2 хвилини
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <button 
+                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-3 rounded-lg font-semibold transition-ukraine"
+                onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Калькулятор вартості
+              </button>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );

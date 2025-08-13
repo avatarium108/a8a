@@ -123,79 +123,62 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* Quick Actions */}
-          <div className="space-y-6">
-            {/* Calculator */}
-            <Card className="border-secondary/20 hover:shadow-yellow transition-ukraine">
-              <CardHeader>
-                <CardTitle className="text-xl text-secondary">📊 Розрахувати вартість</CardTitle>
-                <CardDescription>
-                  Отримайте приблизну вартість автоматизації за 2 хвилини
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button variant="ukraineYellow" className="w-full" onClick={scrollToContact}>
-                  Калькулятор вартості
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Consultation */}
-            <Card className="border-primary/20 hover:shadow-blue transition-ukraine">
-              <CardHeader>
-                <CardTitle className="text-xl text-primary">📞 Записатися на консультацію</CardTitle>
-                <CardDescription>
-                  Безкоштовна 30-хвилинна консультація з нашим експертом
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white" onClick={scrollToContact}>
-                  Обрати зручний час
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Contacts */}
-            <Card className="bg-muted">
-              <CardHeader>
-                <CardTitle className="text-xl">Прямі контакти</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">📱</span>
-                  <span>Telegram: @a8abot</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">📧</span>
-                  <span>a8a@gmail.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">📘</span>
-                  <span>Facebook: </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">💼</span>
-                  <span>LinkedIn: </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">📷</span>
-                  <span>Instagram: </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">▶️</span>
-                  <span>YouTube: </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">🎵</span>
-                  <span>TikTok: </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-primary">💬</span>
-                  <span>WhatsApp: </span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Direct Contacts */}
+          <Card className="bg-muted">
+            <CardHeader>
+              <CardTitle className="text-xl">Прямі контакти</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-primary">📱</span>
+                <a href="https://t.me/a8abot" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Telegram: @a8abot
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">📧</span>
+                <a href="mailto:a8a@gmail.com" className="hover:text-primary transition-colors">
+                  a8a@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">👥</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Facebook: 
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">🏢</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  LinkedIn: 
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">📸</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Instagram: 
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">🎬</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  YouTube: 
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">🎪</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  TikTok: 
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">💬</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  WhatsApp: 
+                </a>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Social Proof */}

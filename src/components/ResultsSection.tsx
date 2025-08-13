@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import successImage from "@/assets/success-ukraine.jpg";
 
 const ResultsSection = () => {
@@ -90,6 +90,26 @@ const ResultsSection = () => {
             <div className="text-lg font-semibold">Задоволених клієнтів</div>
             <div className="text-muted-foreground">рекомендують нас іншим</div>
           </div>
+        </div>
+        
+        {/* Consultation Block */}
+        <div className="mt-16 flex justify-center">
+          <Card className="border-primary/20 hover:shadow-blue transition-ukraine max-w-md">
+            <CardHeader>
+              <CardTitle className="text-xl text-primary text-center">📞 Записатися на консультацію</CardTitle>
+              <CardDescription className="text-center">
+                Безкоштовна 30-хвилинна консультація з нашим експертом
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <button 
+                className="w-full border border-primary text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg font-semibold transition-ukraine"
+                onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Обрати зручний час
+              </button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
