@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
 import heroImage from "@/assets/hero-ukraine.jpg";
 
 const HeroSection = () => {
@@ -7,7 +8,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <>
+      <Navigation />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
       <div className="absolute inset-0 hero-gradient opacity-90"></div>
       <div 
@@ -76,6 +79,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
