@@ -118,15 +118,31 @@ const ContactSection = () => {
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
-                Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних
+                Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних згідно з GDPR
               </p>
+              
+              {/* Security badges */}
+              <div className="flex justify-center gap-4 mt-4 pt-4 border-t border-border">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="text-green-600">🔒</span>
+                  <span>SSL захист</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="text-blue-600">🛡️</span>
+                  <span>GDPR</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="text-primary">🇪🇺</span>
+                  <span>EU сервери</span>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
-          {/* Direct Contacts */}
+          {/* Our Contacts */}
           <Card className="bg-muted">
             <CardHeader>
-              <CardTitle className="text-xl">Прямі контакти</CardTitle>
+              <CardTitle className="text-xl">Наші контакти</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center gap-3">
@@ -181,11 +197,32 @@ const ContactSection = () => {
           </Card>
         </div>
 
-        {/* Social Proof */}
+        {/* Trust & Security Section */}
         <div className="text-center mt-16 p-8 bg-muted rounded-2xl">
-          <h3 className="text-xl font-semibold mb-4 text-primary">
+          <h3 className="text-xl font-semibold mb-6 text-primary">
             Понад 100 українських бізнесів довіряють нам автоматизацію
           </h3>
+          
+          {/* Trust badges */}
+          <div className="flex flex-wrap justify-center gap-6 mb-6">
+            <div className="flex items-center gap-2 text-sm font-medium">
+              <span className="text-primary">🤝</span>
+              <span>Партнер Дія.Бізнес</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm font-medium">
+              <span className="text-green-600">🔐</span>
+              <span>ISO 27001</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm font-medium">
+              <span className="text-blue-600">🛡️</span>
+              <span>GDPR Compliance</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm font-medium">
+              <span className="text-primary">🇺🇦</span>
+              <span>Реєстр IT України</span>
+            </div>
+          </div>
+          
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <span>🏢 IT-компанії</span>
             <span>🛒 E-commerce</span>
@@ -199,6 +236,14 @@ const ContactSection = () => {
             <span>🏠 Нерухомість</span>
             <span>💅 Салони краси</span>
             <span>🚗 Автосервіси</span>
+          </div>
+          
+          {/* Data protection notice */}
+          <div className="mt-6 p-4 bg-background rounded-lg border border-primary/20">
+            <p className="text-sm text-muted-foreground">
+              🔒 <strong>Захист даних:</strong> Всі дані клієнтів зберігаються на європейських серверах з шифруванням AES-256. 
+              Ми дотримуємося стандартів GDPR та ISO 27001 для максимального захисту вашої інформації.
+            </p>
           </div>
         </div>
       </div>

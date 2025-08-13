@@ -44,6 +44,17 @@ const TeamSection = () => {
               </div>
               
               <div className="flex items-start gap-4">
+                <span className="text-2xl">🔐</span>
+                <div>
+                  <h3 className="font-semibold text-lg text-primary">Безпека та довіра</h3>
+                  <p className="text-muted-foreground">
+                    Офіційно зареєстровані в IT-реєстрі України. Сертифіковані за стандартами ISO 27001.
+                    Партнер Дія.Бізнес для цифрової трансформації.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
                 <span className="text-2xl">💪</span>
                 <div>
                   <h3 className="font-semibold text-lg text-primary">Розуміємо ваші виклики</h3>
