@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/8a88a-logo.png";
+import logoImage from "@/assets/trident-ukraine.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
@@ -25,7 +25,7 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <img 
               src={logoImage} 
-              alt="8a88a.io логотип" 
+              alt="8a88a.io тризуб логотип" 
               className="w-10 h-10 object-contain"
             />
             <span className="font-bold text-xl text-foreground">{t.common.siteName}</span>

@@ -8,6 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
   const { t } = useLanguage();
+  
   const scrollToContact = () => {
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -17,11 +18,11 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Готові до 
-            <span className="text-gradient-ukraine"> цифрової свободи?</span>
+            {t.contact.title.split(' ').slice(0, 2).join(' ')} 
+            <span className="text-gradient-ukraine"> {t.contact.title.split(' ').slice(2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Залишайте заявку — обговоримо ваш проєкт і покажемо, як автоматизація змінить ваш бізнес
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -29,66 +30,66 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="border-2 border-primary/20 shadow-blue">
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">📩 Залишити заявку</CardTitle>
+              <CardTitle className="text-2xl text-primary">{t.contact.form.title}</CardTitle>
               <CardDescription>
-                Розкажіть про свій бізнес — ми знайдемо найкраще рішення
+                {t.contact.form.description}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="name">Ім'я *</Label>
-                  <Input id="name" placeholder="Ваше ім'я" />
+                  <Label htmlFor="name">{t.contact.form.fields.name}</Label>
+                  <Input id="name" placeholder={t.contact.form.placeholders.name} />
                 </div>
                 <div>
-                  <Label htmlFor="company">Компанія або проект</Label>
-                  <Input id="company" placeholder="Назва компанії або проекту" />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="phone">Телефон *</Label>
-                  <Input id="phone" placeholder="+380..." />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email *</Label>
-                  <Input id="email" type="email" placeholder="email@example.com" />
+                  <Label htmlFor="company">{t.contact.form.fields.company}</Label>
+                  <Input id="company" placeholder={t.contact.form.placeholders.company} />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="messenger">Зручний месенджер *</Label>
+                  <Label htmlFor="phone">{t.contact.form.fields.phone}</Label>
+                  <Input id="phone" placeholder={t.contact.form.placeholders.phone} />
+                </div>
+                <div>
+                  <Label htmlFor="email">{t.contact.form.fields.email}</Label>
+                  <Input id="email" type="email" placeholder={t.contact.form.placeholders.email} />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="messenger">{t.contact.form.fields.messenger}</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Оберіть месенджер" />
+                      <SelectValue placeholder={t.contact.form.placeholders.messenger} />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="telegram">Telegram</SelectItem>
                       <SelectItem value="whatsapp">WhatsApp</SelectItem>
                       <SelectItem value="viber">Viber</SelectItem>
                       <SelectItem value="email">Email</SelectItem>
-                      <SelectItem value="phone">Телефон</SelectItem>
+                      <SelectItem value="phone">Phone</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
-                  <Label htmlFor="messenger-contact">Логін / контакт *</Label>
-                  <Input id="messenger-contact" placeholder="@username, номер чи email" />
+                  <Label htmlFor="messenger-contact">{t.contact.form.fields.messengerContact}</Label>
+                  <Input id="messenger-contact" placeholder={t.contact.form.placeholders.messengerContact} />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="date">Зручна дата *</Label>
+                  <Label htmlFor="date">{t.contact.form.fields.date}</Label>
                   <Input id="date" type="date" />
                 </div>
                 <div>
-                  <Label htmlFor="time">Зручний час *</Label>
+                  <Label htmlFor="time">{t.contact.form.fields.time}</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Оберіть час" />
+                      <SelectValue placeholder={t.contact.form.fields.time.replace(' *', '')} />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="09:00">09:00</SelectItem>
@@ -107,35 +108,35 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <Label htmlFor="project">Опишіть ваш проєкт *</Label>
+                <Label htmlFor="project">{t.contact.form.fields.project}</Label>
                 <Textarea 
                   id="project" 
-                  placeholder="Розкажіть, що хочете автоматизувати, які є завдання та цілі..."
+                  placeholder={t.contact.form.placeholders.project}
                   className="min-h-24"
                 />
               </div>
               
               <Button variant="ukraine" size="lg" className="w-full">
-                🚀 Відправити заявку
+                {t.contact.form.button}
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
-                Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних згідно з GDPR
+                {t.contact.form.privacy}
               </p>
               
               {/* Security badges */}
               <div className="flex justify-center gap-4 mt-4 pt-4 border-t border-border">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <span className="text-green-600">🔒</span>
-                  <span>SSL захист</span>
+                  <span>{t.contact.form.security.ssl}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <span className="text-blue-600">🛡️</span>
-                  <span>GDPR</span>
+                  <span>{t.contact.form.security.gdpr}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <span className="text-primary">🇪🇺</span>
-                  <span>EU сервери</span>
+                  <span>{t.contact.form.security.servers}</span>
                 </div>
               </div>
             </CardContent>
@@ -144,7 +145,7 @@ const ContactSection = () => {
           {/* Our Contacts */}
           <Card className="bg-muted">
             <CardHeader>
-              <CardTitle className="text-xl">Наші контакти</CardTitle>
+              <CardTitle className="text-xl">{t.contact.info.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center gap-3">
@@ -155,44 +156,44 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">📧</span>
-                <a href="mailto:a8a@gmail.com" className="hover:text-primary transition-colors">
-                  a8a@gmail.com
+                <a href="mailto:info@8a88a.io" className="hover:text-primary transition-colors">
+                  info@8a88a.io
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-primary">🌐</span>
+                <a href="https://8a88a.io" className="hover:text-primary transition-colors">
+                  8a88a.io
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">👥</span>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  Facebook: 
+                  Facebook: @8a88a.io
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">🏢</span>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  LinkedIn: 
+                  LinkedIn: @8a88a.io
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">📸</span>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  Instagram: 
+                  Instagram: @8a88a.io
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">🎬</span>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  YouTube: 
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-primary">🎪</span>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  TikTok: 
+                  YouTube: @8a88a.io
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-primary">💬</span>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  WhatsApp: 
+                  WhatsApp: +380...
                 </a>
               </div>
             </CardContent>
@@ -202,7 +203,7 @@ const ContactSection = () => {
         {/* Trust & Security Section */}
         <div className="text-center mt-16 p-8 bg-muted rounded-2xl">
           <h3 className="text-xl font-semibold mb-6 text-primary">
-            Понад 100 українських бізнесів довіряють нам автоматизацію
+            {t.contact.info.trustTitle}
           </h3>
           
           {/* Trust badges */}
@@ -243,8 +244,7 @@ const ContactSection = () => {
           {/* Data protection notice */}
           <div className="mt-6 p-4 bg-background rounded-lg border border-primary/20">
             <p className="text-sm text-muted-foreground">
-              🔒 <strong>Захист даних:</strong> Всі дані клієнтів зберігаються на європейських серверах з шифруванням AES-256. 
-              Ми дотримуємося стандартів GDPR та ISO 27001 для максимального захисту вашої інформації.
+              {t.contact.info.dataProtection}
             </p>
           </div>
         </div>

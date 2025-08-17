@@ -12,64 +12,32 @@ const PackagesSection = () => {
 
   const packages = [
     {
-      name: "Воля",
+      name: t.packages.items.starter.name,
       flag: "🟦",
-      price: "15,000",
-      description: "Стартап-набір",
-      subtitle: "Для бізнесу, який тільки викликає, але має характер",
-      features: [
-        "Лендінг або простий сайт",
-        "Чат-бот на одній платформі",
-        "Базова CRM-система",
-        "1 IoT пристрій (сенсор)",
-        "Проста інтеграція",
-        "Місяць підтримки",
-        "Навчання роботи"
-      ],
+      price: t.packages.items.starter.price,
+      description: t.packages.items.starter.description,
+      subtitle: t.packages.items.starter.subtitle,
+      features: t.packages.items.starter.features,
       popular: false,
       color: "border-primary"
     },
     {
-      name: "Спротив", 
+      name: t.packages.items.professional.name,
       flag: "🟨",
-      price: "45,000",
-      description: "Повноцінна автоматизація",
-      subtitle: "Для тих, хто готовий змінювати правила гри",
-      features: [
-        "Корпоративний сайт або додаток",
-        "Боти на 2+ платформах",
-        "Повна CRM з аналітикою",
-        "До 5 IoT пристроїв",
-        "3 API інтеграції",
-        "AI-асистент для продажів",
-        "Медичні або волонтерські модулі",
-        "Мобільний додаток для контролю",
-        "3 місяці підтримки",
-        "Детальне навчання команди"
-      ],
+      price: t.packages.items.professional.price,
+      description: t.packages.items.professional.description,
+      subtitle: t.packages.items.professional.subtitle,
+      features: t.packages.items.professional.features,
       popular: true,
       color: "border-secondary"
     },
     {
-      name: "Відбудова",
-      flag: "🇺🇦", 
-      price: "120,000",
-      description: "Повна цифрова трансформація",
-      subtitle: "Для лідерів, які будують майбутнє України",
-      features: [
-        "Повна екосистема сайт + додатки",
-        "Повна автоматизація процесів",
-        "AI та ML рішення",
-        "Необмежена кількість IoT пристроїв",
-        "Кастомні IoT розробки",
-        "Медичні системи (телемедицина, EMR)",
-        "Волонтерські платформи",
-        "Кастомні розробки",
-        "Інтеграція всіх систем",
-        "Власний IoT хаб",
-        "12 місяців підтримки",
-        "Особистий менеджер проєкту"
-      ],
+      name: t.packages.items.enterprise.name,
+      flag: "🔷", 
+      price: t.packages.items.enterprise.price,
+      description: t.packages.items.enterprise.description,
+      subtitle: t.packages.items.enterprise.subtitle,
+      features: t.packages.items.enterprise.features,
       popular: false,
       color: "border-gradient-ukraine"
     }
@@ -80,10 +48,10 @@ const PackagesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient-ukraine">Патріотичні пакети</span>
+            <span className="text-gradient-ukraine">{t.packages.title}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Оберіть рівень автоматизації, який відповідає вашим цілям та можливостям
+            {t.packages.subtitle}
           </p>
         </div>
 
@@ -140,10 +108,10 @@ const PackagesSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Потрібно індивідуальне рішення? Маєте особливі вимоги?
+            {t.packages.customTitle}
           </p>
           <Button variant="ukraineYellow" size="lg" onClick={scrollToContact}>
-            💬 Обговорити індивідуальний проєкт
+            {t.packages.customButton}
           </Button>
         </div>
       </div>

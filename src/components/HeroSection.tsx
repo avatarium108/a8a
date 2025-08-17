@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroImage from "@/assets/hero-ukraine.jpg";
+import tridentImage from "@/assets/trident-ukraine.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
@@ -11,10 +12,10 @@ const HeroSection = () => {
   };
 
   const getTrident = () => {
-    if (locale === 'ua') return '🔱';
+    if (locale === 'ua') return <img src={tridentImage} alt="Тризуб України" className="w-32 h-32 mx-auto" />;
     if (locale === 'no') return '🇳🇴';
     if (locale === 'eu') return '🇪🇺';
-    return '🔱';
+    return <img src={tridentImage} alt="Тризуб України" className="w-32 h-32 mx-auto" />;
   };
 
   return (
@@ -32,8 +33,8 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
           {/* Flag or Trident */}
-          <div className="relative text-8xl mb-6">
-            <span className="animate-pulse">{getTrident()}</span>
+          <div className="relative mb-6 flex justify-center">
+            <div className="animate-pulse">{getTrident()}</div>
           </div>
           
           {/* Main title */}
