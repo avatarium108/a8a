@@ -1,73 +1,76 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: "🌐",
-      title: "Веб-сайти",
-      description: "Landing, корпоративні, інтернет-магазини",
-      details: "Сучасні сайти, що продають 24/7"
+      title: t.services.items.websites.title,
+      description: t.services.items.websites.description,
+      details: t.services.items.websites.details
     },
     {
       icon: "📱",
-      title: "Мобільні додатки",
-      description: "iOS, Android, гібридні рішення",
-      details: "Додатки для бізнесу та клієнтів"
+      title: t.services.items.mobile.title,
+      description: t.services.items.mobile.description,
+      details: t.services.items.mobile.details
     },
     {
       icon: "🤖",
-      title: "Чат-боти та агенти",
-      description: "Telegram, Viber, WhatsApp, Web",
-      details: "AI-агенти, що працюють замість менеджера"
+      title: t.services.items.chatbots.title,
+      description: t.services.items.chatbots.description,
+      details: t.services.items.chatbots.details
     },
     {
       icon: "🏥",
-      title: "Медичні рішення",
-      description: "Телемедицина, запис до лікарів, медкарти",
-      details: "Цифровізація медичних процесів"
+      title: t.services.items.medical.title,
+      description: t.services.items.medical.description,
+      details: t.services.items.medical.details
     },
     {
       icon: "🤝",
-      title: "Волонтерські платформи",
-      description: "Збір коштів, координація допомоги",
-      details: "IT для добрих справ та волонтерства"
+      title: t.services.items.volunteer.title,
+      description: t.services.items.volunteer.description,
+      details: t.services.items.volunteer.details
     },
     {
       icon: "🌐",
-      title: "IoT рішення", 
-      description: "Розумні пристрої, сенсори, моніторинг",
-      details: "Автоматизація фізичних процесів"
+      title: t.services.items.iot.title,
+      description: t.services.items.iot.description,
+      details: t.services.items.iot.details
     },
     {
       icon: "🧠", 
-      title: "AI-асистенти",
-      description: "GPT-помічники, ML-аналітика",
-      details: "AI, які ведуть клієнта від питання до покупки"
+      title: t.services.items.ai.title,
+      description: t.services.items.ai.description,
+      details: t.services.items.ai.details
     },
     {
       icon: "📊",
-      title: "CRM-системи",
-      description: "Управління клієнтами та пацієнтами",
-      details: "CRM, які допомагають організації рости"
+      title: t.services.items.crm.title,
+      description: t.services.items.crm.description,
+      details: t.services.items.crm.details
     },
     {
       icon: "🔗",
-      title: "Інтеграції",
-      description: "API, системи, процеси", 
-      details: "Щоб системи говорили одна з одною"
+      title: t.services.items.integrations.title,
+      description: t.services.items.integrations.description,
+      details: t.services.items.integrations.details
     }
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="services-section" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Що ми робимо: 
+            {t.services.title}
             <span className="text-gradient-ukraine"> рішення для вільного часу</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Створюємо цифрові рішення для бізнесу, медицини та волонтерства — від сайтів до AI-агентів
+            {t.services.subtitle}
           </p>
         </div>
         
@@ -98,9 +101,9 @@ const ServicesSection = () => {
         <div className="mt-16 flex justify-center">
           <Card className="border-secondary/20 hover:shadow-yellow transition-ukraine max-w-md">
             <CardHeader>
-              <CardTitle className="text-xl text-secondary text-center">📊 Розрахувати вартість</CardTitle>
+              <CardTitle className="text-xl text-secondary text-center">{t.services.calculator.title}</CardTitle>
               <CardDescription className="text-center">
-                Отримайте приблизну вартість автоматизації за 2 хвилини
+                {t.services.calculator.description}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -108,7 +111,7 @@ const ServicesSection = () => {
                 className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-3 rounded-lg font-semibold transition-ukraine"
                 onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Калькулятор вартості
+                {t.services.calculator.button}
               </button>
             </CardContent>
           </Card>

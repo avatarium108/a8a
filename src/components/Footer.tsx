@@ -1,4 +1,8 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
@@ -6,12 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">🇺🇦</span>
-              <h3 className="text-2xl font-bold">Automation.UA</h3>
+              <span className="text-3xl">🔷</span>
+              <h3 className="text-2xl font-bold">{t.common.siteName}</h3>
             </div>
             <p className="text-white/80 mb-4 leading-relaxed">
-              Українська команда з автоматизації бізнесу. Створюємо чат-боти, CRM, AI-рішення 
-              для компаній, які будують сильну Україну.
+              {t.footer.description}
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-white/60 hover:text-secondary transition-ukraine">

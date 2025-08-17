@@ -8,30 +8,53 @@ import successROI from "@/assets/success-roi-dashboard.jpg";
 import successVoiceBot from "@/assets/success-voice-bot-crm.jpg";
 import successAutomation from "@/assets/success-home-automation.jpg";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ResultsSection = () => {
+  const { t } = useLanguage();
 
   const results = [
     {
-      title: "Медицина",
-      metric: "+200%",
-      description: "більше пацієнтів",
+      title: t.results.items.medical.title,
+      metric: t.results.items.medical.metric,
+      description: t.results.items.medical.description,
       icon: "🏥",
       image: successUkraine
     },
     {
-      title: "Бізнес",
-      metric: "+500%", 
-      description: "більше заявок",
+      title: t.results.items.business.title,
+      metric: t.results.items.business.metric, 
+      description: t.results.items.business.description,
       icon: "📈",
       image: successROI
     },
     {
-      title: "Автоматизація",
-      metric: "95%",
-      description: "процесів автоматизовано",
+      title: t.results.items.automation.title,
+      metric: t.results.items.automation.metric,
+      description: t.results.items.automation.description,
       icon: "🤖",
       image: successIoT
+    },
+    {
+      title: t.results.items.iot.title,
+      metric: t.results.items.iot.metric,
+      description: t.results.items.iot.description,
+      icon: "🌐",
+      image: successAutomation
+    },
+    {
+      title: t.results.items.ai.title,
+      metric: t.results.items.ai.metric,
+      description: t.results.items.ai.description,
+      icon: "🧠",
+      image: successChatbot
+    },
+    {
+      title: t.results.items.crm.title,
+      metric: t.results.items.crm.metric,
+      description: t.results.items.crm.description,
+      icon: "📊",
+      image: successVoiceBot
     }
   ];
 
@@ -45,14 +68,14 @@ const ResultsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-muted">
+    <section id="results-section" className="py-16 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Наші <span className="text-gradient-ukraine">результати</span>
+            {t.results.title.split(' ')[0]} <span className="text-gradient-ukraine">{t.results.title.split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Реальні покращення для українського бізнесу
+            {t.results.subtitle}
           </p>
         </div>
 
@@ -121,7 +144,7 @@ const ResultsSection = () => {
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            🚀 Хочу такі результати
+            {t.results.cta}
           </button>
         </div>
       </div>
