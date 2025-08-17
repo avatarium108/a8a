@@ -6,7 +6,7 @@ const RussianWarshipPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-yellow-400 to-blue-800 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-red-900 flex items-center justify-center relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" 
@@ -27,23 +27,14 @@ const RussianWarshipPage = () => {
           <img 
             src="/lovable-uploads/917d445b-3c92-45e2-b9c3-c8582a414d3f.png" 
             alt="Український воїн і російський корабель" 
-            className="w-full rounded-lg shadow-2xl border-4 border-yellow-400"
+            className="w-full rounded-lg shadow-2xl border-4 border-red-500"
           />
         </div>
         
-        {/* Main Message */}
-        <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-pulse">
-          Русский военный корабль
-        </h1>
-        
-        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-300">
-          иди нах*й!
-        </h2>
-        
-        {/* Glory to Ukraine */}
+        {/* Glory to Nation */}
         <div className="text-2xl md:text-4xl font-semibold mb-8">
-          <div className="mb-2">Слава Україні!</div>
-          <div>Героям Слава!</div>
+          <div className="mb-2">Слава нації!</div>
+          <div>Смерть ворогам!</div>
         </div>
         
         {/* Decorative elements */}
@@ -63,7 +54,7 @@ const RussianWarshipPage = () => {
           </a>
           <a 
             href="#volunteer" 
-            className="inline-block bg-yellow-400/80 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-red-600/80 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
             💙💛 Волонтерка
           </a>
