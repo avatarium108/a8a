@@ -17,17 +17,26 @@ const RussianWarshipPage = () => {
       </div>
 
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        {/* Ukrainian Flag */}
+        {/* Neptune Missile */}
         <div className="text-8xl mb-8 animate-bounce">
-          🇺🇦
+          🚀
+        </div>
+        
+        {/* Historic Image */}
+        <div className="mb-8 max-w-2xl mx-auto">
+          <img 
+            src="/lovable-uploads/917d445b-3c92-45e2-b9c3-c8582a414d3f.png" 
+            alt="Український воїн і російський корабель" 
+            className="w-full rounded-lg shadow-2xl border-4 border-yellow-400"
+          />
         </div>
         
         {/* Main Message */}
-        <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight animate-pulse">
+        <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-pulse">
           Русский военный корабль
         </h1>
         
-        <h2 className="text-4xl md:text-6xl font-bold mb-8 text-yellow-300">
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-yellow-300">
           иди нах*й!
         </h2>
         
@@ -44,13 +53,19 @@ const RussianWarshipPage = () => {
           <span className="animate-spin">🌻</span>
         </div>
         
-        {/* Return link */}
-        <div className="mt-12">
+        {/* Return and Volunteer links */}
+        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="/ua" 
             className="inline-block bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
             Повернутись на 8a88a.io
+          </a>
+          <a 
+            href="#volunteer" 
+            className="inline-block bg-yellow-400/80 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+          >
+            💙💛 Волонтерка
           </a>
         </div>
         
