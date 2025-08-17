@@ -3,8 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import RussianWarshipPage from "./pages/RussianWarshipPage";
+import { SupportedLocale } from "@/lib/translations";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +18,27 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={
+            <LanguageProvider initialLocale="ua">
+              <Index />
+            </LanguageProvider>
+          } />
+          <Route path="/ua" element={
+            <LanguageProvider initialLocale="ua">
+              <Index />
+            </LanguageProvider>
+          } />
+          <Route path="/no" element={
+            <LanguageProvider initialLocale="no">
+              <Index />
+            </LanguageProvider>
+          } />
+          <Route path="/eu" element={
+            <LanguageProvider initialLocale="eu">
+              <Index />
+            </LanguageProvider>
+          } />
+          <Route path="/ru" element={<RussianWarshipPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

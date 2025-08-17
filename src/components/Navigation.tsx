@@ -1,9 +1,20 @@
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/a8a-logo.png";
+import logoImage from "@/assets/8a88a-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
+  const { locale, t } = useLanguage();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const changeLanguage = (newLocale: 'ua' | 'no' | 'eu' | 'ru') => {
+    if (newLocale === 'ru') {
+      window.location.href = '/ru';
+      return;
+    }
+    window.location.href = `/${newLocale}`;
   };
 
   return (
@@ -14,62 +25,116 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <img 
               src={logoImage} 
-              alt="a8a.smart логотип" 
+              alt="8a88a.io логотип" 
               className="w-10 h-10 object-contain"
             />
-            <span className="font-bold text-xl text-foreground">a8a.smart</span>
+            <span className="font-bold text-xl text-foreground">{t.common.siteName}</span>
+          </div>
+
+          {/* Language Selector */}
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={() => changeLanguage('ua')}
+              className={`text-2xl hover:scale-110 transition-transform ${locale === 'ua' ? 'scale-110' : ''}`}
+              title="Українська"
+            >
+              🇺🇦
+            </button>
+            <button 
+              onClick={() => changeLanguage('no')}
+              className={`text-2xl hover:scale-110 transition-transform ${locale === 'no' ? 'scale-110' : ''}`}
+              title="Norsk"
+            >
+              🇳🇴
+            </button>
+            <button 
+              onClick={() => changeLanguage('eu')}
+              className={`text-2xl hover:scale-110 transition-transform ${locale === 'eu' ? 'scale-110' : ''}`}
+              title="European Union"
+            >
+              🇪🇺
+            </button>
+            <button 
+              onClick={() => changeLanguage('ru')}
+              className="text-2xl hover:scale-110 transition-transform opacity-60 hover:opacity-100"
+              title="Русский военный корабль..."
+            >
+              🇷🇺
+            </button>
           </div>
 
           {/* Navigation Menu */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             <button 
               onClick={() => scrollToSection('mission-section')}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Про нас
+              {t.nav.about}
             </button>
             <button 
               onClick={() => scrollToSection('services-section')}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Послуги
+              {t.nav.services}
             </button>
             <button 
               onClick={() => scrollToSection('packages-section')}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Пакети
+              {t.nav.packages}
             </button>
             <button 
               onClick={() => scrollToSection('team-section')}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Команда
+              {t.nav.team}
             </button>
             <button 
               onClick={() => scrollToSection('contact-section')}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Контакти
+              {t.nav.contact}
             </button>
           </div>
 
-          {/* Donation CTA */}
+          {/* CTA Buttons */}
           <div className="flex items-center gap-3">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="hidden sm:flex items-center gap-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
-              onClick={() => window.open('https://savelife.in.ua/donate/', '_blank')}
-            >
-              💙💛 Донат ЗСУ
-            </Button>
+            {locale === 'ua' && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="hidden sm:flex items-center gap-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
+                onClick={() => window.open('https://savelife.in.ua/donate/', '_blank')}
+              >
+                🤝 {t.nav.volunteer}
+              </Button>
+            )}
+            {locale === 'no' && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="hidden sm:flex items-center gap-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                onClick={() => scrollToSection('contact-section')}
+              >
+                🤝 {t.nav.volunteer}
+              </Button>
+            )}
+            {locale === 'eu' && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="hidden sm:flex items-center gap-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white"
+                onClick={() => scrollToSection('contact-section')}
+              >
+                🤝 {t.nav.volunteer}
+              </Button>
+            )}
             <Button 
               variant="default" 
               size="sm"
               onClick={() => scrollToSection('contact-section')}
             >
-              Заявка
+              {t.nav.application}
             </Button>
           </div>
         </div>
