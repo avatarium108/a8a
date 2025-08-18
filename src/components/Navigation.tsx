@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/trident-ukraine.png";
+import logoImage from "/lovable-uploads/6fb3d41c-2218-4d1a-8fb2-743fdd5ab229.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
