@@ -22,8 +22,8 @@ const RussianWarshipPage = () => {
           <img 
             src="/lovable-uploads/917d445b-3c92-45e2-b9c3-c8582a414d3f.png" 
             alt="Український воїн і російський корабель" 
-            className="w-full rounded-lg shadow-2xl bg-transparent"
-            style={{ mixBlendMode: 'normal' }}
+            className="w-full"
+            style={{ background: 'transparent', mixBlendMode: 'multiply' }}
           />
         </div>
         
