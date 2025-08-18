@@ -6,7 +6,7 @@ const RussianWarshipPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-red-900 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-red-600 via-black to-red-700 flex items-center justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #dc2626 0%, #000000 30%, #000000 70%, #b91c1c 100%)' }}>
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" 
