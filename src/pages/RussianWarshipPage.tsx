@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const RussianWarshipPage = () => {
   useEffect(() => {
-    document.title = "Russian Warship - 8a88a.io";
+    document.title = "Russian Warship - para.tech";
   }, []);
 
   return (
@@ -17,30 +17,30 @@ const RussianWarshipPage = () => {
       </div>
 
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        {/* Neptune Missile */}
-        <div className="text-8xl mb-8 animate-bounce">
-          🚀
-        </div>
-        
         {/* Historic Image */}
         <div className="mb-8 max-w-2xl mx-auto">
           <img 
             src="/lovable-uploads/917d445b-3c92-45e2-b9c3-c8582a414d3f.png" 
             alt="Український воїн і російський корабель" 
-            className="w-full rounded-lg shadow-2xl border-4 border-red-500"
+            className="w-full rounded-lg shadow-2xl"
           />
         </div>
         
-        {/* Glory to Nation */}
+        {/* Glory to Nation and Decorative elements */}
         <div className="text-2xl md:text-4xl font-semibold mb-8">
           <div className="mb-2">Слава нації!</div>
           <div>Смерть ворогам!</div>
         </div>
         
-        {/* Decorative elements */}
+        {/* Decorative elements with trident */}
         <div className="flex justify-center items-center gap-4 text-4xl mb-8">
           <span className="animate-spin">🌻</span>
           <span className="animate-pulse">💙💛</span>
+          <img 
+            src="/lovable-uploads/6fb3d41c-2218-4d1a-8fb2-743fdd5ab229.png" 
+            alt="Тризуб України" 
+            className="w-12 h-12 animate-pulse"
+          />
           <span className="animate-spin">🌻</span>
         </div>
         
@@ -50,13 +50,13 @@ const RussianWarshipPage = () => {
             href="/ua" 
             className="inline-block bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
-            Повернутись на 8a88a.io
+            Повернутись на para.tech
           </a>
           <a 
             href="#volunteer" 
             className="inline-block bg-red-600/80 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
-            💙💛 Волонтерка
+            💙💛 Волонтеримо ся
           </a>
         </div>
         
@@ -64,22 +64,6 @@ const RussianWarshipPage = () => {
         <div className="mt-16 text-lg opacity-80">
           <p>Підтримаємо Україну разом! 🇺🇦</p>
         </div>
-      </div>
-      
-      {/* Animated particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          />
-        ))}
       </div>
     </div>
   );
