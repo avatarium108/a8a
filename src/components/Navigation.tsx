@@ -98,7 +98,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Buttons - максимально вправо */}
-          <div className="flex items-center gap-3 flex-shrink-0 ml-auto">
+          <div className="flex items-center gap-3 flex-shrink-0 ml-auto mr-2">
             {locale === 'ua' && (
               <Button 
                 variant="outline" 
