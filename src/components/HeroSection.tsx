@@ -51,7 +51,7 @@ const HeroSection = () => {
             </p>
             {locale === 'ua' && (
               <div 
-                className="absolute -top-5 text-black font-bold text-sm"
+                className="absolute top-10 text-black font-bold text-sm"
                 style={{ 
                   transform: 'rotate(-25deg)',
                   fontFamily: 'marker, sans-serif',
