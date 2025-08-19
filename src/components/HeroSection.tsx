@@ -57,7 +57,7 @@ const HeroSection = () => {
                   fontFamily: 'marker, sans-serif',
                   textShadow: '2px 2px 0px rgba(255,255,255,0.9)',
                   lineHeight: '1.1',
-                  left: '27rem' // 17 см правіше від початку речення
+                  left: '7rem' // пересунуто лівіше
                 }}
               >
                 <div className="bg-yellow-400 px-2 py-1 rounded-md">{t.common.supportNote}</div>
