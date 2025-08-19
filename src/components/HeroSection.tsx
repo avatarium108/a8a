@@ -32,10 +32,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          {/* Flag or Trident */}
-          <div className="relative mb-6 flex justify-center">
-            <div>{getTrident()}</div>
-          </div>
           
           {/* Main title */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
