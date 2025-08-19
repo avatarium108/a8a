@@ -34,7 +34,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Flag or Trident */}
           <div className="relative mb-6 flex justify-center">
-            <div className="animate-pulse">{getTrident()}</div>
+            <div>{getTrident()}</div>
           </div>
           
           {/* Main title */}
