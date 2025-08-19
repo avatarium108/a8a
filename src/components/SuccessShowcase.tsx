@@ -141,13 +141,13 @@ const SuccessShowcase = () => {
   };
 
   const getTitle = () => {
-    if (locale === 'ua') return "автоматизуємо українські компанії";
+    if (locale === 'ua') return "Успішні рішення";
     if (locale === 'no') return "Våre vellykkede løsninger";
     return "Our Successful Solutions";
   };
 
   const getSubtitle = () => {
-    if (locale === 'ua') return "успішні проекти";
+    if (locale === 'ua') return "Реальні результати українських компаній, що довірилися нашим рішенням";
     if (locale === 'no') return "Reelle resultater fra norske bedrifter som stolte på våre løsninger";
     return "Real results from European companies that trusted our solutions";
   };
