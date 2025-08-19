@@ -60,7 +60,7 @@ const HeroSection = () => {
                   left: '-3.5rem' // пересунуто на 32 см правіше
                 }}
               >
-                <div className="bg-yellow-400 px-2 py-1 rounded-md">{t.common.supportNote}</div>
+                <div className="bg-yellow-400 px-2 py-1 rounded-md whitespace-pre-line">{t.common.supportNote}</div>
               </div>
             )}
           </div>

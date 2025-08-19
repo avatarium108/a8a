@@ -397,7 +397,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     },
     common: {
       siteName: "para.tech",
-      supportNote: "За підтримки:",
+      supportNote: "Дані на європейських серверах.\nВідповідність GDPR, ISO 27001, SOC 2 протоколам безпеки",
       year: "2025"
     }
   },
