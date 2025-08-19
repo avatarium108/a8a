@@ -11,6 +11,8 @@ export interface TranslationContent {
     contact: string;
     volunteer: string;
     application: string;
+    login: string;
+    dashboard: string;
   };
   // Hero section
   hero: {
@@ -182,11 +184,61 @@ export interface TranslationContent {
       terms: string;
     };
   };
+  // Authentication
+  auth: {
+    login: {
+      title: string;
+      subtitle: string;
+      email: string;
+      password: string;
+      forgotPassword: string;
+      loginButton: string;
+      noAccount: string;
+      signUp: string;
+    };
+    signup: {
+      title: string;
+      subtitle: string;
+      fullName: string;
+      email: string;
+      password: string;
+      confirmPassword: string;
+      signupButton: string;
+      hasAccount: string;
+      login: string;
+    };
+    dashboard: {
+      title: string;
+      welcome: string;
+      profile: {
+        title: string;
+        fullName: string;
+        company: string;
+        phone: string;
+        email: string;
+        updateButton: string;
+        updated: string;
+      };
+      logout: string;
+    };
+    messages: {
+      loginSuccess: string;
+      signupSuccess: string;
+      logoutSuccess: string;
+      profileUpdated: string;
+      invalidCredentials: string;
+      userExists: string;
+      passwordMismatch: string;
+      weakPassword: string;
+      fillRequired: string;
+    };
+  };
   // Common
   common: {
     siteName: string;
     supportNote: string;
     year: string;
+    loading: string;
   };
 }
 
@@ -199,7 +251,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       team: "Команда",
       contact: "Контакти",
       volunteer: "💙💛 Волонтеримо ся",
-      application: "Заявка"
+      application: "Заявка",
+      login: "Вхід",
+      dashboard: "Кабінет"
     },
     hero: {
       title: "Автоматизуємо український бізнес",
@@ -398,7 +452,56 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     common: {
       siteName: "para.tech",
       supportNote: "За підтримки:",
-      year: "2025"
+      year: "2025",
+      loading: "Завантаження..."
+    },
+    auth: {
+      login: {
+        title: "Вхід",
+        subtitle: "Увійдіть до свого акаунту",
+        email: "Email",
+        password: "Пароль",
+        forgotPassword: "Забули пароль?",
+        loginButton: "Увійти",
+        noAccount: "Немає акаунту?",
+        signUp: "Зареєструватись"
+      },
+      signup: {
+        title: "Реєстрація",
+        subtitle: "Створіть новий акаунт",
+        fullName: "Повне ім'я",
+        email: "Email",
+        password: "Пароль",
+        confirmPassword: "Підтвердити пароль",
+        signupButton: "Зареєструватись",
+        hasAccount: "Вже є акаунт?",
+        login: "Увійти"
+      },
+      dashboard: {
+        title: "Особистий кабінет",
+        welcome: "Вітаємо",
+        profile: {
+          title: "Профіль",
+          fullName: "Повне ім'я",
+          company: "Компанія",
+          phone: "Телефон",
+          email: "Email",
+          updateButton: "Оновити",
+          updated: "Профіль оновлено"
+        },
+        logout: "Вийти"
+      },
+      messages: {
+        loginSuccess: "Успішний вхід!",
+        signupSuccess: "Реєстрація успішна! Перевірте email для підтвердження.",
+        logoutSuccess: "Ви вийшли з системи",
+        profileUpdated: "Профіль оновлено",
+        invalidCredentials: "Неправильний email або пароль",
+        userExists: "Користувач з таким email вже існує",
+        passwordMismatch: "Паролі не збігаються",
+        weakPassword: "Пароль має бути мінімум 6 символів",
+        fillRequired: "Заповніть всі обов'язкові поля"
+      }
     }
   },
   no: {
@@ -409,7 +512,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       team: "Team",
       contact: "Kontakt",
       volunteer: "🇳🇴 Støtt Norge",
-      application: "Søknad"
+      application: "Søknad",
+      login: "Logg inn",
+      dashboard: "Dashboard"
     },
     hero: {
       title: "Digitaliserer norsk næringsliv",
@@ -608,7 +713,56 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     common: {
       siteName: "para.tech",
       supportNote: "Med støtte fra:",
-      year: "2025"
+      year: "2025",
+      loading: "Laster..."
+    },
+    auth: {
+      login: {
+        title: "Logg inn",
+        subtitle: "Logg inn på kontoen din",
+        email: "E-post",
+        password: "Passord",
+        forgotPassword: "Glemt passord?",
+        loginButton: "Logg inn",
+        noAccount: "Har ikke konto?",
+        signUp: "Registrer deg"
+      },
+      signup: {
+        title: "Registrer",
+        subtitle: "Opprett ny konto",
+        fullName: "Fullt navn",
+        email: "E-post",
+        password: "Passord",
+        confirmPassword: "Bekreft passord",
+        signupButton: "Registrer deg",
+        hasAccount: "Har allerede konto?",
+        login: "Logg inn"
+      },
+      dashboard: {
+        title: "Dashboard",
+        welcome: "Velkommen",
+        profile: {
+          title: "Profil",
+          fullName: "Fullt navn",
+          company: "Selskap",
+          phone: "Telefon",
+          email: "E-post",
+          updateButton: "Oppdater",
+          updated: "Profil oppdatert"
+        },
+        logout: "Logg ut"
+      },
+      messages: {
+        loginSuccess: "Vellykket innlogging!",
+        signupSuccess: "Registrering vellykket! Sjekk e-post for bekreftelse.",
+        logoutSuccess: "Du er logget ut",
+        profileUpdated: "Profil oppdatert",
+        invalidCredentials: "Feil e-post eller passord",
+        userExists: "Bruker med denne e-posten eksisterer allerede",
+        passwordMismatch: "Passordene stemmer ikke overens",
+        weakPassword: "Passordet må være minst 6 tegn",
+        fillRequired: "Fyll ut alle obligatoriske felt"
+      }
     }
   },
   eu: {
@@ -619,7 +773,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       team: "Team", 
       contact: "Contact",
       volunteer: "🇪🇺 Support EU",
-      application: "Apply"
+      application: "Apply",
+      login: "Login",
+      dashboard: "Dashboard"
     },
     hero: {
       title: "Digitalizing European Business",
@@ -818,7 +974,56 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     common: {
       siteName: "para.tech",
       supportNote: "Supported by:",
-      year: "2025"
+      year: "2025",
+      loading: "Loading..."
+    },
+    auth: {
+      login: {
+        title: "Login",
+        subtitle: "Sign in to your account",
+        email: "Email",
+        password: "Password",
+        forgotPassword: "Forgot password?",
+        loginButton: "Sign In",
+        noAccount: "No account?",
+        signUp: "Sign Up"
+      },
+      signup: {
+        title: "Sign Up",
+        subtitle: "Create new account",
+        fullName: "Full Name",
+        email: "Email",
+        password: "Password",
+        confirmPassword: "Confirm Password",
+        signupButton: "Sign Up",
+        hasAccount: "Already have account?",
+        login: "Sign In"
+      },
+      dashboard: {
+        title: "Dashboard",
+        welcome: "Welcome",
+        profile: {
+          title: "Profile",
+          fullName: "Full Name",
+          company: "Company",
+          phone: "Phone",
+          email: "Email",
+          updateButton: "Update",
+          updated: "Profile updated"
+        },
+        logout: "Sign Out"
+      },
+      messages: {
+        loginSuccess: "Login successful!",
+        signupSuccess: "Registration successful! Check email for confirmation.",
+        logoutSuccess: "You have been signed out",
+        profileUpdated: "Profile updated",
+        invalidCredentials: "Invalid email or password",
+        userExists: "User with this email already exists",
+        passwordMismatch: "Passwords don't match",
+        weakPassword: "Password must be at least 6 characters",
+        fillRequired: "Fill in all required fields"
+      }
     }
   },
   ru: {
@@ -829,7 +1034,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       team: "",
       contact: "",
       volunteer: "",
-      application: ""
+      application: "",
+      login: "",
+      dashboard: ""
     },
     hero: {
       title: "Русский военный корабль",
@@ -996,7 +1203,56 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     common: {
       siteName: "para.tech",
       supportNote: "",
-      year: "2025"
+      year: "2025",
+      loading: ""
+    },
+    auth: {
+      login: {
+        title: "",
+        subtitle: "",
+        email: "",
+        password: "",
+        forgotPassword: "",
+        loginButton: "",
+        noAccount: "",
+        signUp: ""
+      },
+      signup: {
+        title: "",
+        subtitle: "",
+        fullName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        signupButton: "",
+        hasAccount: "",
+        login: ""
+      },
+      dashboard: {
+        title: "",
+        welcome: "",
+        profile: {
+          title: "",
+          fullName: "",
+          company: "",
+          phone: "",
+          email: "",
+          updateButton: "",
+          updated: ""
+        },
+        logout: ""
+      },
+      messages: {
+        loginSuccess: "",
+        signupSuccess: "",
+        logoutSuccess: "",
+        profileUpdated: "",
+        invalidCredentials: "",
+        userExists: "",
+        passwordMismatch: "",
+        weakPassword: "",
+        fillRequired: ""
+      }
     }
   }
 };

@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import logoImage from "/lovable-uploads/6fb3d41c-2218-4d1a-8fb2-743fdd5ab229.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
+import { User, LogIn } from "lucide-react";
 
 const Navigation = () => {
   const { locale, t } = useLanguage();
+  const { user, loading } = useAuth();
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -99,6 +102,31 @@ const Navigation = () => {
 
           {/* CTA Buttons - максимально вправо */}
           <div className="flex items-center gap-3 flex-shrink-0 ml-auto mr-2">
+            {/* Auth Button */}
+            {!loading && (
+              user ? (
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.location.href = '/dashboard'}
+                  className="flex items-center gap-2"
+                >
+                  <User className="h-4 w-4" />
+                  {t.nav.dashboard}
+                </Button>
+              ) : (
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.location.href = '/auth'}
+                  className="flex items-center gap-2"
+                >
+                  <LogIn className="h-4 w-4" />
+                  {t.nav.login}
+                </Button>
+              )
+            )}
+
             {locale === 'ua' && (
               <Button 
                 variant="outline" 

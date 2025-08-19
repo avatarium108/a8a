@@ -8,10 +8,12 @@ import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import AIManagerChatbot from "@/components/AIManagerChatbot";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <HeroSection />
       <SuccessShowcase />
       <MissionSection />
