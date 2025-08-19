@@ -8,10 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Mail, Github } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const AuthPage = () => {
-  const { signIn, signUp, user, loading } = useAuth();
+  const { signIn, signUp, signInWithGoogle, signInWithGitHub, user, loading } = useAuth();
   const { t } = useLanguage();
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -139,6 +140,36 @@ const AuthPage = () => {
     setIsLoading(false);
   };
 
+  const handleGoogleLogin = async () => {
+    setIsLoading(true);
+    const { error } = await signInWithGoogle();
+    
+    if (error) {
+      toast({
+        title: "Помилка",
+        description: "Не вдалося увійти через Google",
+        variant: "destructive"
+      });
+      setIsLoading(false);
+    }
+    // Don't set loading to false here - the redirect will happen
+  };
+
+  const handleGitHubLogin = async () => {
+    setIsLoading(true);
+    const { error } = await signInWithGitHub();
+    
+    if (error) {
+      toast({
+        title: "Помилка", 
+        description: "Не вдалося увійти через GitHub",
+        variant: "destructive"
+      });
+      setIsLoading(false);
+    }
+    // Don't set loading to false here - the redirect will happen
+  };
+
   return (
     <div className="min-h-screen bg-gradient-subtle flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
@@ -156,38 +187,75 @@ const AuthPage = () => {
             </TabsList>
 
             <TabsContent value="login">
-              <form onSubmit={handleLogin} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="login-email">Email</Label>
-                  <Input
-                    id="login-email"
-                    type="email"
-                    value={loginData.email}
-                    onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
-                    placeholder="your@email.com"
-                    required
-                  />
+              <div className="space-y-4">
+                {/* Social Login */}
+                <div className="space-y-3">
+                  <Button
+                    onClick={handleGoogleLogin}
+                    variant="outline"
+                    className="w-full flex items-center gap-2"
+                    disabled={isLoading}
+                  >
+                    <Mail className="h-4 w-4" />
+                    Увійти через Google
+                  </Button>
+                  
+                  <Button
+                    onClick={handleGitHubLogin}
+                    variant="outline"
+                    className="w-full flex items-center gap-2"
+                    disabled={isLoading}
+                  >
+                    <Github className="h-4 w-4" />
+                    Увійти через GitHub
+                  </Button>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="login-password">Пароль</Label>
-                  <Input
-                    id="login-password"
-                    type="password"
-                    value={loginData.password}
-                    onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
-                    placeholder="••••••••"
-                    required
-                  />
+
+                <div className="relative">
+                  <div className="absolute inset-0 flex items-center">
+                    <Separator />
+                  </div>
+                  <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-card px-2 text-muted-foreground">
+                      або
+                    </span>
+                  </div>
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full btn-ukraine ukraine-gradient"
-                  disabled={isLoading}
-                >
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Увійти
-                </Button>
-              </form>
+
+                {/* Email/Password Login */}
+                <form onSubmit={handleLogin} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="login-email">Email</Label>
+                    <Input
+                      id="login-email"
+                      type="email"
+                      value={loginData.email}
+                      onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="login-password">Пароль</Label>
+                    <Input
+                      id="login-password"
+                      type="password"
+                      value={loginData.password}
+                      onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    className="w-full btn-ukraine ukraine-gradient"
+                    disabled={isLoading}
+                  >
+                    {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                    Увійти
+                  </Button>
+                </form>
+              </div>
             </TabsContent>
 
             <TabsContent value="signup">
