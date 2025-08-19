@@ -57,7 +57,7 @@ const RussianWarshipPage = () => {
             href="#volunteer" 
             className="inline-block bg-red-600/80 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
-            💙💛 Волонтеримо ся
+            Волонтеримося ++
           </a>
         </div>
         

@@ -250,7 +250,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       packages: "Пакети",
       team: "Команда",
       contact: "Контакти",
-      volunteer: "💙💛 Волонтеримо ся",
+      volunteer: "Волонтеримося ++",
       application: "Заявка",
       login: "Вхід",
       dashboard: "Кабінет"
