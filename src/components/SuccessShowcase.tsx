@@ -141,7 +141,7 @@ const SuccessShowcase = () => {
   };
 
   const getTitle = () => {
-    if (locale === 'ua') return "Наші успішні рішення";
+    if (locale === 'ua') return "Успішні рішення";
     if (locale === 'no') return "Våre vellykkede løsninger";
     return "Our Successful Solutions";
   };

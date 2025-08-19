@@ -20,19 +20,19 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between w-full">
+          {/* Logo - максимально вліво */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <img 
               src={logoImage} 
-              alt="8a88a.io тризуб логотип" 
+              alt="para.tech тризуб логотип" 
               className="w-10 h-10 object-contain"
             />
             <span className="font-bold text-xl text-foreground">{t.common.siteName}</span>
           </div>
 
-          {/* Language Selector */}
-          <div className="flex items-center gap-2">
+          {/* Language Selector - центр */}
+          <div className="flex items-center gap-2 flex-shrink-0">
             <button 
               onClick={() => changeLanguage('ua')}
               className={`text-2xl hover:scale-110 transition-transform ${locale === 'ua' ? 'scale-110' : ''}`}
@@ -97,8 +97,8 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-3">
+          {/* CTA Buttons - максимально вправо */}
+          <div className="flex items-center gap-3 flex-shrink-0 ml-auto">
             {locale === 'ua' && (
               <Button 
                 variant="outline" 

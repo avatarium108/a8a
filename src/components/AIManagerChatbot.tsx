@@ -120,8 +120,11 @@ const AIManagerChatbot = () => {
             <span className="text-xs font-medium">Чат</span>
           </div>
         </Button>
-        <div className="absolute -top-2 -left-8">
-          <Badge variant="secondary" className="bg-gradient-to-r from-green-500 to-green-600 text-white text-sm px-4 py-2 shadow-lg rounded-full border-2 border-white/30">
+        <div 
+          className="absolute -top-2 -left-8 cursor-pointer"
+          onClick={() => setIsOpen(true)}
+        >
+          <Badge variant="secondary" className="bg-gradient-to-r from-green-500 to-green-600 text-white text-sm px-4 py-2 shadow-lg rounded-full border-2 border-white/30 hover:from-green-600 hover:to-green-700 transition-all duration-300">
             💬 Асистент
           </Badge>
         </div>

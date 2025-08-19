@@ -198,13 +198,13 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       packages: "Пакети",
       team: "Команда",
       contact: "Контакти",
-      volunteer: "💙💛 Волонтеримося",
+      volunteer: "💙💛 Волонтеримо ся",
       application: "Заявка"
     },
     hero: {
       title: "Автоматизуємо український бізнес",
       subtitle: "Спеціалізований продукт для автоматизації: сайти, боти, CRM, AI та IoT",
-      mission: "a88a.tech — наш спеціалізований продукт для автоматизації українського бізнесу. Частина більшого портфоліо технологічних рішень, створена для тих, хто будує сильну Україну через інновації.",
+      mission: "para.tech — наш спеціалізований продукт для автоматизації українського бізнесу. Частина більшого портфоліо технологічних рішень, створена для тих, хто будує сильну Україну через інновації.",
       cta: {
         application: "🔵 Залишити заявку",
         test: "🟡 Протестувати рішення", 
@@ -212,9 +212,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       },
       features: {
         service: "100% український сервіс",
-        servers: "Дані на європейських серверах",
+        servers: "Дані на європейських серверах, відповідність GDPR, ISO 27001, SOC 2 протоколам безпеки",
         team: "Команда з 🏛️ Києва, 🦁 Львова, 🌾 Рівного, ⚡ Дніпра та ⚔️ Запоріжжя",
-        security: "Відповідність GDPR, ISO 27001, SOC 2 протоколам безпеки"
+        security: ""
       }
     },
     mission: {
@@ -227,7 +227,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     services: {
-      title: "Що робить a88a.tech:",
+      title: "Що робить para.tech:",
       subtitle: "Спеціалізуємося на автоматизації українського бізнесу — від простих сайтів до складних AI-систем",
       calculator: {
         title: "📊 Розрахувати вартість",
@@ -374,13 +374,13 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         }
       },
       info: {
-        title: "Наші контакти",
+        title: "Контакти para.tech",
         trustTitle: "Понад 100 українських бізнесів довіряють нам автоматизацію",
         dataProtection: "🔒 Захист даних: Всі дані клієнтів зберігаються на європейських серверах з шифруванням AES-256. Ми дотримуємося стандартів GDPR та ISO 27001 для максимального захисту вашої інформації."
       }
     },
     footer: {
-      description: "a88a.tech — спеціалізований продукт для автоматизації українського бізнесу. Частина портфоліо інноваційних рішень для сильної України.",
+      description: "para.tech — спеціалізований продукт для автоматизації українського бізнесу. Частина портфоліо інноваційних рішень для сильної України.",
       services: {
         title: "Послуги",
         items: ["Чат-боти", "CRM-системи", "AI-асистенти", "Автоматизація", "Інтеграції"]
@@ -389,14 +389,14 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         title: "Компанія",
         items: ["Про нас", "Кейси", "Блог", "Кар'єра", "Контакти"]
       },
-      copyright: "© 2025 a88a.tech. Всі права захищені. Слава Україні! 🇺🇦",
+      copyright: "© 2025 para.tech. Всі права захищені. Слава Україні! 🇺🇦",
       links: {
         privacy: "Політика конфіденційності",
         terms: "Умови використання"
       }
     },
     common: {
-      siteName: "a88a.tech",
+      siteName: "para.tech",
       supportNote: "За підтримки:",
       year: "2025"
     }
@@ -590,7 +590,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     footer: {
-      description: "Norsk team for bedriftsautomatisering. Lager chatbots, CRM, AI-løsninger for selskaper som bygger et sterkt Norge.",
+      description: "para.tech — norsk team for bedriftsautomatisering. Lager chatbots, CRM, AI-løsninger for selskaper som bygger et sterkt Norge.",
       services: {
         title: "Tjenester",
         items: ["Chatbots", "CRM-systemer", "AI-assistenter", "Automatisering", "Integrasjoner"]
@@ -599,14 +599,14 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         title: "Selskap",
         items: ["Om oss", "Caser", "Blogg", "Karriere", "Kontakt"]
       },
-      copyright: "© 2025 8a88a.io. Alle rettigheter forbeholdt. 🇳🇴",
+      copyright: "© 2025 para.tech. Alle rettigheter forbeholdt. 🇳🇴",
       links: {
         privacy: "Personvernerklæring",
         terms: "Brukervilkår"
       }
     },
     common: {
-      siteName: "8a88a.io",
+      siteName: "para.tech",
       supportNote: "Med støtte fra:",
       year: "2025"
     }
@@ -800,7 +800,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     footer: {
-      description: "European team for business automation. Creating chatbots, CRM, AI solutions for companies building strong Europe.",
+      description: "para.tech — European team for business automation. Creating chatbots, CRM, AI solutions for companies building strong Europe.",
       services: {
         title: "Services",
         items: ["Chatbots", "CRM systems", "AI assistants", "Automation", "Integrations"]
@@ -809,14 +809,14 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         title: "Company",
         items: ["About us", "Cases", "Blog", "Careers", "Contact"]
       },
-      copyright: "© 2025 8a88a.io. All rights reserved. 🇪🇺",
+      copyright: "© 2025 para.tech. All rights reserved. 🇪🇺",
       links: {
         privacy: "Privacy Policy",
         terms: "Terms of Service"
       }
     },
     common: {
-      siteName: "8a88a.io",
+      siteName: "para.tech",
       supportNote: "Supported by:",
       year: "2025"
     }
@@ -994,7 +994,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     common: {
-      siteName: "8a88a.io",
+      siteName: "para.tech",
       supportNote: "",
       year: "2025"
     }

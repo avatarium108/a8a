@@ -40,7 +40,7 @@ const RussianWarshipPage = () => {
           <img 
             src="/lovable-uploads/6fb3d41c-2218-4d1a-8fb2-743fdd5ab229.png" 
             alt="Тризуб України" 
-            className="w-12 h-12 animate-pulse"
+            className="w-12 h-12"
           />
           <span className="animate-spin">🌻</span>
         </div>
