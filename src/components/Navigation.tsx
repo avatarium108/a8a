@@ -36,7 +36,7 @@ const Navigation = () => {
             </div>
 
             {/* Navigation Menu - посередині */}
-            <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 ml-16">
+            <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 ml-60">
               <button 
                 onClick={() => scrollToSection('mission-section')}
                 className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
