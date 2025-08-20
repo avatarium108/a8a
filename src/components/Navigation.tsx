@@ -139,7 +139,7 @@ const Navigation = () => {
       </nav>
 
       {/* Language Selector - правий кут під меню */}
-      <div className="fixed top-24 right-4 z-40 bg-background/95 backdrop-blur-sm border border-border rounded-lg p-3 shadow-lg">
+      <div className="fixed top-24 right-4 z-40">
         <div className="flex items-center gap-3">
           <button 
             onClick={() => changeLanguage('ua')}
