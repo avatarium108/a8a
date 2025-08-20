@@ -59,12 +59,19 @@ const PackagesSection = () => {
           {packages.map((pkg, index) => (
             <Card 
               key={index} 
-              className={`relative ${pkg.color} ${pkg.popular ? 'ring-2 ring-primary shadow-ukraine' : ''} hover:shadow-blue transition-ukraine`}
+              className={`relative overflow-hidden border-2 transition-all duration-300 hover:shadow-2xl ${pkg.popular ? 'border-primary scale-105 shadow-xl ring-4 ring-primary/20' : 'border-border hover:border-primary/50'}`}
             >
               {pkg.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1">
-                  Найпопулярніший 🏆
-                </Badge>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-red-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                    🔥 Найпопулярніший • -20% до кінця місяця
+                  </div>
+                </div>
+              )}
+              {pkg.popular && (
+                <div className="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                  АКЦІЯ
+                </div>
               )}
               
               <CardHeader className="text-center pb-4">

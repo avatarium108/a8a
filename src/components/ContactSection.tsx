@@ -116,9 +116,25 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button variant="ukraine" size="lg" className="w-full">
-                {t.contact.form.button}
+              <Button variant="ukraine" size="lg" className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 text-lg transform hover:scale-105 transition-all duration-300">
+                🚀 {t.contact.form.button}
               </Button>
+              
+              {/* Trust indicators */}
+              <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
+                <div className="text-center">
+                  <div className="text-2xl mb-1">🔒</div>
+                  <div className="text-xs font-semibold">SSL захист</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-1">📞</div>
+                  <div className="text-xs font-semibold">24/7 підтримка</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-1">💰</div>
+                  <div className="text-xs font-semibold">Гарантія повернення</div>
+                </div>
+              </div>
               
               <p className="text-xs text-muted-foreground text-center">
                 {t.contact.form.privacy}

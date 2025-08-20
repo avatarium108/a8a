@@ -107,21 +107,60 @@ const HeroSection = () => {
             {t.hero.mission}
           </p>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="ukraineYellow" size="lg" className="w-full sm:w-auto text-lg px-8 py-4" onClick={scrollToContact}>
-              {t.hero.cta.application}
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary" onClick={scrollToContact}>
-              {t.hero.cta.test}
-            </Button>
-            <Button variant="ghost" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 text-white hover:bg-white/20" onClick={scrollToContact}>
-              {t.hero.cta.calculate}
-            </Button>
+          {/* Primary CTA with urgency */}
+          <div className="relative mb-8">
+            {/* Urgency badge */}
+            <div className="inline-flex items-center gap-2 bg-red-500/90 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+              ⚡ Обмежена пропозиція до кінця місяця
+            </div>
+            
+            {/* Main CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                variant="ukraineYellow" 
+                size="lg" 
+                className="w-full sm:w-auto text-xl px-12 py-6 font-bold transform hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30" 
+                onClick={scrollToContact}
+              >
+                🚀 {t.hero.cta.application}
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full sm:w-auto text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary font-semibold" 
+                onClick={scrollToContact}
+              >
+                {t.hero.cta.calculate}
+              </Button>
+            </div>
+            
+            {/* Trust indicator */}
+            <p className="text-sm opacity-75 mt-4">
+              ✅ Безкоштовна консультація • 💼 Реальні кейси • 🔒 Гарантія результату
+            </p>
+          </div>
+          
+          {/* Social proof and guarantees */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+              <span className="text-2xl mb-2">🏆</span>
+              <div className="font-bold">500+ проєктів</div>
+              <div className="opacity-80">Успішно реалізовано</div>
+            </div>
+            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+              <span className="text-2xl mb-2">⭐</span>
+              <div className="font-bold">4.9/5 рейтинг</div>
+              <div className="opacity-80">Від наших клієнтів</div>
+            </div>
+            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
+              <span className="text-2xl mb-2">🔒</span>
+              <div className="font-bold">100% гарантія</div>
+              <div className="opacity-80">Повернення коштів</div>
+            </div>
           </div>
           
           {/* Features */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm opacity-90">
             <div className="flex items-center justify-center gap-2">
               <span className="text-secondary">🧷</span>
               <span>{t.hero.features.service}</span>
@@ -133,10 +172,6 @@ const HeroSection = () => {
             <div className="flex items-center justify-center gap-2 md:col-span-2">
               <span className="text-secondary">💙</span>
               <span>{t.hero.features.team}</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 md:col-span-2">
-              <span className="text-secondary">🔒</span>
-              <span>{t.hero.features.security}</span>
             </div>
           </div>
         </div>
