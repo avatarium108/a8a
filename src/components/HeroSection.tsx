@@ -41,24 +41,24 @@ const HeroSection = () => {
             <h1 className="relative text-4xl md:text-6xl lg:text-7xl font-black mb-2 leading-tight">
               {/* Main text with special styling */}
               <div className="relative inline-block">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
                   Автоматизуємо
                 </span>
                 {/* Underline effect */}
-                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
               </div>
               
               <div className="relative mt-4 text-center">
                 <div className="mb-2">
-                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500 font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
+                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
                     українські компанії
                   </span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-green-400 text-3xl md:text-4xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
+                  <span className="text-secondary text-3xl md:text-4xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
                 </div>
                 <div>
-                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600 font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.9s' }}>
+                  <span className="inline-block text-secondary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.9s' }}>
                     підприємців
                   </span>
                 </div>
