@@ -35,22 +35,34 @@ const HeroSection = () => {
           
           {/* Main title */}
           <div className="relative mb-8">
-            <h1 className="text-5xl md:text-7xl font-black mb-2 leading-tight">
-              <span className="block text-gradient-ukraine drop-shadow-lg animate-fade-in">
-                Автоматизуємо
-              </span>
-              <span className="block text-white drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                українські компанії
-              </span>
-              <span className="block text-secondary drop-shadow-lg animate-fade-in font-extrabold" style={{ animationDelay: '0.4s' }}>
-                та підприємців
-              </span>
+            {/* Background accent */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 blur-3xl rounded-full scale-150 animate-pulse"></div>
+            
+            <h1 className="relative text-4xl md:text-6xl lg:text-7xl font-black mb-2 leading-tight">
+              {/* Main text with special styling */}
+              <div className="relative inline-block">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
+                  Автоматизуємо
+                </span>
+                {/* Underline effect */}
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
+              </div>
+              
+              <div className="relative mt-4">
+                <span className="inline-block text-white font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
+                  українські компанії
+                </span>
+                <span className="mx-4 text-secondary text-6xl md:text-8xl animate-fade-in" style={{ animationDelay: '0.7s' }}>+</span>
+                <span className="inline-block text-secondary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.9s' }}>
+                  підприємців
+                </span>
+              </div>
             </h1>
             
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary rounded-full animate-pulse opacity-70"></div>
-            <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full animate-pulse opacity-60" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-secondary/50 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+            {/* Floating elements */}
+            <div className="absolute top-0 left-1/4 w-3 h-3 bg-secondary rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.2s' }}></div>
+            <div className="absolute bottom-0 right-1/4 w-2 h-2 bg-primary rounded-full animate-bounce opacity-70" style={{ animationDelay: '1.8s' }}></div>
+            <div className="absolute top-1/2 right-0 w-4 h-4 bg-secondary/30 rounded-full animate-pulse" style={{ animationDelay: '2.2s' }}></div>
           </div>
           
           {/* Subtitle with support note */}
