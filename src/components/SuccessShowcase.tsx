@@ -141,7 +141,7 @@ const SuccessShowcase = () => {
   };
 
   const getTitle = () => {
-    if (locale === 'ua') return "автоматизуємо українські компанії";
+    if (locale === 'ua') return "автоматизуємо українські компанії та підприємців";
     if (locale === 'no') return "Våre vellykkede løsninger";
     return "Our Successful Solutions";
   };
@@ -153,7 +153,7 @@ const SuccessShowcase = () => {
   };
 
   const getBadge = () => {
-    if (locale === 'ua') return "🏆 Наші успішні проєкти";
+    if (locale === 'ua') return "🏆 Успішні проєкти";
     if (locale === 'no') return "🏆 Våre vellykkede prosjekter";
     return "🏆 Our Successful Projects";
   };
