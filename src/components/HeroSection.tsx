@@ -50,15 +50,15 @@ const HeroSection = () => {
               
               <div className="relative mt-4 text-center">
                 <div className="mb-2">
-                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
+                  <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300 text-3xl md:text-5xl lg:text-6xl" style={{ animationDelay: '0.5s' }}>
                     українські компанії
                   </span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-secondary text-3xl md:text-4xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
+                  <span className="text-secondary text-2xl md:text-3xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
                 </div>
                 <div>
-                  <span className="inline-block text-secondary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.9s' }}>
+                  <span className="inline-block text-secondary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300 text-3xl md:text-5xl lg:text-6xl" style={{ animationDelay: '0.9s' }}>
                     підприємців
                   </span>
                 </div>
