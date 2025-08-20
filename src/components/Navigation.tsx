@@ -75,30 +75,30 @@ const Navigation = () => {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="hidden sm:flex items-center gap-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground"
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
                   onClick={() => window.open('https://savelife.in.ua/donate/', '_blank')}
                 >
-                  🤝 {t.nav.volunteer}
+                  {t.nav.volunteer}
                 </Button>
               )}
               {locale === 'no' && (
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="hidden sm:flex items-center gap-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
                   onClick={() => scrollToSection('contact-section')}
                 >
-                  🤝 {t.nav.volunteer}
+                  {t.nav.volunteer}
                 </Button>
               )}
               {locale === 'eu' && (
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="hidden sm:flex items-center gap-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white"
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
                   onClick={() => scrollToSection('contact-section')}
                 >
-                  🤝 {t.nav.volunteer}
+                  {t.nav.volunteer}
                 </Button>
               )}
               <Button 
