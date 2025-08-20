@@ -22,7 +22,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900/95 via-purple-800/90 to-background/95 backdrop-blur-sm border-b border-purple-700/30">
         <div className="container mx-auto py-3 pl-2 pr-4">
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
