@@ -88,6 +88,13 @@ const HeroSection = () => {
                 }}
               >
                 <div className="bg-yellow-400 px-2 py-1 rounded-md">{t.common.supportNote}</div>
+                <div className="mt-2 flex justify-center">
+                  <img 
+                    src="/lovable-uploads/fafe9872-021b-43cb-9181-4655cc8ee039.png" 
+                    alt="Хрест українських збройних сил" 
+                    className="w-12 h-12"
+                  />
+                </div>
               </div>
             )}
           </div>
