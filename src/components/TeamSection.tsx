@@ -62,6 +62,15 @@ const TeamSection = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-primary">{t.team.points.location.title}</h3>
                   <p className="text-muted-foreground">{t.team.points.location.description}</p>
+                  
+                  {/* City coats of arms */}
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <img src="/lovable-uploads/d6cc748b-4003-4a4c-810f-c1e27e2d72c8.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                    <img src="/lovable-uploads/e9621884-3c4e-4746-873c-964a9ac5c306.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                    <img src="/lovable-uploads/eb865bae-8535-4bbf-b46c-5a8aa9480dbd.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                    <img src="/lovable-uploads/574296d1-af1e-4687-9bbe-182756915edb.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                    <img src="/lovable-uploads/ae39f00a-56ae-4e80-bf04-db906dafbc00.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                  </div>
                 </div>
               </div>
             </div>
