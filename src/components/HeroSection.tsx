@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
                   українські компанії
                 </span>
-                <span className="mx-4 text-secondary text-6xl md:text-8xl animate-fade-in" style={{ animationDelay: '0.7s' }}>+</span>
+                <span className="mx-4 text-secondary text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
                 <span className="inline-block text-secondary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.9s' }}>
                   підприємців
                 </span>
