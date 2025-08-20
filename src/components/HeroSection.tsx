@@ -41,7 +41,7 @@ const HeroSection = () => {
             <h1 className="relative text-4xl md:text-6xl lg:text-7xl font-black mb-2 leading-tight">
               {/* Main text with special styling */}
               <div className="relative inline-block">
-                <span className="absolute -left-48 top-0 font-mono text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 animate-fade-in">
+                <span className="absolute -left-24 top-0 font-mono text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 animate-fade-in">
                   para.tech
                 </span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
