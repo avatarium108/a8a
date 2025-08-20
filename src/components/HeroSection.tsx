@@ -13,8 +13,8 @@ const HeroSection = () => {
 
   const getTrident = () => {
     if (locale === 'ua') return <img src={tridentImage} alt="Тризуб України" className="w-32 h-32 mx-auto" />;
-    if (locale === 'no') return '🇳🇴';
-    if (locale === 'eu') return '🇪🇺';
+    if (locale === 'no') return <img src="/lovable-uploads/dafd268e-3dde-4b18-845e-b291930690bf.png" alt="Герб Львова" className="w-32 h-32 mx-auto" />;
+    if (locale === 'eu') return <img src="/lovable-uploads/807b38cd-175a-4cc2-bc43-b4bcc9e6004e.png" alt="Герб міста" className="w-32 h-32 mx-auto" />;
     return <img src={tridentImage} alt="Тризуб України" className="w-32 h-32 mx-auto" />;
   };
 
