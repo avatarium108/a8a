@@ -71,31 +71,6 @@ const Navigation = () => {
 
             {/* CTA Buttons - максимально вправо */}
             <div className="flex items-center gap-3 flex-shrink-0 ml-auto mr-2">
-              {/* Auth Button */}
-              {!loading && (
-                user ? (
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => window.location.href = '/dashboard'}
-                    className="flex items-center gap-2"
-                  >
-                    <User className="h-4 w-4" />
-                    {t.nav.dashboard}
-                  </Button>
-                ) : (
-                  <Button 
-                    variant="success" 
-                    size="sm"
-                    onClick={() => window.location.href = '/auth'}
-                    className="flex items-center gap-2"
-                  >
-                    <LogIn className="h-4 w-4" />
-                    {t.nav.login}
-                  </Button>
-                )
-              )}
-
               {locale === 'ua' && (
                 <Button 
                   variant="outline" 
@@ -133,6 +108,31 @@ const Navigation = () => {
               >
                 {t.nav.application}
               </Button>
+              
+              {/* Auth Button - тепер останній */}
+              {!loading && (
+                user ? (
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => window.location.href = '/dashboard'}
+                    className="flex items-center gap-2"
+                  >
+                    <User className="h-4 w-4" />
+                    {t.nav.dashboard}
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="success" 
+                    size="sm"
+                    onClick={() => window.location.href = '/auth'}
+                    className="flex items-center gap-2"
+                  >
+                    <LogIn className="h-4 w-4" />
+                    {t.nav.login}
+                  </Button>
+                )
+              )}
             </div>
           </div>
         </div>
