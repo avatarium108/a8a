@@ -143,31 +143,49 @@ const Navigation = () => {
         <div className="flex items-center gap-3">
           <button 
             onClick={() => changeLanguage('ua')}
-            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'ua' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
+            className={`relative w-8 h-6 hover:scale-125 transition-transform duration-200 rounded-sm overflow-hidden shadow-md ${locale === 'ua' ? 'scale-125 ring-2 ring-primary' : ''}`}
             title="Українська"
           >
-            🇺🇦
+            <div className="w-full h-1/2 bg-blue-500"></div>
+            <div className="w-full h-1/2 bg-yellow-400"></div>
           </button>
           <button 
             onClick={() => changeLanguage('no')}
-            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'no' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
+            className={`relative w-8 h-6 hover:scale-125 transition-transform duration-200 rounded-sm overflow-hidden shadow-md ${locale === 'no' ? 'scale-125 ring-2 ring-primary' : ''}`}
             title="Norsk"
           >
-            🇳🇴
+            <div className="w-full h-full bg-red-600 relative">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-full h-1 bg-white"></div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-1 h-full bg-white"></div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-full h-0.5 bg-blue-800"></div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-0.5 h-full bg-blue-800"></div>
+              </div>
+            </div>
           </button>
           <button 
             onClick={() => changeLanguage('eu')}
-            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'eu' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
+            className={`relative w-8 h-6 hover:scale-125 transition-transform duration-200 rounded-sm overflow-hidden shadow-md ${locale === 'eu' ? 'scale-125 ring-2 ring-primary' : ''}`}
             title="European Union"
           >
-            🇪🇺
+            <div className="w-full h-full bg-blue-800 flex items-center justify-center">
+              <div className="text-yellow-400 text-xs">★</div>
+            </div>
           </button>
           <button 
             onClick={() => changeLanguage('ru')}
-            className="text-3xl hover:scale-125 transition-transform duration-200 opacity-60 hover:opacity-100"
+            className="relative w-8 h-6 hover:scale-125 transition-transform duration-200 rounded-sm overflow-hidden shadow-md opacity-60 hover:opacity-100"
             title="Русский военный корабль..."
           >
-            🇷🇺
+            <div className="w-full h-1/3 bg-white"></div>
+            <div className="w-full h-1/3 bg-blue-600"></div>
+            <div className="w-full h-1/3 bg-red-600"></div>
           </button>
         </div>
       </div>
