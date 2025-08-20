@@ -70,6 +70,7 @@ const TeamSection = () => {
                     <img src="/lovable-uploads/eb865bae-8535-4bbf-b46c-5a8aa9480dbd.png" alt="Герб міста" className="w-12 h-8 object-contain" />
                     <img src="/lovable-uploads/574296d1-af1e-4687-9bbe-182756915edb.png" alt="Герб міста" className="w-12 h-8 object-contain" />
                     <img src="/lovable-uploads/ae39f00a-56ae-4e80-bf04-db906dafbc00.png" alt="Герб міста" className="w-12 h-8 object-contain" />
+                    <img src="/lovable-uploads/4fad7f41-3fa5-4c19-8fb1-cfd7699de53e.png" alt="Прапор Запоріжжя" className="w-12 h-8 object-contain" />
                   </div>
                 </div>
               </div>
