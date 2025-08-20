@@ -35,35 +35,35 @@ const Navigation = () => {
               <span className="font-bold text-sm text-foreground">{t.common.siteName}</span>
             </div>
 
-            {/* Navigation Menu */}
-            <div className="hidden lg:flex items-center gap-6">
+            {/* Navigation Menu - посередині */}
+            <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2">
               <button 
                 onClick={() => scrollToSection('mission-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.about}
               </button>
               <button 
                 onClick={() => scrollToSection('services-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.services}
               </button>
               <button 
                 onClick={() => scrollToSection('packages-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.packages}
               </button>
               <button 
                 onClick={() => scrollToSection('team-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.team}
               </button>
               <button 
                 onClick={() => scrollToSection('contact-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.contact}
               </button>
