@@ -174,45 +174,11 @@ const Navigation = () => {
             className={`relative w-8 h-6 hover:scale-125 transition-transform duration-200 rounded-sm overflow-hidden shadow-md ${locale === 'eu' ? 'scale-125 ring-2 ring-primary' : ''}`}
             title="European Union"
           >
-            <div className="w-full h-full bg-blue-700 flex items-center justify-center relative">
-              {/* 12 зірок у колі точно як на прапорі ЄС */}
-              <div className="absolute" style={{ transform: 'rotate(0deg) translateY(-8px) rotate(0deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(30deg) translateY(-8px) rotate(-30deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(60deg) translateY(-8px) rotate(-60deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(90deg) translateY(-8px) rotate(-90deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(120deg) translateY(-8px) rotate(-120deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(150deg) translateY(-8px) rotate(-150deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(180deg) translateY(-8px) rotate(-180deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(210deg) translateY(-8px) rotate(-210deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(240deg) translateY(-8px) rotate(-240deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(270deg) translateY(-8px) rotate(-270deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(300deg) translateY(-8px) rotate(-300deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-              <div className="absolute" style={{ transform: 'rotate(330deg) translateY(-8px) rotate(-330deg)' }}>
-                <div className="text-yellow-400 text-xs leading-none">★</div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/8a984c61-9175-48bb-b7f5-0d89c0dbb8b0.png" 
+              alt="EU Flag" 
+              className="w-full h-full object-cover"
+            />
           </button>
           <button 
             onClick={() => changeLanguage('ru')}
