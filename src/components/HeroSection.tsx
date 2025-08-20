@@ -41,10 +41,13 @@ const HeroSection = () => {
             <h1 className="relative text-4xl md:text-6xl lg:text-7xl font-black mb-2 leading-tight">
               {/* Main text with special styling */}
               <div className="relative inline-block">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
-                  <span className="font-mono mr-4">para.tech</span>Автоматизуємо
+                <span className="absolute -left-48 top-0 font-mono text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 animate-fade-in">
+                  para.tech
                 </span>
-                {/* Underline effect */}
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-fade-in bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-700">
+                  Автоматизуємо
+                </span>
+                {/* Underline effect only for Автоматизуємо */}
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
               </div>
               
