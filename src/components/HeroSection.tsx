@@ -78,13 +78,14 @@ const HeroSection = () => {
             </p>
             {locale === 'ua' && (
               <div 
-                className="absolute top-10 text-black font-bold text-sm"
+                className="absolute text-black font-bold text-sm"
                 style={{ 
                   transform: 'rotate(-25deg)',
                   fontFamily: 'marker, sans-serif',
                   textShadow: '2px 2px 0px rgba(255,255,255,0.9)',
                   lineHeight: '1.1',
-                  left: '-12.7rem' // зсунуто ще на 5см вліво
+                  left: '-12.7rem', // зсунуто ще на 5см вліво
+                  top: '-23rem' // зсунуто на 23см вгору
                 }}
               >
                 <div className="bg-yellow-400 px-2 py-1 rounded-md">{t.common.supportNote}</div>
