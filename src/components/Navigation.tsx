@@ -25,15 +25,6 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto py-3 pl-2 pr-4">
           <div className="flex items-center justify-between w-full">
-            {/* Logo - максимально вліво */}
-            <div className="flex flex-col items-center gap-1 flex-shrink-0 -ml-2">
-              <img 
-                src={logoImage} 
-                alt="para.tech тризуб логотип" 
-                className="w-10 h-10 object-contain"
-              />
-              <span className="font-bold text-sm text-foreground">{t.common.siteName}</span>
-            </div>
 
             {/* Navigation Menu - посередині */}
             <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -ml-44">
