@@ -21,6 +21,7 @@ const buttonVariants = cva(
         ukraine: "btn-ukraine blue-gradient text-white hover:shadow-ukraine font-montserrat font-semibold",
         ukraineYellow: "btn-ukraine bg-secondary text-secondary-foreground hover:bg-secondary-dark hover:shadow-yellow font-montserrat font-semibold",
         hero: "btn-ukraine ukraine-gradient text-white hover:shadow-ukraine font-montserrat font-bold text-lg",
+        success: "bg-success text-success-foreground hover:bg-success/90",
       },
       size: {
         default: "h-10 px-4 py-2",

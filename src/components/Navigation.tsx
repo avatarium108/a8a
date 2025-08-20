@@ -85,7 +85,7 @@ const Navigation = () => {
                   </Button>
                 ) : (
                   <Button 
-                    variant="outline" 
+                    variant="success" 
                     size="sm"
                     onClick={() => window.location.href = '/auth'}
                     className="flex items-center gap-2"

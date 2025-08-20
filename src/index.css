@@ -22,6 +22,10 @@
     --secondary-foreground: 222 16% 20%;
     --secondary-dark: 48 100% 40%;
 
+    /* Green - success/login color */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
     /* Supporting colors */
     --card: 0 0% 100%;
     --card-foreground: 222 16% 20%;
