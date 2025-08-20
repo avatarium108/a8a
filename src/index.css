@@ -1,5 +1,9 @@
 /* Premium Ukrainian Business Automation Design System v2.0 */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     /* Premium Color Palette - Enhanced */
