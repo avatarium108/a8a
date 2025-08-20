@@ -48,13 +48,13 @@ const HeroSection = () => {
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
               </div>
               
-              <div className="relative mt-4 text-center">
-                <div className="mb-0.5">
+              <div className="relative mt-4 text-center leading-none">
+                <div className="-mb-2">
                   <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary font-extrabold animate-fade-in transform hover:scale-105 transition-transform duration-300 text-2xl md:text-4xl lg:text-5xl" style={{ animationDelay: '0.5s' }}>
                     українські компанії
                   </span>
                 </div>
-                <div className="mb-0.5">
+                <div className="-mb-2">
                   <span className="text-secondary text-xl md:text-2xl animate-fade-in" style={{ animationDelay: '0.7s' }}>та</span>
                 </div>
                 <div>
