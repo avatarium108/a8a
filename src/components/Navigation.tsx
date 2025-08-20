@@ -128,7 +128,7 @@ const Navigation = () => {
                     onClick={() => window.location.href = '/auth'}
                     className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white border-green-600"
                   >
-                    <LogIn className="h-4 w-4 text-blue-500" />
+                    <LogIn className="h-4 w-4 text-white" />
                     {t.nav.login}
                   </Button>
                 )
