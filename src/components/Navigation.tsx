@@ -25,6 +25,14 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto py-3 pl-2 pr-4">
           <div className="flex items-center justify-between w-full">
+            {/* Logo */}
+            <div className="flex items-center flex-shrink-0">
+              <img 
+                src="/lovable-uploads/009093d6-0b98-47d4-8dd6-bd9c04675221.png" 
+                alt="Ukraine EU Tech Logo" 
+                className="w-12 h-12 object-contain"
+              />
+            </div>
 
             {/* Navigation Menu - посередині */}
             <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -ml-44">
