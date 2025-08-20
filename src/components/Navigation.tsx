@@ -139,32 +139,32 @@ const Navigation = () => {
       </nav>
 
       {/* Language Selector - правий кут під меню */}
-      <div className="fixed top-16 right-4 z-40 bg-background/95 backdrop-blur-sm border border-border rounded-lg p-2 shadow-lg">
-        <div className="flex items-center gap-2">
+      <div className="fixed top-24 right-4 z-40 bg-background/95 backdrop-blur-sm border border-border rounded-lg p-3 shadow-lg">
+        <div className="flex items-center gap-3">
           <button 
             onClick={() => changeLanguage('ua')}
-            className={`text-xl hover:scale-110 transition-transform ${locale === 'ua' ? 'scale-110' : ''}`}
+            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'ua' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
             title="Українська"
           >
             🇺🇦
           </button>
           <button 
             onClick={() => changeLanguage('no')}
-            className={`text-xl hover:scale-110 transition-transform ${locale === 'no' ? 'scale-110' : ''}`}
+            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'no' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
             title="Norsk"
           >
             🇳🇴
           </button>
           <button 
             onClick={() => changeLanguage('eu')}
-            className={`text-xl hover:scale-110 transition-transform ${locale === 'eu' ? 'scale-110' : ''}`}
+            className={`text-3xl hover:scale-125 transition-transform duration-200 ${locale === 'eu' ? 'scale-125 ring-2 ring-primary rounded-full' : ''}`}
             title="European Union"
           >
             🇪🇺
           </button>
           <button 
             onClick={() => changeLanguage('ru')}
-            className="text-xl hover:scale-110 transition-transform opacity-60 hover:opacity-100"
+            className="text-3xl hover:scale-125 transition-transform duration-200 opacity-60 hover:opacity-100"
             title="Русский военный корабль..."
           >
             🇷🇺
