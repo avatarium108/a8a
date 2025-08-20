@@ -107,71 +107,89 @@ const HeroSection = () => {
             {t.hero.mission}
           </p>
           
-          {/* Primary CTA with urgency */}
+          {/* Main CTA with premium styling */}
           <div className="relative mb-8">
-            {/* Urgency badge */}
-            <div className="inline-flex items-center gap-2 bg-red-500/90 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              ⚡ Обмежена пропозиція до кінця місяця
+            {/* Premium urgency badge */}
+            <div className="inline-flex items-center gap-2 glass-ukraine text-white px-6 py-3 rounded-full text-sm font-bold mb-6 animate-glow">
+              ⚡ Обмежена пропозиція • тільки цього місяця • -25%
             </div>
             
-            {/* Main CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Enhanced CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button 
-                variant="ukraineYellow" 
-                size="lg" 
-                className="w-full sm:w-auto text-xl px-12 py-6 font-bold transform hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30" 
+                variant="premium" 
+                size="xl" 
+                className="w-full sm:w-auto font-display text-xl px-16 py-6 animate-scale-in shadow-premium" 
                 onClick={scrollToContact}
+                style={{ animationDelay: '0.2s' }}
               >
                 🚀 {t.hero.cta.application}
               </Button>
               <Button 
-                variant="outline" 
+                variant="glass" 
                 size="lg" 
-                className="w-full sm:w-auto text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary font-semibold" 
+                className="w-full sm:w-auto text-lg px-10 py-4 font-semibold animate-scale-in" 
                 onClick={scrollToContact}
+                style={{ animationDelay: '0.4s' }}
               >
-                {t.hero.cta.calculate}
+                💎 {t.hero.cta.calculate}
               </Button>
             </div>
             
-            {/* Trust indicator */}
-            <p className="text-sm opacity-75 mt-4">
-              ✅ Безкоштовна консультація • 💼 Реальні кейси • 🔒 Гарантія результату
-            </p>
-          </div>
-          
-          {/* Social proof and guarantees */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <span className="text-2xl mb-2">🏆</span>
-              <div className="font-bold">500+ проєктів</div>
-              <div className="opacity-80">Успішно реалізовано</div>
-            </div>
-            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <span className="text-2xl mb-2">⭐</span>
-              <div className="font-bold">4.9/5 рейтинг</div>
-              <div className="opacity-80">Від наших клієнтів</div>
-            </div>
-            <div className="flex flex-col items-center text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-              <span className="text-2xl mb-2">🔒</span>
-              <div className="font-bold">100% гарантія</div>
-              <div className="opacity-80">Повернення коштів</div>
+            {/* Premium trust indicators */}
+            <div className="text-sm opacity-90 mt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex flex-wrap justify-center gap-6 text-white/90">
+                <span className="flex items-center gap-2">
+                  <span className="text-premium-gold text-lg">✨</span>
+                  Безкоштовна консультація
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="text-secondary text-lg">🏆</span>
+                  500+ реальних кейсів
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="text-success-light text-lg">💎</span>
+                  100% гарантія результату
+                </span>
+              </div>
             </div>
           </div>
           
-          {/* Features */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm opacity-90">
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-secondary">🧷</span>
-              <span>{t.hero.features.service}</span>
+          {/* Premium social proof */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '0.8s' }}>
+              <div className="text-3xl mb-3 animate-float">🏆</div>
+              <div className="font-bold text-xl text-gradient-premium">500+</div>
+              <div className="text-primary-light font-medium">успішних проєктів</div>
+              <div className="text-xs opacity-80 mt-1">за 3 роки роботи</div>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-secondary">🛡</span>
-              <span>{t.hero.features.servers}</span>
+            <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '1.0s' }}>
+              <div className="text-3xl mb-3 animate-float" style={{ animationDelay: '0.5s' }}>⭐</div>
+              <div className="font-bold text-xl text-gradient-premium">4.9/5</div>
+              <div className="text-primary-light font-medium">рейтинг довіри</div>
+              <div className="text-xs opacity-80 mt-1">від наших клієнтів</div>
             </div>
-            <div className="flex items-center justify-center gap-2 md:col-span-2">
-              <span className="text-secondary">💙</span>
-              <span>{t.hero.features.team}</span>
+            <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '1.2s' }}>
+              <div className="text-3xl mb-3 animate-float" style={{ animationDelay: '1.0s' }}>💎</div>
+              <div className="font-bold text-xl text-gradient-premium">100%</div>
+              <div className="text-primary-light font-medium">гарантія якості</div>
+              <div className="text-xs opacity-80 mt-1">або повернення коштів</div>
+            </div>
+          </div>
+          
+          {/* Enhanced features */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm opacity-90 animate-fade-in" style={{ animationDelay: '1.4s' }}>
+            <div className="flex items-center justify-center gap-3 glass-effect p-3 rounded-lg">
+              <span className="text-secondary text-xl">🧷</span>
+              <span className="font-medium">{t.hero.features.service}</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 glass-effect p-3 rounded-lg">
+              <span className="text-secondary text-xl">🛡</span>
+              <span className="font-medium">{t.hero.features.servers}</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 glass-effect p-3 rounded-lg md:col-span-2">
+              <span className="text-secondary text-xl">💙</span>
+              <span className="font-medium">{t.hero.features.team}</span>
             </div>
           </div>
         </div>

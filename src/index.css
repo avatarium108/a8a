@@ -1,112 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Ukrainian Business Automation Design System */
+/* Premium Ukrainian Business Automation Design System v2.0 */
 
 @layer base {
   :root {
-    /* Ukrainian patriotic colors */
+    /* Premium Color Palette - Enhanced */
     --background: 0 0% 100%;
-    --foreground: 222 16% 20%;
+    --foreground: 222 16% 15%;
 
-    /* Blue - Ukrainian flag blue */
+    /* Ukrainian Blue Variations */
     --primary: 216 100% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-dark: 216 100% 35%;
+    --primary-light: 216 100% 65%;
+    --primary-muted: 216 100% 95%;
     
-    /* Yellow - Ukrainian flag yellow */
+    /* Ukrainian Yellow Variations */
     --secondary: 48 100% 50%;
-    --secondary-foreground: 222 16% 20%;
+    --secondary-foreground: 222 16% 15%;
     --secondary-dark: 48 100% 40%;
+    --secondary-light: 48 100% 65%;
+    --secondary-muted: 48 100% 95%;
 
-    /* Green - success/login color */
+    /* Success & Status Colors */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
+    --success-light: 142 71% 65%;
+    --success-muted: 142 71% 95%;
 
-    /* Supporting colors */
+    /* Premium Accents */
+    --premium-gold: 38 90% 50%;
+    --premium-silver: 220 9% 60%;
+    --premium-bronze: 30 50% 45%;
+
+    /* Supporting UI Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222 16% 20%;
+    --card-foreground: 222 16% 15%;
+    --card-hover: 216 20% 98%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 16% 20%;
+    --popover-foreground: 222 16% 15%;
 
-    --muted: 216 20% 95%;
-    --muted-foreground: 222 16% 50%;
+    --muted: 216 20% 96%;
+    --muted-foreground: 222 16% 45%;
 
-    --accent: 216 20% 95%;
+    --accent: 216 20% 96%;
     --accent-foreground: 216 100% 50%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 216 20% 90%;
-    --input: 216 20% 90%;
+    --border: 216 20% 92%;
+    --input: 216 20% 92%;
     --ring: 216 100% 50%;
 
-    /* Ukrainian gradients */
+    /* Premium Gradients Collection */
     --gradient-ukraine: linear-gradient(135deg, hsl(216 100% 50%), hsl(48 100% 50%));
     --gradient-blue: linear-gradient(135deg, hsl(216 100% 50%), hsl(216 100% 35%));
     --gradient-hero: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(216 100% 60%) 25%, hsl(48 100% 50%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(38 90% 50%) 50%, hsl(48 100% 50%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(216 20% 98%));
+    --gradient-dark: linear-gradient(135deg, hsl(222 16% 15%) 0%, hsl(216 100% 15%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(216 20% 99%) 100%);
 
-    /* Shadows with Ukrainian theme */
+    /* Advanced Shadow System */
     --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.3);
     --shadow-blue: 0 4px 20px hsl(216 100% 50% / 0.2);
-    --shadow-yellow: 0 4px 20px hsl(48 100% 50% / 0.2);
+    --shadow-yellow: 0 4px 20px hsl(48 100% 50% / 0.25);
+    --shadow-premium: 0 20px 40px -10px hsl(216 100% 50% / 0.4);
+    --shadow-card: 0 4px 6px -1px hsl(216 20% 50% / 0.1), 0 2px 4px -1px hsl(216 20% 50% / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px hsl(216 20% 50% / 0.1), 0 4px 6px -2px hsl(216 20% 50% / 0.05);
+    --shadow-glow: 0 0 20px hsl(216 100% 50% / 0.5);
 
-    /* Animations */
+    /* Advanced Transitions */
     --transition-ukraine: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
+    /* Dark mode shadows */
+    --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.4);
+    --shadow-premium: 0 20px 40px -10px hsl(216 100% 50% / 0.5);
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -124,12 +133,25 @@
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Montserrat', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-variation-settings: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .display-font {
+    font-family: 'Playfair Display', serif;
   }
 }
 
 @layer components {
+  /* Enhanced Gradient Classes */
   .hero-gradient {
     background: var(--gradient-hero);
   }
@@ -141,6 +163,18 @@
   .blue-gradient {
     background: var(--gradient-blue);
   }
+
+  .premium-gradient {
+    background: var(--gradient-premium);
+  }
+
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
   
   .text-gradient-ukraine {
     background: var(--gradient-ukraine);
@@ -148,7 +182,15 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .text-gradient-premium {
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   
+  /* Enhanced Shadow Classes */
   .shadow-ukraine {
     box-shadow: var(--shadow-ukraine);
   }
@@ -160,13 +202,40 @@
   .shadow-yellow {
     box-shadow: var(--shadow-yellow);
   }
+
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
   
+  /* Enhanced Transition Classes */
   .transition-ukraine {
     transition: var(--transition-ukraine);
   }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
   
+  /* Premium Button Styles */
   .btn-ukraine {
-    @apply relative overflow-hidden rounded-xl font-semibold px-8 py-4 transition-ukraine;
+    @apply relative overflow-hidden rounded-xl font-semibold px-8 py-4 transition-smooth;
+    background: var(--gradient-ukraine);
   }
   
   .btn-ukraine::before {
@@ -176,11 +245,111 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .btn-ukraine:hover::before {
     left: 100%;
   }
+
+  .btn-ukraine:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-premium);
+  }
+
+  /* Premium Card Styles */
+  .card-premium {
+    @apply relative overflow-hidden rounded-xl transition-smooth;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .card-premium::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, hsl(216 100% 50% / 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-premium:hover::before {
+    opacity: 1;
+  }
+
+  /* Typography Enhancements */
+  .text-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-black leading-tight;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-display {
+    font-family: 'Playfair Display', serif;
+    @apply font-semibold;
+  }
+
+  .text-premium {
+    @apply text-gradient-premium font-bold;
+  }
+
+  /* Micro-animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Interactive States */
+  .interactive-hover {
+    @apply transition-smooth cursor-pointer;
+  }
+
+  .interactive-hover:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Glass Effects */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-ukraine {
+    background: linear-gradient(135deg, hsl(216 100% 50% / 0.1), hsl(48 100% 50% / 0.1));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(216 100% 50% / 0.2);
+  }
+}
+
+/* Keyframes for animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px hsl(216 100% 50% / 0.3); }
+  to { box-shadow: 0 0 30px hsl(216 100% 50% / 0.6); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

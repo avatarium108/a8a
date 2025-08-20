@@ -179,34 +179,54 @@ const SuccessShowcase = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {getSuccessData().map((item, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl bg-card border shadow-sm hover:shadow-lg transition-all duration-300">
-              <div className="aspect-video relative overflow-hidden">
+            <div key={index} className="card-premium interactive-hover animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="aspect-video relative overflow-hidden rounded-t-xl">
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute top-3 right-3 text-2xl">{item.icon}</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute top-4 right-4 text-3xl animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
+                  {item.icon}
+                </div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="glass-ukraine px-3 py-1 rounded-full text-white text-sm font-bold">
+                    Новий кейс
+                  </div>
+                </div>
               </div>
               
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-1 text-primary">{item.title}</h3>
-                <p className="font-medium text-foreground mb-2">{item.subtitle}</p>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+              <div className="p-6">
+                <h3 className="font-bold text-xl mb-2 text-gradient-premium font-display">{item.title}</h3>
+                <p className="font-semibold text-primary mb-3">{item.subtitle}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                
+                {/* Performance indicator */}
+                <div className="mt-4 pt-4 border-t border-border">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Результат:</span>
+                    <span className="font-bold text-success">+200% ефективності</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3">
-            <span className="text-2xl">{getFlag()}</span>
-            <span className="font-medium text-primary">
-              {getTagline()}
-            </span>
+        <div className="text-center mt-16">
+          <div className="card-premium inline-flex items-center gap-4 px-10 py-6 animate-glow">
+            <span className="text-4xl animate-float">{getFlag()}</span>
+            <div className="text-left">
+              <div className="font-bold text-xl text-gradient-premium font-display">
+                {getTagline()}
+              </div>
+              <div className="text-sm text-muted-foreground">
+                Працюємо виключно для успіху українського бізнесу
+              </div>
+            </div>
           </div>
         </div>
       </div>
