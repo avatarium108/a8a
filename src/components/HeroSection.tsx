@@ -34,15 +34,24 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           
           {/* Main title */}
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            {t.hero.title.split(' ').map((word, index) => 
-              index === 1 ? (
-                <span key={index} className="text-secondary">{word}<br/></span>
-              ) : (
-                <span key={index}>{word} </span>
-              )
-            )}
-          </h1>
+          <div className="relative mb-8">
+            <h1 className="text-5xl md:text-7xl font-black mb-2 leading-tight">
+              <span className="block text-gradient-ukraine drop-shadow-lg animate-fade-in">
+                Автоматизуємо
+              </span>
+              <span className="block text-white drop-shadow-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                українські компанії
+              </span>
+              <span className="block text-secondary drop-shadow-lg animate-fade-in font-extrabold" style={{ animationDelay: '0.4s' }}>
+                та підприємців
+              </span>
+            </h1>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary rounded-full animate-pulse opacity-70"></div>
+            <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full animate-pulse opacity-60" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-secondary/50 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+          </div>
           
           {/* Subtitle with support note */}
           <div className="relative mb-4">
