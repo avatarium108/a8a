@@ -65,6 +65,15 @@
     --gradient-dark: linear-gradient(135deg, hsl(222 16% 15%) 0%, hsl(216 100% 15%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(216 20% 99%) 100%);
+    
+    /* Section-specific thematic gradients */
+    --gradient-success-section: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(48 100% 50%) 50%, hsl(142 71% 45%) 100%);
+    --gradient-mission: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(262 83% 58%) 50%, hsl(239 84% 67%) 100%);
+    --gradient-services: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(186 84% 60%) 50%, hsl(216 100% 50%) 100%);
+    --gradient-results: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(0 84% 60%) 50%, hsl(348 83% 47%) 100%);
+    --gradient-packages: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(43 96% 56%) 50%, hsl(36 77% 49%) 100%);
+    --gradient-team: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(48 100% 50%) 50%, hsl(216 100% 50%) 100%);
+    --gradient-contact: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(189 94% 43%) 50%, hsl(196 94% 67%) 100%);
 
     /* Advanced Shadow System */
     --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.3);
@@ -178,6 +187,39 @@
 
   .card-gradient {
     background: var(--gradient-card);
+  }
+
+  /* Section-specific gradient backgrounds */
+  .success-section-gradient {
+    background: var(--gradient-success-section);
+  }
+
+  .mission-gradient {
+    background: var(--gradient-mission);
+  }
+
+  .services-gradient {
+    background: var(--gradient-services);
+  }
+
+  .results-gradient {
+    background: var(--gradient-results);
+  }
+
+  .packages-gradient {
+    background: var(--gradient-packages);
+  }
+
+  .team-gradient {
+    background: var(--gradient-team);
+  }
+
+  .contact-gradient {
+    background: var(--gradient-contact);
+  }
+  
+  .gradient-dark {
+    background: var(--gradient-dark);
   }
   
   .text-gradient-ukraine {

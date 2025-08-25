@@ -5,8 +5,15 @@ const TeamSection = () => {
   const { t } = useLanguage();
   
   return (
-    <section id="team-section" className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
+    <section id="team-section" className="py-20 team-gradient relative overflow-hidden">
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute top-0 left-0 w-full h-full" 
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M25 25l5-10h-10l5 10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+             }}
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Team Image */}
           <div className="relative">

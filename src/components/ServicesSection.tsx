@@ -62,8 +62,15 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services-section" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services-section" className="py-20 services-gradient relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full" 
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M40 40l8-8v16l-8-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+             }}
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t.services.title}

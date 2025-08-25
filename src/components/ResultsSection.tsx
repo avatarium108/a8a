@@ -68,8 +68,15 @@ const ResultsSection = () => {
   }, []);
 
   return (
-    <section id="results-section" className="py-16 bg-muted">
-      <div className="container mx-auto px-4">
+    <section id="results-section" className="py-16 results-gradient relative overflow-hidden">
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute top-0 left-0 w-full h-full" 
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 50l10-10v20l-10-10zM30 30l5-5v10l-5-5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+             }}
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.results.title.split(' ')[0]} <span className="text-gradient-ukraine">{t.results.title.split(' ').slice(1).join(' ')}</span>

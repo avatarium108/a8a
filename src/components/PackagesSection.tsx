@@ -44,8 +44,15 @@ const PackagesSection = () => {
   ];
 
   return (
-    <section id="packages-section" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="packages-section" className="py-20 packages-gradient relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full" 
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M60 60l8-8h-16l8 8zM90 30l4-4h-8l4 4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+             }}
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient-ukraine">{t.packages.title}</span>
