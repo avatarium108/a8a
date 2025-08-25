@@ -1,4 +1,4 @@
-/* Premium Ukrainian Business Automation Design System v2.0 */
+/* Norwegian SMB Business Design System v3.0 */
 
 @tailwind base;
 @tailwind components;
@@ -6,88 +6,88 @@
 
 @layer base {
   :root {
-    /* Premium Color Palette - Enhanced */
+    /* Norwegian Color Palette - Calm & Professional */
     --background: 0 0% 100%;
-    --foreground: 222 16% 15%;
+    --foreground: 210 15% 20%;
 
-    /* Ukrainian Blue Variations */
-    --primary: 216 100% 50%;
+    /* Norwegian Blue Variations - Softer */
+    --primary: 210 60% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 216 100% 35%;
-    --primary-light: 216 100% 65%;
-    --primary-muted: 216 100% 95%;
+    --primary-dark: 210 70% 35%;
+    --primary-light: 210 50% 65%;
+    --primary-muted: 210 30% 96%;
     
-    /* Ukrainian Yellow Variations */
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 222 16% 15%;
-    --secondary-dark: 48 100% 40%;
-    --secondary-light: 48 100% 65%;
-    --secondary-muted: 48 100% 95%;
+    /* Norwegian Red Variations - Muted */
+    --secondary: 0 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 0 70% 45%;
+    --secondary-light: 0 60% 70%;
+    --secondary-muted: 0 30% 96%;
 
-    /* Success & Status Colors */
-    --success: 142 71% 45%;
+    /* Success & Status Colors - Norwegian Green */
+    --success: 120 40% 45%;
     --success-foreground: 0 0% 100%;
-    --success-light: 142 71% 65%;
-    --success-muted: 142 71% 95%;
+    --success-light: 120 35% 65%;
+    --success-muted: 120 20% 96%;
 
-    /* Premium Accents */
-    --premium-gold: 38 90% 50%;
-    --premium-silver: 220 9% 60%;
-    --premium-bronze: 30 50% 45%;
+    /* Norwegian Accent Colors */
+    --premium-gold: 45 85% 60%;
+    --premium-silver: 210 10% 65%;
+    --premium-bronze: 25 45% 55%;
 
-    /* Supporting UI Colors */
+    /* Supporting UI Colors - More Whitespace */
     --card: 0 0% 100%;
-    --card-foreground: 222 16% 15%;
-    --card-hover: 216 20% 98%;
+    --card-foreground: 210 15% 20%;
+    --card-hover: 210 15% 98%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 16% 15%;
+    --popover-foreground: 210 15% 20%;
 
-    --muted: 216 20% 96%;
-    --muted-foreground: 222 16% 45%;
+    --muted: 210 15% 97%;
+    --muted-foreground: 210 10% 50%;
 
-    --accent: 216 20% 96%;
-    --accent-foreground: 216 100% 50%;
+    --accent: 210 15% 97%;
+    --accent-foreground: 210 60% 45%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 216 20% 92%;
-    --input: 216 20% 92%;
-    --ring: 216 100% 50%;
+    --border: 210 15% 90%;
+    --input: 210 15% 95%;
+    --ring: 210 60% 45%;
 
-    /* Premium Gradients Collection */
-    --gradient-ukraine: linear-gradient(135deg, hsl(216 100% 50%), hsl(48 100% 50%));
-    --gradient-blue: linear-gradient(135deg, hsl(216 100% 50%), hsl(216 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(216 100% 60%) 25%, hsl(48 100% 50%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(38 90% 50%) 50%, hsl(48 100% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(216 20% 98%));
-    --gradient-dark: linear-gradient(135deg, hsl(222 16% 15%) 0%, hsl(216 100% 15%) 100%);
-    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(216 20% 99%) 100%);
+    /* Norwegian Gradients Collection - Calm & Professional */
+    --gradient-norway: linear-gradient(135deg, hsl(210 60% 45%), hsl(0 65% 55%));
+    --gradient-blue: linear-gradient(135deg, hsl(210 60% 45%), hsl(210 70% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(210 50% 65%) 25%, hsl(0 65% 55%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(45 85% 60%) 50%, hsl(0 65% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 98%));
+    --gradient-dark: linear-gradient(135deg, hsl(210 15% 20%) 0%, hsl(210 60% 15%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(120 40% 45%), hsl(120 35% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 15% 99%) 100%);
     
-    /* Section-specific thematic gradients */
-    --gradient-success-section: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(48 100% 50%) 50%, hsl(142 71% 45%) 100%);
-    --gradient-mission: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(262 83% 58%) 50%, hsl(239 84% 67%) 100%);
-    --gradient-services: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(186 84% 60%) 50%, hsl(216 100% 50%) 100%);
-    --gradient-results: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(0 84% 60%) 50%, hsl(348 83% 47%) 100%);
-    --gradient-packages: linear-gradient(135deg, hsl(48 100% 67%) 0%, hsl(43 96% 56%) 50%, hsl(36 77% 49%) 100%);
-    --gradient-team: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(48 100% 50%) 50%, hsl(216 100% 50%) 100%);
-    --gradient-contact: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(189 94% 43%) 50%, hsl(196 94% 67%) 100%);
+    /* Section-specific Norwegian gradients - Subtle & Clean */
+    --gradient-success-section: linear-gradient(135deg, hsl(120 40% 45%) 0%, hsl(45 85% 60%) 50%, hsl(120 40% 45%) 100%);
+    --gradient-mission: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(210 50% 55%) 50%, hsl(210 40% 65%) 100%);
+    --gradient-services: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(210 50% 60%) 50%, hsl(210 40% 75%) 100%);
+    --gradient-results: linear-gradient(135deg, hsl(120 40% 45%) 0%, hsl(120 35% 55%) 50%, hsl(120 30% 65%) 100%);
+    --gradient-packages: linear-gradient(135deg, hsl(45 85% 60%) 0%, hsl(45 75% 65%) 50%, hsl(45 65% 70%) 100%);
+    --gradient-team: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(0 65% 55%) 50%, hsl(210 60% 45%) 100%);
+    --gradient-contact: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(210 50% 55%) 50%, hsl(210 40% 65%) 100%);
 
-    /* Advanced Shadow System */
-    --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.3);
-    --shadow-blue: 0 4px 20px hsl(216 100% 50% / 0.2);
-    --shadow-yellow: 0 4px 20px hsl(48 100% 50% / 0.25);
-    --shadow-premium: 0 20px 40px -10px hsl(216 100% 50% / 0.4);
-    --shadow-card: 0 4px 6px -1px hsl(216 20% 50% / 0.1), 0 2px 4px -1px hsl(216 20% 50% / 0.06);
-    --shadow-card-hover: 0 10px 15px -3px hsl(216 20% 50% / 0.1), 0 4px 6px -2px hsl(216 20% 50% / 0.05);
-    --shadow-glow: 0 0 20px hsl(216 100% 50% / 0.5);
+    /* Norwegian Shadow System - Subtle & Clean */
+    --shadow-norway: 0 8px 25px -8px hsl(210 60% 45% / 0.15);
+    --shadow-blue: 0 4px 15px hsl(210 60% 45% / 0.12);
+    --shadow-red: 0 4px 15px hsl(0 65% 55% / 0.15);
+    --shadow-premium: 0 15px 35px -8px hsl(210 60% 45% / 0.2);
+    --shadow-card: 0 2px 4px -1px hsl(210 15% 50% / 0.08), 0 1px 2px -1px hsl(210 15% 50% / 0.04);
+    --shadow-card-hover: 0 8px 12px -3px hsl(210 15% 50% / 0.12), 0 3px 5px -2px hsl(210 15% 50% / 0.08);
+    --shadow-glow: 0 0 15px hsl(210 60% 45% / 0.3);
 
-    /* Advanced Transitions */
-    --transition-ukraine: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Norwegian Transitions - Gentle & Professional */
+    --transition-norway: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-gentle: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     --radius: 0.75rem;
     --radius-lg: 1rem;
@@ -126,8 +126,8 @@
     --ring: 212.7 26.8% 83.9%;
     
     /* Dark mode shadows */
-    --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.4);
-    --shadow-premium: 0 20px 40px -10px hsl(216 100% 50% / 0.5);
+    --shadow-norway: 0 10px 30px -10px hsl(210 60% 45% / 0.4);
+    --shadow-premium: 0 20px 40px -10px hsl(210 60% 45% / 0.5);
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -164,13 +164,13 @@
 }
 
 @layer components {
-  /* Enhanced Gradient Classes */
+  /* Norwegian Gradient Classes */
   .hero-gradient {
     background: var(--gradient-hero);
   }
   
-  .ukraine-gradient {
-    background: var(--gradient-ukraine);
+  .norway-gradient {
+    background: var(--gradient-norway);
   }
   
   .blue-gradient {
@@ -222,8 +222,8 @@
     background: var(--gradient-dark);
   }
   
-  .text-gradient-ukraine {
-    background: var(--gradient-ukraine);
+  .text-gradient-norway {
+    background: var(--gradient-norway);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -236,17 +236,17 @@
     background-clip: text;
   }
   
-  /* Enhanced Shadow Classes */
-  .shadow-ukraine {
-    box-shadow: var(--shadow-ukraine);
+  /* Norwegian Shadow Classes */
+  .shadow-norway {
+    box-shadow: var(--shadow-norway);
   }
   
   .shadow-blue {
     box-shadow: var(--shadow-blue);
   }
   
-  .shadow-yellow {
-    box-shadow: var(--shadow-yellow);
+  .shadow-red {
+    box-shadow: var(--shadow-red);
   }
 
   .shadow-premium {
@@ -265,41 +265,54 @@
     box-shadow: var(--shadow-glow);
   }
   
-  /* Enhanced Transition Classes */
-  .transition-ukraine {
-    transition: var(--transition-ukraine);
+  /* Norwegian Transition Classes */
+  .transition-norway {
+    transition: var(--transition-norway);
   }
 
   .transition-smooth {
     transition: var(--transition-smooth);
   }
 
-  .transition-bounce {
-    transition: var(--transition-bounce);
+  .transition-gentle {
+    transition: var(--transition-gentle);
   }
   
-  /* Premium Button Styles */
-  .btn-ukraine {
-    @apply relative overflow-hidden rounded-xl font-semibold px-8 py-4 transition-smooth;
-    background: var(--gradient-ukraine);
+  /* Norwegian Button Styles - Clean & Professional */
+  .btn-norway {
+    @apply relative overflow-hidden rounded-lg font-medium px-6 py-3 transition-gentle;
+    background: var(--gradient-norway);
+    box-shadow: var(--shadow-card);
   }
   
-  .btn-ukraine::before {
+  .btn-norway::before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   
-  .btn-ukraine:hover::before {
+  .btn-norway:hover::before {
     left: 100%;
   }
 
-  .btn-ukraine:hover {
+  .btn-norway:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* CTA Button - More prominent but still professional */
+  .btn-cta {
+    @apply relative overflow-hidden rounded-lg font-semibold px-8 py-4 transition-gentle;
+    background: var(--gradient-blue);
+    box-shadow: var(--shadow-blue);
+  }
+
+  .btn-cta:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-premium);
   }
@@ -323,7 +336,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, hsl(216 100% 50% / 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(210 60% 45% / 0.1) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -377,10 +390,10 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .glass-ukraine {
-    background: linear-gradient(135deg, hsl(216 100% 50% / 0.1), hsl(48 100% 50% / 0.1));
+  .glass-norway {
+    background: linear-gradient(135deg, hsl(210 60% 45% / 0.1), hsl(0 65% 55% / 0.1));
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(216 100% 50% / 0.2);
+    border: 1px solid hsl(210 60% 45% / 0.2);
   }
 }
 
@@ -391,8 +404,8 @@
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px hsl(216 100% 50% / 0.3); }
-  to { box-shadow: 0 0 30px hsl(216 100% 50% / 0.6); }
+  from { box-shadow: 0 0 20px hsl(210 60% 45% / 0.3); }
+  to { box-shadow: 0 0 30px hsl(210 60% 45% / 0.6); }
 }
 
 @keyframes scaleIn {
