@@ -60,6 +60,7 @@ export interface TranslationContent {
       ai: { title: string; description: string; details: string; };
       crm: { title: string; description: string; details: string; };
       integrations: { title: string; description: string; details: string; };
+      banking: { title: string; description: string; details: string; };
     };
   };
   // Results section
@@ -297,7 +298,8 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         iot: { title: "🌐 IoT рішення", description: "Розумні пристрої, сенсори, моніторинг", details: "Автоматизація фізичних процесів" },
         ai: { title: "🧠 AI-асистенти", description: "GPT-помічники, ML-аналітика", details: "AI, які ведуть клієнта від питання до покупки" },
         crm: { title: "📊 CRM-системи", description: "Управління клієнтами та пацієнтами", details: "CRM, які допомагають організації рости" },
-        integrations: { title: "🔗 Інтеграції", description: "API, системи, процеси", details: "Щоб системи говорили одна з одною" }
+        integrations: { title: "🔗 Інтеграції", description: "API, системи, процеси", details: "Щоб системи говорили одна з одною" },
+        banking: { title: "🏦 Банкінг", description: "Корисне інтернет користувачам", details: "Зручні фінансові рішення для повсякденного життя" }
       }
     },
     results: {
@@ -306,7 +308,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       cta: "🚀 Хочу такі результати",
       items: {
         medical: { title: "Медицина", metric: "+200%", description: "більше пацієнтів" },
-        business: { title: "Бізнес", metric: "+500%", description: "більше заявок" },
+        business: { title: "Бізнес", metric: "108%", description: "більше заявок" },
         automation: { title: "Автоматизація", metric: "95%", description: "процесів автоматизовано" },
         iot: { title: "IoT", metric: "+300%", description: "ефективності" },
         ai: { title: "AI", metric: "85%", description: "точності прогнозів" },
@@ -558,7 +560,8 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         iot: { title: "🌐 IoT løsninger", description: "Smarte enheter, sensorer, overvåking", details: "Automatisering av fysiske prosesser" },
         ai: { title: "🧠 AI-assistenter", description: "GPT-hjelpere, ML-analyse", details: "AI som leder kunder fra spørsmål til kjøp" },
         crm: { title: "📊 CRM-systemer", description: "Kundeadministrasjon", details: "CRM som hjelper organisasjoner vokse" },
-        integrations: { title: "🔗 Integrasjoner", description: "API, systemer, prosesser", details: "Så systemer kan snakke sammen" }
+        integrations: { title: "🔗 Integrasjoner", description: "API, systemer, prosesser", details: "Så systemer kan snakke sammen" },
+        banking: { title: "🏦 Bank", description: "Nyttig internett for brukere", details: "Praktiske finansielle løsninger for hverdagen" }
       }
     },
     results: {
@@ -819,7 +822,8 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         iot: { title: "🌐 IoT solutions", description: "Smart devices, sensors, monitoring", details: "Automation of physical processes" },
         ai: { title: "🧠 AI assistants", description: "GPT helpers, ML analytics", details: "AI that leads customers from question to purchase" },
         crm: { title: "📊 CRM systems", description: "Customer management", details: "CRM that helps organizations grow" },
-        integrations: { title: "🔗 Integrations", description: "API, systems, processes", details: "Making systems talk to each other" }
+        integrations: { title: "🔗 Integrations", description: "API, systems, processes", details: "Making systems talk to each other" },
+        banking: { title: "🏦 Banking", description: "Useful internet for users", details: "Convenient financial solutions for everyday life" }
       }
     },
     results: {
@@ -1080,7 +1084,8 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
         iot: { title: "", description: "", details: "" },
         ai: { title: "", description: "", details: "" },
         crm: { title: "", description: "", details: "" },
-        integrations: { title: "", description: "", details: "" }
+        integrations: { title: "", description: "", details: "" },
+        banking: { title: "", description: "", details: "" }
       }
     },
     results: {

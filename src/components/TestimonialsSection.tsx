@@ -113,7 +113,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {getTitle()}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-foreground max-w-2xl mx-auto">
             {getSubtitle()}
           </p>
         </div>
@@ -130,7 +130,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Testimonial text */}
-                <blockquote className="text-base mb-6 italic text-muted-foreground leading-relaxed">
+                <blockquote className="text-base mb-6 italic text-foreground leading-relaxed">
                   "{testimonial.text}"
                 </blockquote>
 
@@ -146,7 +146,7 @@ const TestimonialsSection = () => {
                   <div className="text-3xl">{testimonial.avatar}</div>
                   <div>
                     <div className="font-bold text-lg">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="text-sm text-foreground">{testimonial.role}</div>
                     <div className="text-sm font-medium text-primary">{testimonial.company}</div>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const TestimonialsSection = () => {
             <div className="text-2xl">🏆</div>
             <div>
               <div className="font-bold text-lg">4.9/5 середній рейтинг</div>
-              <div className="text-sm text-muted-foreground">на основі 500+ проєктів</div>
+              <div className="text-sm text-foreground">на основі 500+ проєктів</div>
             </div>
           </div>
         </div>
