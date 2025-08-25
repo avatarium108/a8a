@@ -145,11 +145,11 @@ const HeroSection = () => {
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="text-secondary text-lg">🏆</span>
-                  500+ реальних кейсів
+                  Перші успішні кейси
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="text-success-light text-lg">💎</span>
-                  100% гарантія результату
+                  108% гарантія результату
                 </span>
               </div>
             </div>
@@ -159,9 +159,9 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '0.8s' }}>
               <div className="text-3xl mb-3 animate-float">🏆</div>
-              <div className="font-bold text-xl text-gradient-premium">500+</div>
+              <div className="font-bold text-xl text-gradient-premium">10+</div>
               <div className="text-primary-light font-medium">успішних проєктів</div>
-              <div className="text-xs opacity-80 mt-1">за 3 роки роботи</div>
+              <div className="text-xs opacity-80 mt-1">перші результати</div>
             </div>
             <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '1.0s' }}>
               <div className="text-3xl mb-3 animate-float" style={{ animationDelay: '0.5s' }}>⭐</div>
@@ -171,7 +171,7 @@ const HeroSection = () => {
             </div>
             <div className="card-premium p-6 text-center backdrop-blur-sm animate-scale-in" style={{ animationDelay: '1.2s' }}>
               <div className="text-3xl mb-3 animate-float" style={{ animationDelay: '1.0s' }}>💎</div>
-              <div className="font-bold text-xl text-gradient-premium">100%</div>
+              <div className="font-bold text-xl text-gradient-premium">108%</div>
               <div className="text-primary-light font-medium">гарантія якості</div>
               <div className="text-xs opacity-80 mt-1">або повернення коштів</div>
             </div>
