@@ -6,7 +6,7 @@ const RussianWarshipPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 via-black to-red-700 flex items-center justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #dc2626 0%, #000000 30%, #000000 70%, #b91c1c 100%)' }}>
+    <div className="min-h-screen bg-gradient-dark flex items-center justify-center relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" 
@@ -49,13 +49,13 @@ const RussianWarshipPage = () => {
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="/ua" 
-            className="inline-block bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-block glass-ukraine text-white font-bold py-3 px-8 rounded-xl transition-ukraine transform hover:scale-105 shadow-ukraine"
           >
             Повернутись на para.tech
           </a>
           <a 
             href="#volunteer" 
-            className="inline-block bg-red-600/80 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-destructive/80 hover:bg-destructive text-destructive-foreground font-bold py-3 px-8 rounded-xl transition-ukraine transform hover:scale-105"
           >
             4.5.0 ++
           </a>
