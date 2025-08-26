@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om oss",
+    "services": "Tjenester",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Velkommen til A8A",
+    "subtitle": "Din pålitelige partner i den digitale verden",
+    "cta": "Kom i gang nå"
+  },
+  "about": {
+    "title": "Om oss",
+    "description": "Vi er et team av profesjonelle som leverer kvalitetstjenester innen webutvikling og digital markedsføring."
+  },
+  "services": {
+    "title": "Våre tjenester",
+    "web": {
+      "title": "Webutvikling",
+      "description": "Vi lager moderne og funksjonelle nettsteder"
+    },
+    "marketing": {
+      "title": "Digital markedsføring",
+      "description": "Vi promoterer din virksomhet på internett"
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "Vi utvikler brukervennlige og vakre grensesnitt"
+    }
+  },
+  "contact": {
+    "title": "Kontakt oss",
+    "email": "E-post",
+    "phone": "Telefon",
+    "address": "Adresse"
+  },
+  "footer": {
+    "copyright": "© 2025 A8A. Alle rettigheter forbeholdt."
+  }
+}
