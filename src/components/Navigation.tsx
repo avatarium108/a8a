@@ -22,8 +22,8 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/50 shadow-sm">
-        <div className="container mx-auto py-4 px-6">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900/95 via-purple-800/90 to-background/95 backdrop-blur-sm border-b border-purple-700/30">
+        <div className="container mx-auto py-3 pl-2 pr-4">
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
@@ -34,40 +34,75 @@ const Navigation = () => {
               />
             </div>
 
-            {/* Navigation Menu - центр */}
-            <div className="hidden lg:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+            {/* Navigation Menu - посередині */}
+            <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -ml-44">
               <button 
                 onClick={() => scrollToSection('mission-section')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.about}
               </button>
               <button 
                 onClick={() => scrollToSection('services-section')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.services}
               </button>
               <button 
                 onClick={() => scrollToSection('packages-section')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.packages}
               </button>
               <button 
+                onClick={() => scrollToSection('team-section')}
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
+              >
+                {t.nav.team}
+              </button>
+              <button 
                 onClick={() => scrollToSection('contact-section')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.contact}
               </button>
             </div>
 
-            {/* CTA Buttons - вправо */}
-            <div className="flex items-center gap-4 flex-shrink-0 ml-auto">
+            {/* CTA Buttons - максимально вправо */}
+            <div className="flex items-center gap-3 flex-shrink-0 ml-auto mr-2">
+              {locale === 'ua' && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
+                  onClick={() => window.open('https://savelife.in.ua/donate/', '_blank')}
+                >
+                  {t.nav.volunteer}
+                </Button>
+              )}
+              {locale === 'no' && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
+                  onClick={() => scrollToSection('contact-section')}
+                >
+                  {t.nav.volunteer}
+                </Button>
+              )}
+              {locale === 'eu' && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-black border-red-600"
+                  onClick={() => scrollToSection('contact-section')}
+                >
+                  {t.nav.volunteer}
+                </Button>
+              )}
               <Button 
-                variant="outline" 
+                variant="default" 
                 size="sm"
-                className="hidden sm:flex border-gray-300 text-gray-700 hover:bg-gray-50"
                 onClick={() => scrollToSection('contact-section')}
               >
                 {t.nav.application}
