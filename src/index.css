@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    /* Premium Color Palette - Enhanced */
-    --background: 0 0% 100%;
-    --foreground: 222 16% 15%;
+    /* Norwegian Clean Palette - Minimalist Design */
+    --background: 0 0% 99%;
+    --foreground: 210 10% 23%;
 
-    /* Ukrainian Blue Variations */
-    --primary: 216 100% 50%;
+    /* Norwegian Blue Variations - Muted and Clean */
+    --primary: 210 50% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 216 100% 35%;
-    --primary-light: 216 100% 65%;
-    --primary-muted: 216 100% 95%;
+    --primary-dark: 210 60% 40%;
+    --primary-light: 210 40% 70%;
+    --primary-muted: 210 20% 96%;
     
-    /* Ukrainian Yellow Variations */
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 222 16% 15%;
-    --secondary-dark: 48 100% 40%;
-    --secondary-light: 48 100% 65%;
-    --secondary-muted: 48 100% 95%;
+    /* Norwegian Red Accent - Subtle */
+    --secondary: 0 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 0 70% 45%;
+    --secondary-light: 0 50% 65%;
+    --secondary-muted: 0 20% 96%;
 
     /* Success & Status Colors */
     --success: 142 71% 45%;
@@ -56,13 +56,13 @@
     --input: 216 20% 92%;
     --ring: 216 100% 50%;
 
-    /* Premium Gradients Collection */
-    --gradient-ukraine: linear-gradient(135deg, hsl(216 100% 50%), hsl(48 100% 50%));
-    --gradient-blue: linear-gradient(135deg, hsl(216 100% 50%), hsl(216 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(216 100% 60%) 25%, hsl(48 100% 50%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(38 90% 50%) 50%, hsl(48 100% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(216 20% 98%));
-    --gradient-dark: linear-gradient(135deg, hsl(222 16% 15%) 0%, hsl(216 100% 15%) 100%);
+    /* Norwegian Clean Gradients - Minimal and Elegant */
+    --gradient-norway: linear-gradient(135deg, hsl(210 50% 55%), hsl(0 65% 55%));
+    --gradient-blue: linear-gradient(135deg, hsl(210 50% 55%), hsl(210 60% 40%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 50% 55%) 0%, hsl(210 40% 70%) 50%, hsl(0 0% 98%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(210 50% 55%) 0%, hsl(210 40% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 99%), hsl(210 15% 96%));
+    --gradient-dark: linear-gradient(135deg, hsl(210 10% 23%) 0%, hsl(210 20% 15%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(216 20% 99%) 100%);
     

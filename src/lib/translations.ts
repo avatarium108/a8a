@@ -519,33 +519,33 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       dashboard: "Dashboard"
     },
     hero: {
-      title: "Digitaliserer norsk næringsliv",
-      subtitle: "Vi lager nettsider, apper, chatbots, CRM, AI, automatisering og IoT",
-      mission: "Vi er et norsk team som hjelper bedrifter, helse og frivillighet med å implementere systematikk og digital frihet gjennom smarte teknologier. Vi jobber med de som handler, ikke venter.",
+      title: "Vi hjelper deg å vokse",
+      subtitle: "Enkle digitale løsninger for norske bedrifter",
+      mission: "Vi lager nettsider, apper og automatisering som faktisk virker. Rett frem, rimelig, pålitelig.",
       cta: {
-        application: "🔵 Send søknad",
-        test: "🟡 Test løsningen",
-        calculate: "🔶 Beregn kostnad"
+        application: "Bestill nå",
+        test: "Les mer",
+        calculate: "Beregn kostnad"
       },
       features: {
-        service: "100% norsk service",
-        servers: "Data på europeiske servere", 
-        team: "Team fra 🏛️ Oslo, ⛰️ Bergen, 🏔️ Trondheim og ⚡ Stavanger",
-        security: "Overholder GDPR, ISO 27001, SOC 2 sikkerhetsstandarder"
+        service: "Norsk service",
+        servers: "Sikre servere", 
+        team: "Team fra Norge",
+        security: "Vi beskytter dine data"
       }
     },
     mission: {
-      title: "Våre kunder gir aldri opp",
-      description: "De som bygger - i hjemland, i krig, i utlandet. Vi tror at fremtiden til Norge ligger i automatisert, fri business. Og vi bygger det sammen med dere.",
+      title: "Enkelt og ærlig",
+      description: "Vi hjelper norske bedrifter med teknologi som virker. Uten mas. Uten unødvendig kompleksitet.",
       values: {
-        first: { title: "🇳🇴 Norske verdier", description: "Jobber med respekt for vår kultur og språk, støtter norsk næringsliv" },
-        second: { title: "💪 Styrke i enhet", description: "Sammen skaper vi sterke digitale bedrifter for nasjonens fremtid" },
-        third: { title: "🚀 Bevegelse mot seier", description: "Hvert prosjekt er et skritt mot et sterkere Norge gjennom innovasjon" }
+        first: { title: "🏔️ Norsk kvalitet", description: "Vi leverer det vi lover. Punkt." },
+        second: { title: "🤝 Enkel kommunikasjon", description: "Snakker norsk. Forklarer tydelig." },
+        third: { title: "⚡ Rask levering", description: "Ferdig på tid. Fungerer fra dag én." }
       }
     },
     services: {
-      title: "Hva vi gjør:",
-      subtitle: "Lager digitale løsninger for bedrifter, helse og frivillighet - fra nettsider til AI-agenter",
+      title: "Våre tjenester",
+      subtitle: "Digitale løsninger som fungerer",
       calculator: {
         title: "📊 Beregn kostnad",
         description: "Få omtrentlig kostnad for automatisering på 2 minutter",
@@ -565,29 +565,29 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     results: {
-      title: "Våre kunders resultater",
-      subtitle: "Reelle forbedringer for norsk næringsliv",
-      cta: "🚀 Vil ha slike resultater",
+      title: "Resultater",
+      subtitle: "Dette får du",
+      cta: "Vil du ha dette?",
       items: {
-        medical: { title: "Medisin", metric: "+200%", description: "flere pasienter" },
-        business: { title: "Business", metric: "+500%", description: "flere forespørsler" },
-        automation: { title: "Automatisering", metric: "95%", description: "prosesser automatisert" },
-        iot: { title: "IoT", metric: "+300%", description: "effektivitet" },
-        ai: { title: "AI", metric: "85%", description: "prognosenøyaktighet" },
-        crm: { title: "CRM", metric: "+400%", description: "salgskonvertering" }
+        medical: { title: "Helse", metric: "108%", description: "mer effektivt" },
+        business: { title: "Bedrift", metric: "108%", description: "flere kunder" },
+        automation: { title: "Automatisering", metric: "108%", description: "mindre arbeid" },
+        iot: { title: "IoT", metric: "108%", description: "bedre kontroll" },
+        ai: { title: "AI", metric: "108%", description: "smartere drift" },
+        crm: { title: "CRM", metric: "108%", description: "bedre salg" }
       }
     },
     packages: {
-      title: "Patriotiske pakker",
-      subtitle: "Velg automatiseringsnivå som passer dine mål og muligheter",
-      customTitle: "Trenger skreddersydd løsning? Har spesielle krav?",
-      customButton: "💬 Diskuter individuelt prosjekt",
+      title: "Våre pakker",
+      subtitle: "Rimelige priser. Tydelige leveranser.",
+      customTitle: "Trenger noe annet?",
+      customButton: "Kontakt oss",
       items: {
         starter: {
-          name: "Vilje",
-          price: "45,000",
-          description: "Oppstart-pakke",
-          subtitle: "For bedrifter som nettopp starter, men har karakter",
+          name: "Start",
+          price: "25,000",
+          description: "Grunnpakke",
+          subtitle: "For småbedrifter",
           features: [
             "Landing eller enkel nettside",
             "Chatbot på én plattform",
@@ -599,10 +599,10 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
           ]
         },
         professional: {
-          name: "Motstand",
-          price: "135,000",
-          description: "Full automatisering",
-          subtitle: "For de som er klare til å endre spillereglene",
+          name: "Profi",
+          price: "75,000",
+          description: "Full løsning",
+          subtitle: "For voksende bedrifter",
           features: [
             "Bedriftsnettside eller app",
             "Bots på 2+ plattformer",
@@ -617,10 +617,10 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
           ]
         },
         enterprise: {
-          name: "Gjenoppbygging",
-          price: "360,000",
-          description: "Full digital transformasjon",
-          subtitle: "For ledere som bygger Norges fremtid",
+          name: "Bedrift",
+          price: "150,000",
+          description: "Komplett løsning",
+          subtitle: "For større bedrifter",
           features: [
             "Fullt økosystem nettside + apper",
             "Full prosessautomatisering",
@@ -639,30 +639,30 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     team: {
-      title: "Vårt team og erfaring",
+      title: "Hvem vi er",
       points: {
-        global: { title: "🌍 Global tilstedeværelse", description: "Jobber med kunder i Norge, Europa og globalt" },
-        language: { title: "🧠 Forståelig på norsk", description: "Snakker norsk. Skriver forståelig. Implementerer effektivt." },
-        security: { title: "🔐 Sikkerhet og tillit", description: "Offisielt registrert i Norge. Sertifisert etter ISO 27001-standarder. Partner med norske myndigheter." },
-        understanding: { title: "💪 Forstår dine utfordringer", description: "Vet hvor vanskelig det er å drive forretning under press. Derfor lager vi løsninger som virkelig hjelper." },
-        location: { title: "🇳🇴 Team fra Norge", description: "🏛️ Oslo, ⛰️ Bergen, 🏔️ Trondheim, ⚡ Stavanger — vi er her, nær deg, og forstår din kontekst som ingen andre." }
+        global: { title: "🇳🇴 Norsk kvalitet", description: "Vi leverer det vi lover" },
+        language: { title: "🗣️ Snakker norsk", description: "Enkel kommunikasjon på norsk" },
+        security: { title: "🔒 Trygg partner", description: "Vi beskytter dine data" },
+        understanding: { title: "🤝 Forstår deg", description: "Vi hører på dine behov" },
+        location: { title: "📍 Fra Norge", description: "Team fra hele Norge" }
       },
-      valuesTitle: "Våre verdier:",
+      valuesTitle: "Det vi står for:",
       values: {
-        efficiency: "⚡ Effektivitet",
-        accuracy: "🎯 Nøyaktighet",
-        freedom: "🕊️ Frihet",
-        trust: "🤝 Tillit",
-        development: "📈 Utvikling",
-        strength: "💪 Styrke"
+        efficiency: "⚡ Raskt",
+        accuracy: "🎯 Presist",
+        freedom: "🕊️ Enkelt",
+        trust: "🤝 Ærlig",
+        development: "📈 Vekst",
+        strength: "💪 Robust"
       }
     },
     contact: {
-      title: "Klar for digital frihet?",
-      subtitle: "Send inn søknad — vi diskuterer prosjektet ditt og viser hvordan automatisering endrer bedriften din",
+      title: "Klar til å starte?",
+      subtitle: "Ta kontakt. Vi hjelper deg.",
       form: {
-        title: "📩 Send søknad",
-        description: "Fortell om bedriften din — vi finner den beste løsningen",
+        title: "Kontakt oss",
+        description: "Fortell hva du trenger",
         fields: {
           name: "Navn *",
           company: "Selskap eller prosjekt",
@@ -683,8 +683,8 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
           messengerContact: "@brukernavn, nummer eller e-post",
           project: "Fortell hva du vil automatisere, mål og utfordringer..."
         },
-        button: "🚀 Send søknad",
-        privacy: "Ved å trykke på knappen godtar du behandling av persondata i henhold til GDPR",
+        button: "Send melding",
+        privacy: "Vi beskytter dine data",
         security: {
           ssl: "🔒 SSL-beskyttelse",
           gdpr: "🛡️ GDPR",
@@ -698,19 +698,19 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     footer: {
-      description: "para.tech — norsk team for bedriftsautomatisering. Lager chatbots, CRM, AI-løsninger for selskaper som bygger et sterkt Norge.",
+      description: "Enkle digitale løsninger for norske bedrifter.",
       services: {
         title: "Tjenester",
-        items: ["Chatbots", "CRM-systemer", "AI-assistenter", "Automatisering", "Integrasjoner"]
+        items: ["Nettsider", "Apper", "Chatbots", "Automatisering", "Integrasjoner"]
       },
       company: {
         title: "Selskap",
-        items: ["Om oss", "Caser", "Blogg", "Karriere", "Kontakt"]
+        items: ["Om oss", "Resultater", "Blogg", "Jobb", "Kontakt"]
       },
-      copyright: "© 2025 para.tech. Alle rettigheter forbeholdt. 🇳🇴",
+      copyright: "© 2025 para.tech. Alle rettigheter forbeholdt.",
       links: {
-        privacy: "Personvernerklæring",
-        terms: "Brukervilkår"
+        privacy: "Personvern",
+        terms: "Vilkår"
       }
     },
     common: {
