@@ -510,7 +510,7 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
     nav: {
       about: "Om oss",
       services: "Tjenester",
-      packages: "Løsninger", 
+      packages: "Pakker", 
       team: "Team",
       contact: "Kontakt",
       volunteer: "🇳🇴 Støtt Norge",
@@ -519,187 +519,193 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       dashboard: "Dashboard"
     },
     hero: {
-      title: "AI-rådgivning og chatbot-løsninger for norske SMB-bedrifter",
-      subtitle: "Vi hjelper små og mellomstore bedrifter med å automatisere kundeservice, øke salg og spare tid gjennom smarte AI-løsninger",
-      mission: "Spesialisert på praktiske AI-løsninger for norske SMB-bedrifter. Vi forstår utfordringene dere står overfor og leverer teknologi som faktisk fungerer i hverdagen.",
+      title: "Digitaliserer norsk næringsliv",
+      subtitle: "Vi lager nettsider, apper, chatbots, CRM, AI, automatisering og IoT",
+      mission: "Vi er et norsk team som hjelper bedrifter, helse og frivillighet med å implementere systematikk og digital frihet gjennom smarte teknologier. Vi jobber med de som handler, ikke venter.",
       cta: {
-        application: "Book gratis konsultasjon",
-        test: "Se demo av løsningen",
-        calculate: "Beregn besparelse"
+        application: "🔵 Send søknad",
+        test: "🟡 Test løsningen",
+        calculate: "🔶 Beregn kostnad"
       },
       features: {
-        service: "Norskspråklig support og implementering",
-        servers: "Sikre norske og europeiske servere", 
-        team: "Erfarne konsulenter med SMB-fokus",
-        security: "GDPR-kompatibel og ISO-sertifisert sikkerhet"
+        service: "100% norsk service",
+        servers: "Data på europeiske servere", 
+        team: "Team fra 🏛️ Oslo, ⛰️ Bergen, 🏔️ Trondheim og ⚡ Stavanger",
+        security: "Overholder GDPR, ISO 27001, SOC 2 sikkerhetsstandarder"
       }
     },
     mission: {
-      title: "Norske SMB-bedrifter som vokser med AI",
-      description: "Vi hjelper ambisiøse norske bedriftseiere som vil ta steget inn i fremtiden. Våre AI-løsninger gir dere mer tid til det som virkelig betyr noe - å bygge bedriften deres.",
+      title: "Våre kunder gir aldri opp",
+      description: "De som bygger - i hjemland, i krig, i utlandet. Vi tror at fremtiden til Norge ligger i automatisert, fri business. Og vi bygger det sammen med dere.",
       values: {
-        first: { title: "🎯 Resultatorientert", description: "Fokuserer på løsninger som gir målbare resultater for din bedrift" },
-        second: { title: "🤝 Personlig service", description: "Tett oppfølging og support på norsk - vi er her når du trenger oss" },
-        third: { title: "⚡ Rask implementering", description: "Fra idé til fungerende løsning på få uker, ikke måneder" }
+        first: { title: "🇳🇴 Norske verdier", description: "Jobber med respekt for vår kultur og språk, støtter norsk næringsliv" },
+        second: { title: "💪 Styrke i enhet", description: "Sammen skaper vi sterke digitale bedrifter for nasjonens fremtid" },
+        third: { title: "🚀 Bevegelse mot seier", description: "Hvert prosjekt er et skritt mot et sterkere Norge gjennom innovasjon" }
       }
     },
     services: {
-      title: "Våre tjenester for SMB-bedrifter",
-      subtitle: "Praktiske AI-løsninger som gir umiddelbar verdi for din bedrift",
+      title: "Hva vi gjør:",
+      subtitle: "Lager digitale løsninger for bedrifter, helse og frivillighet - fra nettsider til AI-agenter",
       calculator: {
-        title: "📊 Beregn din besparelse",
-        description: "Se hvor mye tid og penger du kan spare med automatisering",
-        button: "Beregn besparelse"
+        title: "📊 Beregn kostnad",
+        description: "Få omtrentlig kostnad for automatisering på 2 minutter",
+        button: "Kostnadskalkulator"
       },
       items: {
-        websites: { title: "🌐 Bedriftsnettsider", description: "Profesjonelle nettsider som konverterer", details: "Responsive nettsider optimalisert for norske kunder" },
-        mobile: { title: "📱 Bedriftsapper", description: "Kundeapper og interne verktøy", details: "Native og hybride apper for iOS og Android" },
-        chatbots: { title: "🤖 AI-chatbots", description: "Automatisert kundeservice 24/7", details: "Intelligente chatbots som håndterer 80% av kundehenvendelser" },
-        medical: { title: "🏥 Helseteknologi", description: "Digitale løsninger for helsesektoren", details: "Timebestilling, pasientportaler og telemedisin" },
-        volunteer: { title: "🤝 Organisasjonsverktøy", description: "Digitale løsninger for foreninger", details: "Medlemssystemer og arrangementsplanlegging" },
-        iot: { title: "🌐 Smart overvåking", description: "IoT-sensorer for bedriftsoptimalisering", details: "Temperatur, fuktighet, energiforbruk og sikkerhet" },
-        ai: { title: "🧠 AI-assistenter", description: "Personlige AI-hjelpere for bedriften", details: "AI som kvalifiserer leads og booker møter automatisk" },
-        crm: { title: "📊 Kundestyring", description: "CRM tilpasset norske SMB-bedrifter", details: "Enkel kundeoppfølging med norsk språkstøtte" },
-        integrations: { title: "🔗 Systemintegrasjoner", description: "Koble sammen eksisterende systemer", details: "Integrasjoner med Tripletex, Visma og andre norske systemer" },
-        banking: { title: "🏦 Betalingsløsninger", description: "Sømløse betalingsopplevelser", details: "Vipps, BankID og andre norske betalingsmetoder" }
+        websites: { title: "🌐 Nettsider", description: "Landing, bedrift, nettbutikker", details: "Moderne nettsider som selger 24/7" },
+        mobile: { title: "📱 Mobile apper", description: "iOS, Android, hybride løsninger", details: "Apper for bedrift og kunder" },
+        chatbots: { title: "🤖 Chatbots og agenter", description: "Messenger, WhatsApp, Web", details: "AI-agenter som jobber i stedet for manager" },
+        medical: { title: "🏥 Medisinske løsninger", description: "Telemedisin, timebestilling, journaler", details: "Digitalisering av medisinske prosesser" },
+        volunteer: { title: "🤝 Frivillige plattformer", description: "Innsamling, koordinering av hjelp", details: "IT for gode formål og frivillighet" },
+        iot: { title: "🌐 IoT løsninger", description: "Smarte enheter, sensorer, overvåking", details: "Automatisering av fysiske prosesser" },
+        ai: { title: "🧠 AI-assistenter", description: "GPT-hjelpere, ML-analyse", details: "AI som leder kunder fra spørsmål til kjøp" },
+        crm: { title: "📊 CRM-systemer", description: "Kundeadministrasjon", details: "CRM som hjelper organisasjoner vokse" },
+        integrations: { title: "🔗 Integrasjoner", description: "API, systemer, prosesser", details: "Så systemer kan snakke sammen" },
+        banking: { title: "🏦 Bank", description: "Nyttig internett for brukere", details: "Praktiske finansielle løsninger for hverdagen" }
       }
     },
     results: {
-      title: "Resultater fra norske SMB-bedrifter",
-      subtitle: "Dokumenterte forbedringer hos våre kunder",
-      cta: "Book gratis konsultasjon",
+      title: "Våre kunders resultater",
+      subtitle: "Reelle forbedringer for norsk næringsliv",
+      cta: "🚀 Vil ha slike resultater",
       items: {
-        medical: { title: "Tannlegepraksis Oslo", metric: "60%", description: "færre telefoner til resepsjon" },
-        business: { title: "Rørleggerfirma Bergen", metric: "3x", description: "flere kvalifiserte henvendelser" },
-        automation: { title: "Regnskapsbyrå Trondheim", metric: "40 timer", description: "spart per måned" },
-        iot: { title: "Bakeri Stavanger", metric: "25%", description: "redusert energikostnad" },
-        ai: { title: "Eiendomsmegler Tromsø", metric: "80%", description: "av leads kvalifiseres automatisk" },
-        crm: { title: "Konsulentfirma Kristiansand", metric: "2.5x", description: "høyere kundetilfredshet" }
+        medical: { title: "Medisin", metric: "+200%", description: "flere pasienter" },
+        business: { title: "Business", metric: "+500%", description: "flere forespørsler" },
+        automation: { title: "Automatisering", metric: "95%", description: "prosesser automatisert" },
+        iot: { title: "IoT", metric: "+300%", description: "effektivitet" },
+        ai: { title: "AI", metric: "85%", description: "prognosenøyaktighet" },
+        crm: { title: "CRM", metric: "+400%", description: "salgskonvertering" }
       }
     },
     packages: {
-      title: "SMB-løsninger tilpasset norske bedrifter",
-      subtitle: "Velg pakken som passer din bedrifts størrelse og behov",
-      customTitle: "Trenger en skreddersydd løsning for din bedrift?",
-      customButton: "Book gratis konsultasjon",
+      title: "Patriotiske pakker",
+      subtitle: "Velg automatiseringsnivå som passer dine mål og muligheter",
+      customTitle: "Trenger skreddersydd løsning? Har spesielle krav?",
+      customButton: "💬 Diskuter individuelt prosjekt",
       items: {
         starter: {
-          name: "Starter",
-          price: "Fra 25,000 kr",
-          description: "Perfekt for små bedrifter",
-          subtitle: "Kom i gang med automatisering uten store investeringer",
+          name: "Vilje",
+          price: "45,000",
+          description: "Oppstart-pakke",
+          subtitle: "For bedrifter som nettopp starter, men har karakter",
           features: [
-            "Enkel AI-chatbot for nettside",
-            "Automatisk e-postoppfølging",
-            "Grunnleggende CRM-system",
-            "Integrasjon med eksisterende systemer",
-            "2 måneders support og opplæring",
-            "Norskspråklig brukergrensesnitt",
-            "GDPR-kompatibel databehandling"
+            "Landing eller enkel nettside",
+            "Chatbot på én plattform",
+            "Basis CRM-system",
+            "1 IoT-enhet (sensor)",
+            "Enkel integrasjon",
+            "Måned støtte",
+            "Opplæring"
           ]
         },
         professional: {
-          name: "Professional",
-          price: "Fra 75,000 kr",
-          description: "For voksende SMB-bedrifter",
-          subtitle: "Komplett automatiseringsløsning for seriøse bedrifter",
+          name: "Motstand",
+          price: "135,000",
+          description: "Full automatisering",
+          subtitle: "For de som er klare til å endre spillereglene",
           features: [
-            "Avansert AI-chatbot med lead-kvalifisering",
-            "Automatisk møtebooking og kalendersync",
-            "Komplett CRM med rapportering",
-            "Integrasjoner med Tripletex/Visma",
-            "Mobil app for kundeoppfølging",
-            "WhatsApp Business API",
-            "6 måneders support og opplæring",
-            "Månedlige optimaliseringsrapporter"
+            "Bedriftsnettside eller app",
+            "Bots på 2+ plattformer",
+            "Full CRM med analyse",
+            "Opptil 5 IoT-enheter",
+            "3 API-integrasjoner",
+            "AI-assistent for salg",
+            "Medisinske eller frivillige moduler",
+            "Mobil app for kontroll",
+            "3 måneder støtte",
+            "Detaljert teamopplæring"
           ]
         },
         enterprise: {
-          name: "Enterprise",
-          price: "Fra 150,000 kr",
-          description: "For etablerte bedrifter",
-          subtitle: "Full digital transformasjon med dedikert support",
+          name: "Gjenoppbygging",
+          price: "360,000",
+          description: "Full digital transformasjon",
+          subtitle: "For ledere som bygger Norges fremtid",
           features: [
-            "Skreddersydd AI-løsning for din bransje",
-            "Komplett automatisering av salgsprosess",
-            "Avansert analyse og prediktiv modellering",
-            "Integrasjon med alle eksisterende systemer",
-            "Dedikert kundesuksess-manager",
-            "24/7 teknisk support",
-            "Kvartalsvise strategimøter",
-            "Ubegrenset tilpasninger og oppdateringer"
+            "Fullt økosystem nettside + apper",
+            "Full prosessautomatisering",
+            "AI og ML-løsninger",
+            "Ubegrenset antall IoT-enheter",
+            "Tilpassede IoT-utviklinger",
+            "Medisinske systemer (telemedisin, EMR)",
+            "Frivillige plattformer",
+            "Tilpassede utviklinger",
+            "Integrasjon av alle systemer",
+            "Egen IoT-hub",
+            "12 måneder støtte",
+            "Personlig prosjektleder"
           ]
         }
       }
     },
     team: {
-      title: "Hvorfor norske SMB-bedrifter velger oss",
+      title: "Vårt team og erfaring",
       points: {
-        global: { title: "🎯 SMB-spesialisering", description: "Vi forstår utfordringene små og mellomstore bedrifter står overfor" },
-        language: { title: "🇳🇴 Norsk ekspertise", description: "Norsktalende team som forstår norsk forretningskultur og regelverk" },
-        security: { title: "🔐 Trygg partner", description: "Registrert norsk selskap med full GDPR-compliance og ISO-sertifiseringer" },
-        understanding: { title: "💼 Praktisk erfaring", description: "Over 50 implementerte løsninger hos norske SMB-bedrifter" },
-        location: { title: "🤝 Lokal tilstedeværelse", description: "Kontorer i Oslo og Bergen - vi møter deg der du er" }
+        global: { title: "🌍 Global tilstedeværelse", description: "Jobber med kunder i Norge, Europa og globalt" },
+        language: { title: "🧠 Forståelig på norsk", description: "Snakker norsk. Skriver forståelig. Implementerer effektivt." },
+        security: { title: "🔐 Sikkerhet og tillit", description: "Offisielt registrert i Norge. Sertifisert etter ISO 27001-standarder. Partner med norske myndigheter." },
+        understanding: { title: "💪 Forstår dine utfordringer", description: "Vet hvor vanskelig det er å drive forretning under press. Derfor lager vi løsninger som virkelig hjelper." },
+        location: { title: "🇳🇴 Team fra Norge", description: "🏛️ Oslo, ⛰️ Bergen, 🏔️ Trondheim, ⚡ Stavanger — vi er her, nær deg, og forstår din kontekst som ingen andre." }
       },
-      valuesTitle: "Våre prinsipper:",
+      valuesTitle: "Våre verdier:",
       values: {
-        efficiency: "⚡ Effektivitet først",
-        accuracy: "🎯 Målbare resultater",
-        freedom: "🕊️ Enkel implementering",
-        trust: "🤝 Transparent kommunikasjon",
-        development: "📈 Kontinuerlig forbedring",
-        strength: "💪 Langsiktig partnerskap"
+        efficiency: "⚡ Effektivitet",
+        accuracy: "🎯 Nøyaktighet",
+        freedom: "🕊️ Frihet",
+        trust: "🤝 Tillit",
+        development: "📈 Utvikling",
+        strength: "💪 Styrke"
       }
     },
     contact: {
-      title: "Klar for å automatisere bedriften din?",
-      subtitle: "Book en gratis konsultasjon og få en skreddersydd plan for hvordan AI kan hjelpe din SMB-bedrift",
+      title: "Klar for digital frihet?",
+      subtitle: "Send inn søknad — vi diskuterer prosjektet ditt og viser hvordan automatisering endrer bedriften din",
       form: {
-        title: "📅 Book gratis konsultasjon",
-        description: "Fortell oss om utfordringene dine — vi lager en tilpasset løsning",
+        title: "📩 Send søknad",
+        description: "Fortell om bedriften din — vi finner den beste løsningen",
         fields: {
           name: "Navn *",
-          company: "Bedrift *",
+          company: "Selskap eller prosjekt",
           phone: "Telefon *",
           email: "E-post *",
-          messenger: "Foretrukket kontaktmåte *",
-          messengerContact: "Kontaktinformasjon *",
-          date: "Ønsket dato for konsultasjon *",
-          time: "Ønsket tidspunkt *",
-          project: "Beskriv dine utfordringer *"
+          messenger: "Foretrukket messenger *",
+          messengerContact: "Brukernavn / kontakt *",
+          date: "Passende dato *",
+          time: "Passende tid *",
+          project: "Beskriv prosjektet ditt *"
         },
         placeholders: {
           name: "Ditt navn",
-          company: "Bedriftsnavn",
-          phone: "+47 xxx xx xxx",
-          email: "din@bedrift.no",
-          messenger: "Telefon, Teams, Zoom",
-          messengerContact: "Telefonnummer eller e-post",
-          project: "Hvilke prosesser tar for mye tid? Hvor mister dere kunder? Hva ønsker dere å automatisere?"
+          company: "Selskapsnavn eller prosjekt",
+          phone: "+47...",
+          email: "email@example.com",
+          messenger: "Velg messenger",
+          messengerContact: "@brukernavn, nummer eller e-post",
+          project: "Fortell hva du vil automatisere, mål og utfordringer..."
         },
-        button: "Book gratis konsultasjon",
-        privacy: "Ved å sende inn skjemaet godtar du vår behandling av persondata i henhold til GDPR",
+        button: "🚀 Send søknad",
+        privacy: "Ved å trykke på knappen godtar du behandling av persondata i henhold til GDPR",
         security: {
-          ssl: "🔒 SSL-kryptert",
-          gdpr: "🛡️ GDPR-kompatibel",
-          servers: "🇳🇴 Norske servere"
+          ssl: "🔒 SSL-beskyttelse",
+          gdpr: "🛡️ GDPR",
+          servers: "🇪🇺 EU-servere"
         }
       },
       info: {
-        title: "Kontakt oss",
-        trustTitle: "Allerede 50+ norske SMB-bedrifter har automatisert med oss",
-        dataProtection: "🔒 Datasikkerhet: Vi lagrer all informasjon på norske servere med banknivå-sikkerhet. Full GDPR-compliance og ISO 27001-sertifisering."
+        title: "Våre kontakter",
+        trustTitle: "Over 100 norske bedrifter stoler på vår automatisering",
+        dataProtection: "🔒 Databeskyttelse: All kundedata lagres på europeiske servere med AES-256 kryptering. Vi følger GDPR og ISO 27001-standarder for maksimal beskyttelse av din informasjon."
       }
     },
     footer: {
-      description: "para.tech — spesialisert på AI-rådgivning og chatbot-løsninger for norske SMB-bedrifter. Vi hjelper deg spare tid, øke salg og forbedre kundeservice.",
+      description: "para.tech — norsk team for bedriftsautomatisering. Lager chatbots, CRM, AI-løsninger for selskaper som bygger et sterkt Norge.",
       services: {
         title: "Tjenester",
-        items: ["AI-chatbots", "Automatisering", "CRM-systemer", "Systemintegrasjoner", "Konsultasjon"]
+        items: ["Chatbots", "CRM-systemer", "AI-assistenter", "Automatisering", "Integrasjoner"]
       },
       company: {
         title: "Selskap",
-        items: ["Om oss", "Kundehistorier", "Blogg", "Karriere", "Kontakt"]
+        items: ["Om oss", "Caser", "Blogg", "Karriere", "Kontakt"]
       },
       copyright: "© 2025 para.tech. Alle rettigheter forbeholdt. 🇳🇴",
       links: {
@@ -1200,9 +1206,9 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
       }
     },
     common: {
-      siteName: "",
+      siteName: "para.tech",
       supportNote: "",
-      year: "",
+      year: "2025",
       loading: ""
     },
     auth: {
@@ -1258,8 +1264,4 @@ export const translations: Record<SupportedLocale, TranslationContent> = {
 
 export function getTranslation(locale: SupportedLocale): TranslationContent {
   return translations[locale] || translations.ua;
-}
-
-export function getSupportedLocales(): SupportedLocale[] {
-  return Object.keys(translations) as SupportedLocale[];
 }
