@@ -56,6 +56,39 @@
     --input: 216 20% 92%;
     --ring: 216 100% 50%;
 
+    /* Norwegian Scandinavian Design Palette */
+    --no-background: 0 0% 100%;
+    --no-foreground: 215 25% 27%;
+    
+    /* Norwegian Blue - Clean & Professional */
+    --no-primary: 210 100% 56%;
+    --no-primary-foreground: 0 0% 100%;
+    --no-primary-dark: 210 100% 40%;
+    --no-primary-light: 210 100% 70%;
+    --no-primary-muted: 210 100% 96%;
+    
+    /* Norwegian Red Accent - Subtle */
+    --no-secondary: 0 65% 51%;
+    --no-secondary-foreground: 0 0% 100%;
+    --no-secondary-dark: 0 65% 35%;
+    --no-secondary-light: 0 65% 65%;
+    --no-secondary-muted: 0 65% 95%;
+
+    /* Clean Supporting Colors */
+    --no-card: 0 0% 100%;
+    --no-card-foreground: 215 25% 27%;
+    --no-card-hover: 210 20% 98%;
+
+    --no-muted: 210 20% 97%;
+    --no-muted-foreground: 215 16% 47%;
+
+    --no-accent: 210 20% 97%;
+    --no-accent-foreground: 210 100% 56%;
+
+    --no-border: 210 20% 94%;
+    --no-input: 210 20% 94%;
+    --no-ring: 210 100% 56%;
+
     /* Premium Gradients Collection */
     --gradient-ukraine: linear-gradient(135deg, hsl(216 100% 50%), hsl(48 100% 50%));
     --gradient-blue: linear-gradient(135deg, hsl(216 100% 50%), hsl(216 100% 35%));
@@ -75,6 +108,13 @@
     --gradient-team: linear-gradient(135deg, hsl(216 100% 50%) 0%, hsl(48 100% 50%) 50%, hsl(216 100% 50%) 100%);
     --gradient-contact: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(189 94% 43%) 50%, hsl(196 94% 67%) 100%);
 
+    /* Norwegian Scandinavian Gradients - Clean & Minimal */
+    --no-gradient-primary: linear-gradient(135deg, hsl(210 100% 56%) 0%, hsl(210 100% 40%) 100%);
+    --no-gradient-hero: linear-gradient(135deg, hsl(210 100% 56%) 0%, hsl(210 100% 65%) 50%, hsl(0 65% 51%) 100%);
+    --no-gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --no-gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 99%) 100%);
+    --no-gradient-section: linear-gradient(135deg, hsl(210 100% 96%) 0%, hsl(0 0% 100%) 50%, hsl(210 100% 96%) 100%);
+
     /* Advanced Shadow System */
     --shadow-ukraine: 0 10px 30px -10px hsl(216 100% 50% / 0.3);
     --shadow-blue: 0 4px 20px hsl(216 100% 50% / 0.2);
@@ -83,6 +123,12 @@
     --shadow-card: 0 4px 6px -1px hsl(216 20% 50% / 0.1), 0 2px 4px -1px hsl(216 20% 50% / 0.06);
     --shadow-card-hover: 0 10px 15px -3px hsl(216 20% 50% / 0.1), 0 4px 6px -2px hsl(216 20% 50% / 0.05);
     --shadow-glow: 0 0 20px hsl(216 100% 50% / 0.5);
+
+    /* Norwegian Clean Shadow System */
+    --no-shadow-subtle: 0 2px 8px -2px hsl(210 20% 50% / 0.08), 0 1px 3px -1px hsl(210 20% 50% / 0.05);
+    --no-shadow-card: 0 4px 12px -4px hsl(210 20% 50% / 0.12), 0 2px 6px -2px hsl(210 20% 50% / 0.08);
+    --no-shadow-hover: 0 8px 20px -6px hsl(210 20% 50% / 0.15), 0 4px 8px -3px hsl(210 20% 50% / 0.1);
+    --no-shadow-focus: 0 0 0 3px hsl(210 100% 56% / 0.2);
 
     /* Advanced Transitions */
     --transition-ukraine: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -152,6 +198,25 @@
     font-variation-settings: normal;
   }
 
+  /* Norwegian Language Typography Support */
+  body[data-locale="no"] {
+    font-family: 'Inter', 'Source Sans Pro', sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+
+  body[data-locale="no"] h1, 
+  body[data-locale="no"] h2, 
+  body[data-locale="no"] h3, 
+  body[data-locale="no"] h4, 
+  body[data-locale="no"] h5, 
+  body[data-locale="no"] h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -187,6 +252,23 @@
 
   .card-gradient {
     background: var(--gradient-card);
+  }
+
+  /* Norwegian Clean Design Classes */
+  [data-locale="no"] .hero-gradient {
+    background: var(--no-gradient-hero);
+  }
+  
+  [data-locale="no"] .norway-gradient {
+    background: var(--no-gradient-primary);
+  }
+  
+  [data-locale="no"] .card-gradient {
+    background: var(--no-gradient-card);
+  }
+
+  [data-locale="no"] .section-gradient {
+    background: var(--no-gradient-section);
   }
 
   /* Section-specific gradient backgrounds */
@@ -264,6 +346,19 @@
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  /* Norwegian Clean Shadow Classes */
+  [data-locale="no"] .shadow-card {
+    box-shadow: var(--no-shadow-card);
+  }
+
+  [data-locale="no"] .shadow-card-hover {
+    box-shadow: var(--no-shadow-hover);
+  }
+
+  [data-locale="no"] .shadow-subtle {
+    box-shadow: var(--no-shadow-subtle);
+  }
   
   /* Enhanced Transition Classes */
   .transition-ukraine {
@@ -304,6 +399,32 @@
     box-shadow: var(--shadow-premium);
   }
 
+  /* Norwegian Clean Button Styles */
+  [data-locale="no"] .btn-primary {
+    @apply rounded-lg font-medium px-6 py-3 transition-all duration-200;
+    background: hsl(var(--no-primary));
+    color: hsl(var(--no-primary-foreground));
+    border: 1px solid transparent;
+  }
+
+  [data-locale="no"] .btn-primary:hover {
+    background: hsl(var(--no-primary-dark));
+    transform: translateY(-1px);
+    box-shadow: var(--no-shadow-hover);
+  }
+
+  [data-locale="no"] .btn-secondary {
+    @apply rounded-lg font-medium px-6 py-3 transition-all duration-200;
+    background: transparent;
+    color: hsl(var(--no-primary));
+    border: 1px solid hsl(var(--no-border));
+  }
+
+  [data-locale="no"] .btn-secondary:hover {
+    background: hsl(var(--no-primary-muted));
+    box-shadow: var(--no-shadow-subtle);
+  }
+
   /* Premium Card Styles */
   .card-premium {
     @apply relative overflow-hidden rounded-xl transition-smooth;
@@ -330,6 +451,23 @@
 
   .card-premium:hover::before {
     opacity: 1;
+  }
+
+  /* Norwegian Clean Card Styles */
+  [data-locale="no"] .card-premium {
+    @apply relative rounded-lg transition-all duration-200;
+    background: hsl(var(--no-card));
+    box-shadow: var(--no-shadow-card);
+    border: 1px solid hsl(var(--no-border));
+  }
+
+  [data-locale="no"] .card-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--no-shadow-hover);
+  }
+
+  [data-locale="no"] .card-premium::before {
+    display: none;
   }
 
   /* Typography Enhancements */

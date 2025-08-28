@@ -26,7 +26,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode; initialLoca
 
   useEffect(() => {
     setT(getTranslation(locale));
+    // Set data-locale attribute on body for CSS styling
+    document.body.setAttribute('data-locale', locale);
   }, [locale]);
+
+  // Set initial data-locale on mount
+  useEffect(() => {
+    document.body.setAttribute('data-locale', initialLocale);
+  }, [initialLocale]);
 
   return (
     <LanguageContext.Provider value={{ locale, setLocale, t }}>
