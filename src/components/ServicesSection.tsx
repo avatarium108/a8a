@@ -2,8 +2,70 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   
+  const getSectionClasses = () => {
+    switch (locale) {
+      case 'no':
+        return 'py-20 bg-white relative overflow-hidden';
+      case 'eu':
+        return 'py-20 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden';
+      default:
+        return 'py-20 services-gradient relative overflow-hidden';
+    }
+  };
+
+  const getPatternClasses = () => {
+    if (locale === 'no') {
+      return 'absolute inset-0 opacity-3';
+    }
+    return 'absolute inset-0 opacity-10';
+  };
+
+  const getNationalPattern = () => {
+    switch (locale) {
+      case 'no':
+        return `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23003f7f' fill-opacity='0.05'%3E%3Cpath d='M40 40l8-8v16l-8-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+      case 'eu':
+        return `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23003399' fill-opacity='0.06'%3E%3Cpath d='M40 40l8-8v16l-8-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+      default:
+        return `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M40 40l8-8v16l-8-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+    }
+  };
+
+  const getTitleClasses = () => {
+    switch (locale) {
+      case 'no':
+        return 'text-4xl md:text-5xl font-medium mb-6 text-slate-800';
+      case 'eu':
+        return 'text-4xl md:text-5xl font-semibold mb-6 text-blue-800';
+      default:
+        return 'text-4xl md:text-5xl font-bold mb-6';
+    }
+  };
+
+  const getSubtitleClasses = () => {
+    switch (locale) {
+      case 'no':
+        return 'text-xl text-slate-600 max-w-3xl mx-auto';
+      case 'eu':
+        return 'text-xl text-slate-600 max-w-3xl mx-auto';
+      default:
+        return 'text-xl text-muted-foreground max-w-3xl mx-auto';
+    }
+  };
+
+  const getCardClasses = () => {
+    switch (locale) {
+      case 'no':
+        return 'group hover:shadow-lg transition-all duration-200 border hover:border-blue-200 bg-white';
+      case 'eu':
+        return 'group hover:shadow-lg transition-all duration-200 border hover:border-blue-200 bg-white';
+      default:
+        return 'group hover:shadow-blue transition-ukraine border-2 hover:border-primary/20';
+    }
+  };
+
   const services = [
     {
       icon: "🌐",
@@ -62,41 +124,49 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services-section" className="py-20 services-gradient relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
+    <section id="services-section" className={getSectionClasses()}>
+      <div className={getPatternClasses()}>
         <div className="absolute top-0 left-0 w-full h-full" 
-             style={{
-               backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M40 40l8-8v16l-8-8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-             }}
+             style={{ backgroundImage: getNationalPattern() }}
         />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className={getTitleClasses()}>
             {t.services.title}
-            <span className="text-gradient-ukraine"> рішення для вільного часу</span>
+            {locale === 'ua' && (
+              <span className="text-gradient-ukraine"> рішення для вільного часу</span>
+            )}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className={getSubtitleClasses()}>
             {t.services.subtitle}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-blue transition-ukraine border-2 hover:border-primary/20">
+            <Card key={index} className={getCardClasses()}>
               <CardHeader className="text-center">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-ukraine">
+                <div className={`text-5xl mb-4 transition-transform duration-200 ${
+                  locale === 'no' ? 'group-hover:scale-105' : 'group-hover:scale-110 transition-ukraine'
+                }`}>
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl font-bold text-primary">
+                <CardTitle className={`text-xl font-bold ${
+                  locale === 'no' ? 'text-slate-800' : locale === 'eu' ? 'text-blue-800' : 'text-primary'
+                }`}>
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground font-medium">
+                <CardDescription className={`font-medium ${
+                  locale === 'no' ? 'text-slate-600' : locale === 'eu' ? 'text-slate-600' : 'text-muted-foreground'
+                }`}>
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-foreground leading-relaxed">
+                <p className={`leading-relaxed ${
+                  locale === 'no' ? 'text-slate-700' : locale === 'eu' ? 'text-slate-700' : 'text-foreground'
+                }`}>
                   {service.details}
                 </p>
               </CardContent>
@@ -106,16 +176,30 @@ const ServicesSection = () => {
         
         {/* Cost Calculator Block */}
         <div className="mt-16 flex justify-center">
-          <Card className="border-secondary/20 hover:shadow-yellow transition-ukraine max-w-md">
+          <Card className={`hover:shadow-lg transition-all duration-200 max-w-md ${
+            locale === 'no' ? 'border-blue-200 bg-white' : 
+            locale === 'eu' ? 'border-blue-200 bg-white' : 
+            'border-secondary/20 hover:shadow-yellow transition-ukraine'
+          }`}>
             <CardHeader>
-              <CardTitle className="text-xl text-secondary text-center">{t.services.calculator.title}</CardTitle>
+              <CardTitle className={`text-xl text-center ${
+                locale === 'no' ? 'text-blue-700' : 
+                locale === 'eu' ? 'text-blue-600' : 
+                'text-secondary'
+              }`}>
+                {t.services.calculator.title}
+              </CardTitle>
               <CardDescription className="text-center">
                 {t.services.calculator.description}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <button 
-                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-3 rounded-lg font-semibold transition-ukraine"
+                className={`w-full px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                  locale === 'no' ? 'bg-blue-600 hover:bg-blue-700 text-white' :
+                  locale === 'eu' ? 'bg-blue-600 hover:bg-blue-700 text-white' :
+                  'bg-secondary hover:bg-secondary/90 text-secondary-foreground transition-ukraine'
+                }`}
                 onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {t.services.calculator.button}
