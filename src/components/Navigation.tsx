@@ -37,16 +37,16 @@ const Navigation = () => {
             {/* Navigation Menu - посередині */}
             <div className="hidden lg:flex items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -ml-44">
               <button 
-                onClick={() => scrollToSection('mission-section')}
-                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
-              >
-                {t.nav.about}
-              </button>
-              <button 
                 onClick={() => scrollToSection('services-section')}
                 className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
               >
                 {t.nav.services}
+              </button>
+              <button 
+                onClick={() => scrollToSection('achievements-section')}
+                className="text-foreground/80 hover:text-foreground transition-colors bg-yellow-100 hover:bg-yellow-200 px-3 py-1 rounded-md"
+              >
+                {locale === 'ua' ? 'Досягнення' : locale === 'no' ? 'Resultater' : 'Achievements'}
               </button>
               <button 
                 onClick={() => scrollToSection('packages-section')}

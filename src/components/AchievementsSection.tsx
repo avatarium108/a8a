@@ -1,16 +1,16 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import successUkraine from "@/assets/success-ukraine.jpg";
 import successChatbot from "@/assets/success-chatbot-stripe-sheets.jpg";
 import successIoT from "@/assets/success-iot-ai-make.jpg";
 import successROI from "@/assets/success-roi-dashboard.jpg";
 import successVoiceBot from "@/assets/success-voice-bot-crm.jpg";
 import successAutomation from "@/assets/success-home-automation.jpg";
-import { useState, useEffect } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
-const ResultsSection = () => {
+const AchievementsSection = () => {
   const { locale, t } = useLanguage();
 
   const getSectionClasses = () => {
@@ -97,6 +97,7 @@ const ResultsSection = () => {
     }
   };
 
+  // Key metrics data
   const results = [
     {
       title: t.results.items.medical.title,
@@ -125,22 +126,58 @@ const ResultsSection = () => {
       description: t.results.items.iot.description,
       icon: "🌐",
       image: successAutomation
-    },
-    {
-      title: t.results.items.ai.title,
-      metric: t.results.items.ai.metric,
-      description: t.results.items.ai.description,
-      icon: "🧠",
-      image: successChatbot
-    },
-    {
-      title: t.results.items.crm.title,
-      metric: t.results.items.crm.metric,
-      description: t.results.items.crm.description,
-      icon: "📊",
-      image: successVoiceBot
     }
   ];
+
+  // Top testimonials data
+  const getTopTestimonials = () => {
+    if (locale === 'ua') {
+      return [
+        {
+          name: "Олексій Петренко",
+          company: "ТОВ 'Медтех Україна'",
+          role: "Директор",
+          text: "Para.tech створили для нас телемедичну платформу, яка збільшила кількість пацієнтів на 200%. Професійний підхід та розуміння специфіки медичного бізнесу.",
+          rating: 5,
+          results: "+200% пацієнтів",
+          avatar: "👨‍⚕️"
+        },
+        {
+          name: "Дмитро Іваненко",
+          company: "IT-Консалтинг 'Цифра'",
+          role: "CEO",
+          text: "Автоматизували всі бізнес-процеси через CRM та чат-боти. Тепер заявок стало в 5 разів більше, а команда працює ефективніше.",
+          rating: 5,
+          results: "+500% заявок",
+          avatar: "👨‍💻"
+        }
+      ];
+    } else if (locale === 'no') {
+      return [
+        {
+          name: "Erik Hansen",
+          company: "Bergen Tech Solutions",
+          role: "CEO",
+          text: "Para.tech leverte en fantastisk IoT-løsning for vårt smart hjem-prosjekt. Profesjonell tilnærming og forståelse av våre behov.",
+          rating: 5,
+          results: "+300% effektivitet",
+          avatar: "👨‍💼"
+        }
+      ];
+    } else {
+      return [
+        {
+          name: "Marco Rossi",
+          company: "EU Digital Solutions",
+          role: "Director",
+          text: "Para.tech delivered an excellent automation solution that increased our efficiency by 300%. Professional approach and deep understanding of our business needs.",
+          rating: 5,
+          results: "+300% efficiency",
+          avatar: "👨‍💼"
+        }
+      ];
+    }
+  };
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -152,7 +189,7 @@ const ResultsSection = () => {
   }, []);
 
   return (
-    <section id="results-section" className={getSectionClasses()}>
+    <section id="achievements-section" className={getSectionClasses()}>
       <div className={getPatternClasses()}>
         <div className="absolute top-0 left-0 w-full h-full" 
              style={{ backgroundImage: getNationalPattern() }}
@@ -174,12 +211,12 @@ const ResultsSection = () => {
           </p>
         </div>
 
-        {/* Results Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Key Metrics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {results.map((result, index) => (
             <Card key={index} className={getCardClasses()}>
-              <CardContent className="p-8">
-                <div className={`text-5xl mb-4 transition-transform duration-200 ${
+              <CardContent className="p-6">
+                <div className={`text-4xl mb-4 transition-transform duration-200 ${
                   locale === 'no' ? 'group-hover:scale-105' : 'group-hover:scale-110 transition-transform duration-300'
                 }`}>
                   {result.icon}
@@ -187,7 +224,7 @@ const ResultsSection = () => {
                 <div className={getMetricClasses()}>
                   {result.metric}
                 </div>
-                <div className={`text-lg font-semibold mb-1 ${
+                <div className={`text-base font-semibold mb-1 ${
                   locale === 'no' ? 'text-slate-700' : locale === 'eu' ? 'text-slate-700' : ''
                 }`}>
                   {result.description}
@@ -202,8 +239,8 @@ const ResultsSection = () => {
           ))}
         </div>
 
-        {/* Success Story */}
-        <div className="max-w-4xl mx-auto">
+        {/* Success Case Showcase */}
+        <div className="max-w-4xl mx-auto mb-16">
           <div className="relative overflow-hidden rounded-xl">
             <img 
               src={results[currentImageIndex].image} 
@@ -247,8 +284,75 @@ const ResultsSection = () => {
             ))}
           </div>
         </div>
-        {/* Simple CTA */}
-        <div className="mt-12 text-center">
+
+        {/* Top Client Testimonials */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">
+              ⭐ {locale === 'ua' ? 'Відгуки клієнтів' : locale === 'no' ? 'Kundetilbakemeldinger' : 'Client Reviews'}
+            </Badge>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              {locale === 'ua' ? 'Що кажуть наші клієнти' : locale === 'no' ? 'Hva våre kunder sier' : 'What Our Clients Say'}
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {getTopTestimonials().map((testimonial, index) => (
+              <Card key={index} className="relative overflow-hidden hover:shadow-2xl transition-all duration-300 border-l-4 border-l-primary">
+                <CardContent className="p-8">
+                  {/* Rating stars */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+
+                  {/* Testimonial text */}
+                  <blockquote className="text-base mb-6 italic text-foreground leading-relaxed">
+                    "{testimonial.text}"
+                  </blockquote>
+
+                  {/* Results badge */}
+                  <div className="mb-4">
+                    <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 font-bold">
+                      📈 {testimonial.results}
+                    </Badge>
+                  </div>
+
+                  {/* Author info */}
+                  <div className="flex items-center gap-4">
+                    <div className="text-3xl">{testimonial.avatar}</div>
+                    <div>
+                      <div className="font-bold text-lg">{testimonial.name}</div>
+                      <div className="text-sm text-foreground">{testimonial.role}</div>
+                      <div className="text-sm font-medium text-primary">{testimonial.company}</div>
+                    </div>
+                  </div>
+
+                  {/* Decorative quote */}
+                  <div className="absolute top-4 right-4 text-6xl text-primary/10 font-serif">
+                    "
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="inline-flex items-center gap-4 bg-muted/50 rounded-xl px-8 py-4 mb-8">
+            <div className="text-2xl">🏆</div>
+            <div>
+              <div className="font-bold text-lg">
+                {locale === 'ua' ? '4.9/5 середній рейтинг' : locale === 'no' ? '4.9/5 gjennomsnittlig vurdering' : '4.9/5 average rating'}
+              </div>
+              <div className="text-sm text-foreground">
+                {locale === 'ua' ? 'на основі 500+ проєктів' : locale === 'no' ? 'basert på 500+ prosjekter' : 'based on 500+ projects'}
+              </div>
+            </div>
+          </div>
+          
           <button 
             className={getButtonClasses()}
             onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
@@ -261,4 +365,4 @@ const ResultsSection = () => {
   );
 };
 
-export default ResultsSection;
+export default AchievementsSection;
