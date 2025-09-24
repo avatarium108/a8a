@@ -4,6 +4,20 @@
 
 **URL**: https://lovable.dev/projects/b6b7db46-f034-430a-b6d6-43ebb1f4e38d
 
+## Environment Setup
+
+Before running the project, you need to set up your environment variables:
+
+1. Copy the environment template:
+   ```sh
+   cp .env.example .env
+   ```
+
+2. Fill in your actual Supabase credentials in the `.env` file:
+   - `VITE_SUPABASE_PROJECT_ID`: Your Supabase project ID
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`: Your Supabase publishable key
+   - `VITE_SUPABASE_URL`: Your Supabase URL
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
@@ -29,10 +43,14 @@ git clone <YOUR_GIT_URL>
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Copy environment variables
+cp .env.example .env
+# Edit .env with your actual Supabase credentials
+
+# Step 4: Install the necessary dependencies.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 5: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
@@ -59,10 +77,22 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase
 
 ## How can I deploy this project?
 
+### Lovable Deployment
 Simply open [Lovable](https://lovable.dev/projects/b6b7db46-f034-430a-b6d6-43ebb1f4e38d) and click on Share -> Publish.
+
+### Netlify Deployment
+1. Connect your GitHub repository to Netlify
+2. Set your environment variables in Netlify dashboard
+3. Deploy automatically with each push to main branch
+
+### Vercel Deployment
+1. Connect your GitHub repository to Vercel
+2. Set your environment variables in Vercel dashboard
+3. Deploy automatically with each push to main branch
 
 ## Can I connect a custom domain to my Lovable project?
 
