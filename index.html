@@ -1,57 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>para.tech - Автоматизація українського бізнесу | AI рішення, CRM, IoT</title>
-    <meta name="description" content="Para.tech - спеціалізовані рішення з автоматизації для українського бізнесу. Сайти, боти, CRM, AI та IoT системи. 500+ успішних проєктів. Гарантія результату." />
-    <meta name="keywords" content="автоматизація бізнесу україна, ai рішення, crm система, iot, чат боти, веб сайти, телемедицина" />
-    <meta name="author" content="para.tech" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A8A - Your Digital Partner</title>
+    <meta name="description" content="Professional web development and digital marketing services. Your reliable partner in the digital world.">
     
-    <!-- Optimized Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://a8a.vercel.app/?lang=en">
+    <link rel="alternate" hreflang="ua" href="https://a8a.vercel.app/?lang=ua">
+    <link rel="alternate" hreflang="no" href="https://a8a.vercel.app/?lang=no">
+    <link rel="alternate" hreflang="x-default" href="https://a8a.vercel.app/">
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "para.tech",
-      "url": "https://para.tech",
-      "logo": "https://para.tech/logo.png",
-      "description": "Автоматизація українського бізнесу через AI, CRM, IoT та веб-рішення",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "UA"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "500"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "UAH",
-        "lowPrice": "15000",
-        "highPrice": "120000"
-      }
-    }
-    </script>
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="A8A - Your Digital Partner">
+    <meta property="og:description" content="Professional web development and digital marketing services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://a8a.vercel.app/">
+    <meta property="og:image" content="https://a8a.vercel.app/og-image.jpg">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A8A - Your Digital Partner">
+    <meta name="twitter:description" content="Professional web development and digital marketing services">
+    <meta name="twitter:image" content="https://a8a.vercel.app/og-image.jpg">
+    
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>A8A</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="langSelect">
+                    <option value="en">EN</option>
+                    <option value="ua">UA</option>
+                    <option value="no">NO</option>
+                </select>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="a8a.smart - Автоматизація та AI рішення" />
-    <meta property="og:description" content="Професійні рішення з автоматизації бізнес-процесів та штучного інтелекту для українських компаній" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 data-i18n="hero.title">Welcome to A8A</h1>
+                <p data-i18n="hero.subtitle">Your reliable partner in the digital world</p>
+                <button class="cta-button" data-i18n="hero.cta">Get Started</button>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 data-i18n="about.title">About Us</h2>
+                <p data-i18n="about.description">We are a team of professionals providing quality services in web development and digital marketing.</p>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 data-i18n="services.title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 data-i18n="services.web.title">Web Development</h3>
+                        <p data-i18n="services.web.description">We create modern and functional websites</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-i18n="services.marketing.title">Digital Marketing</h3>
+                        <p data-i18n="services.marketing.description">We promote your business online</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-i18n="services.design.title">UI/UX Design</h3>
+                        <p data-i18n="services.design.description">We develop user-friendly and beautiful interfaces</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 data-i18n="contact.title">Contact Us</h2>
+                <div class="contact-info">
+                    <p><strong data-i18n="contact.email">Email:</strong> info@a8a.com</p>
+                    <p><strong data-i18n="contact.phone">Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong data-i18n="contact.address">Address:</strong> 123 Digital Street, Tech City</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.copyright">© 2025 A8A. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/js/i18n.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
 </html>

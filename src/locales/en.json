@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to A8A",
+    "subtitle": "Your reliable partner in the digital world",
+    "cta": "Get Started"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team of professionals providing quality services in web development and digital marketing."
+  },
+  "services": {
+    "title": "Our Services",
+    "web": {
+      "title": "Web Development",
+      "description": "We create modern and functional websites"
+    },
+    "marketing": {
+      "title": "Digital Marketing",
+      "description": "We promote your business online"
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "We develop user-friendly and beautiful interfaces"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "footer": {
+    "copyright": "© 2025 A8A. All rights reserved."
+  }
+}
